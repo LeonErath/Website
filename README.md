@@ -3,7 +3,7 @@
 
 Build the container:
 ```
-docker build -f Dockerfile-prod -t website-prod 
+docker build -f Dockerfile-prod -t website-prod .
 ```
 
 Spin up the container:
