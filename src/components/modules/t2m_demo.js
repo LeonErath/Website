@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import styled from "styled-components";
 import axios from "axios";
-import BounceLoader from "react-spinners/BounceLoader";
 
 const Main = styled.div`
   width: 80%;
@@ -189,15 +188,7 @@ class Demo extends Component {
                 height: "550px"
               }}
             >
-              <div>
-                {" "}
-                <BounceLoader
-                  sizeUnit={"px"}
-                  size={150}
-                  color={"#730000"}
-                  loading={this.state.loading}
-                />
-              </div>
+              <div>Loading..</div>
             </div>
           )}
           <div style={{ width: "100%", textAlign: "center" }}>
