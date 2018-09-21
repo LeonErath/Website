@@ -4,6 +4,7 @@ import styled from "styled-components";
 import { BrowserRouter as Router, Route, Link, Switch } from "react-router-dom";
 import Navbar from "../modules/navbar.js";
 import ImageButton from "../modules/ImageButton.js";
+import Demo from "../modules/t2m_demo.js";
 var LineChart = require("react-chartjs").Line;
 
 const SectionTitle = styled.div`
@@ -267,8 +268,10 @@ class T2M extends Component {
           </IntroTitle>
         </List>
         <FactList>
-          <Fact>100% Java</Fact>
+          <Fact>Demo</Fact>
         </FactList>
+
+        <Demo />
       </Main>
     );
   }

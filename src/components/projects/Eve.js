@@ -16,6 +16,7 @@ import {
 } from "../modules/styles.js";
 
 import ImageButton from "../modules/ImageButton.js";
+import Chatbot from "../modules/chatbot";
 
 const FACT_COLOR = "#f2f2f0";
 const EMPHASIZE_COLOR = "#4f4f4f";
@@ -346,6 +347,9 @@ class Eve extends Component {
             individualized response of the user to the user's request.
           </Introduction>
         </List>
+        <div style={{ position: "fixed", bottom: "20px", right: "6%" }}>
+          <Chatbot />
+        </div>
       </Main>
     );
   }
