@@ -11,7 +11,7 @@ const ChatMessages = styled.div`
 
 const Message = styled.div`
   flex-direction: ${props => (props.right ? "row-reverse" : "row")};
-  margin: 4px;
+  margin: 8px;
   display: flex;
 `;
 const Text = styled.div`
@@ -19,9 +19,14 @@ const Text = styled.div`
   padding-bottom: 6px;
   padding-left: 20px;
   padding-right: 20px;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica,
+    Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  font-weight: 100;
+  font-size: 14px;
   display: inline-block;
   border-radius: 25px;
-  background: rgb(153, 172, 194);
+  background: #6eb29d;
+  color: #ffffff;
 `;
 
 class ChatClient extends Component {
@@ -34,6 +39,7 @@ class ChatClient extends Component {
     };
 
     this.makeRequest = this.makeRequest.bind(this);
+    this.scrollToBottom = this.scrollToBottom.bind(this);
   }
 
   componentDidMount() {
@@ -51,29 +57,38 @@ class ChatClient extends Component {
     if (blocked) {
       messages.push(message);
       this.setState({ messages: messages, blocked: blocked });
+
       this.makeRequest(message.text);
     } else {
       console.log("Chat is currently blocked");
     }
   }
 
+  componentDidUpdate() {
+    this.scrollToBottom();
+  }
+  scrollToBottom() {
+    this.messagesEnd.scrollIntoView({ behavior: "smooth" });
+  }
+
   makeRequest(message) {
+    let that = this;
     axios({
-      auth: {
-        username: "dev",
-        password: "dev"
-      },
       method: "post",
-      url: "http://localhost:8080/messageApi",
+      url: "http://leonerath.de:8080/messageApi",
       data: {
         message: message,
-        bot: 9
+        bot: 1
       }
     })
       .then(function(response) {
-        const messages = this.state.messages;
-        messages.push(response);
-        this.setState({ messages: messages });
+        console.log(response.data);
+
+        let messages = that.state.messages;
+        messages.push({ text: response.data });
+        console.log(messages);
+
+        that.setState({ messages: messages });
       })
       .catch(function(error) {
         console.log(error);
@@ -90,6 +105,12 @@ class ChatClient extends Component {
             </Message>
           );
         })}
+        <div
+          style={{ float: "left", clear: "both" }}
+          ref={el => {
+            this.messagesEnd = el;
+          }}
+        />
       </div>
     );
 

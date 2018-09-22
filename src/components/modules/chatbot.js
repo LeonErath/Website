@@ -1,30 +1,33 @@
 import React, { Component } from "react";
 import styled from "styled-components";
 import ChatClient from "./chatClient";
-
-const SVG = styled.svg`
-  width: 100%;
-
-  height: 100%;
-  object-fit: contain;
-`;
+import GithubIcon from "../../svg/github";
+import ChatIcon from "../../svg/chat";
+import DismissIcon from "../../svg/dismiss2";
+import SendIcon from "../../svg/send";
 
 const SendButton = styled.button`
+  display: flex;
+  justify-content: center;
+  align-items: center;
   margin-left: 8px;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica,
     Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
   text-align: center;
-  width: 48px;
-  height: 48px;
+  width: 34px;
+  height: 34px;
   cursor: pointer;
-  border-color: #6eb29d;
+  background: #6eb29d;
   outline: none;
+  border: none;
   border-radius: 50%;
 `;
 
 const Button = styled.button`
   font-family: Calibri, sans-serif;
-
+  display: flex;
+  justify-content: center;
+  align-items: center;
   letter-spacing: 1px;
   color: ${props => (props.textcolor ? props.textcolor : "white")};
   background: ${props => (props.color ? props.color : "black")};
@@ -78,20 +81,21 @@ const Triangle = styled.div`
 const ChatWindow = styled.div`
   position: relative;
   z-index: 0;
-  height: 560px;
+  height: 574px;
   width: 300px;
 
-  margin-bottom: 14px;
+  margin-bottom: -2px;
 `;
 
 const ProfileImage = styled.div`
   position: absolute;
   z-index: 2;
 
-  height: 100px;
-  width: 100px;
-  margin-left: 100px;
+  height: 140px;
+  width: 140px;
+  margin-left: 80px;
   border-radius: 50%;
+
   background: #ffffff;
 `;
 const ChatMessages = styled.div`
@@ -107,10 +111,12 @@ const PrivacyPolicy = styled.div`
 `;
 
 const InputBox = styled.div`
-  padding-left: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 `;
 const Input = styled.input`
-  width: 200px;
+  width: 240px;
   padding: 6px 10px;
   font-size: 14px;
   margin: 8px 0;
@@ -125,15 +131,17 @@ const Input = styled.input`
 
 const Chat = styled.div`
   padding-top: 58px;
-  margin-top: 50px;
+  margin-top: 70px;
   position: relative;
   z-index: 1;
   font-weight: 100;
   line-height: 1.5;
   letter-spacing: 1.1;
-  height: 450px;
+  height: 444px;
   width: 300px;
-  box-shadow: 10px 10px 10px 5px rgba(0, 0, 0, 0.1);
+
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.3);
+
   border-radius: 8px;
   background: #ffffff;
 `;
@@ -171,21 +179,22 @@ class Chatbot extends Component {
               {" "}
               <img
                 style={{
-                  height: "100px",
-                  width: "100px",
+                  height: "100%",
+                  width: "100%",
                   objectFit: "cover",
                   borderRadius: "50%"
                 }}
-                src="./profile.jpg"
+                src="./images/eve/smile2.jpg"
               />
             </ProfileImage>
             <Chat>
               <ChatClient onRef={ref => (this.child = ref)} />
               <PrivacyPolicy>
-                Eve uses the Information you provide to us to contact you about
-                our relevant content, products, and services. You may
-                unsubscribe from these communications at any time. For more
-                information, check out our privaxy policy.
+                Eve uses your messages to generate an appropriate answer. Your
+                messages will be sent to the server and then deleted. None of
+                your messages will be saved or kept longer than necessary. For
+                more information on how we process your information, check our
+                privacy policy.
               </PrivacyPolicy>
               <InputBox>
                 <Input
@@ -195,11 +204,14 @@ class Chatbot extends Component {
                   onChange={evt => this.setState({ value: evt.target.value })}
                   placeholder="Your message.."
                 />{" "}
-                <SendButton onClick={this.sendMessage}>SEND</SendButton>
+                <SendButton onClick={this.sendMessage}>
+                  <SendIcon />
+                </SendButton>
               </InputBox>
             </Chat>
           </ChatWindow>
         )}
+        {this.state.open && <Triangle />}
         {!this.state.open && (
           <Message>
             Hey there!
@@ -208,59 +220,8 @@ class Chatbot extends Component {
         )}
         {!this.state.open && <Triangle />}
         <Button onClick={this.chatbotClick} color="#6eb29d">
-          {!this.state.open && (
-            <SVG
-              xmlns="http://www.w3.org/2000/svg"
-              viewBox="0 0 835.225 806.782"
-              fill="#ffffff"
-            >
-              <g id="noun_chat_920149" transform="translate(-94.544 -3.215)">
-                <g
-                  id="Group_83"
-                  data-name="Group 83"
-                  transform="translate(94.544 3.215)"
-                >
-                  <path
-                    id="Path_153"
-                    data-name="Path 153"
-                    class="cls-1"
-                    d="M420.507,3.215c228.476,0,415.812,156.159,417.6,348.132,1.1,118.738-44.584,204.095-148.078,276.5-1.469,1.423-3.03,3.076-4.132,4.316-3.168,43.758,23.968,93.346,80.536,147.389l4.041,3.9a15.4,15.4,0,0,1-10.882,26.31c-.413,0-.781.229-1.194.229-118.6-9.321-239.633-96.423-261.214-112.677l-9.367-1.01c-13.775,1.791-53.033,5.556-67.266,5.556h-.046C190.24,701.866,2.9,544.559,2.9,352.541,2.9,160.476,190.24,3.215,420.507,3.215Zm1.01,665.73c13.27,0,55.971-3.122,63.823-4.454a16.626,16.626,0,0,1,5-.046l15.519,2.479A15.161,15.161,0,0,1,512.889,670c1.1.872,99.132,76.5,203.131,101.657-45.227-51.517-65.568-100.647-60.471-146.471a13.955,13.955,0,0,1,.872-3.627c.6-1.7,2.479-6.8,13.224-16.851.551-.505,1.148-.964,1.745-1.423C767.629,536.2,808.218,460.947,807.208,351.668,805.647,176.5,632.132,34.024,420.507,34.024c-213.278,0-386.747,142.384-386.747,317.46C33.714,526.515,207.229,668.945,421.517,668.945Z"
-                    transform="translate(-2.905 -3.215)"
-                  />
-                </g>
-              </g>
-            </SVG>
-          )}
-          {this.state.open && (
-            <SVG
-              xmlns="http://www.w3.org/2000/svg"
-              viewBox="0 0 711.244 711.244"
-              fill="#ffffff"
-            >
-              <g
-                id="Group_85"
-                data-name="Group 85"
-                transform="translate(-6404.358 2144.642)"
-              >
-                <line
-                  id="Line_7"
-                  data-name="Line 7"
-                  class="cls-1"
-                  x2="682.96"
-                  y2="682.96"
-                  transform="translate(6418.5 -2130.5)"
-                />
-                <line
-                  id="Line_8"
-                  data-name="Line 8"
-                  class="cls-2"
-                  y1="682.96"
-                  x2="682.96"
-                  transform="translate(6418.5 -2130.5)"
-                />
-              </g>
-            </SVG>
-          )}
+          {!this.state.open && <ChatIcon />}
+          {this.state.open && <DismissIcon />}
         </Button>
       </Main>
     );
