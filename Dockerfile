@@ -11,7 +11,8 @@ ENV PATH /usr/src/app/node_modules/.bin:$PATH
 # install and cache app dependencies
 COPY package.json /usr/src/app/package.json
 RUN yarn install
-RUN yarn install react-scripts@1.1.1 -g --silent
+RUN yarn add react-scripts@1.1.1 -g --silent
+COPY . /usr/src/app
 
 # start app
 CMD ["yarn", "start"]

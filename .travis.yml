@@ -4,5 +4,14 @@ node_js:
 cache:
   directories:
     - node_modules
+
+services:
+  - docker
+
+before_install:
+- docker build -f Dockerfile -t website . 
+- docker run --name website -d -p 80:80 --rm website
+- docker ps -a
+- docker exec -it website bash
 script:
   - npm run build
