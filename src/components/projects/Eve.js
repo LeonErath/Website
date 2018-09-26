@@ -5,15 +5,12 @@ import Navbar from "../modules/navbar.js";
 import styled from "styled-components";
 import {
   Main,
-  List,
-  SectionTitle,
-  IntroTitle,
-  Introduction,
   ImageContainer,
   Emphasize,
   Fact,
   FactList
 } from "../modules/styles.js";
+import Section from "../modules/Section";
 
 import ImageButton from "../modules/ImageButton.js";
 import Chatbot from "../modules/chatbot";
@@ -101,7 +98,7 @@ class Eve extends Component {
             {
               title: "DREAM TEAM",
               text:
-                " Daniel Salomon (Design), \
+                "Daniel Salomon (Design), \
                 Niklas Korz (Python-KI),\
                 Simon Niedermayr (Go-Webserver),\
                 Daniel Scholz (Python-KI),\
@@ -118,15 +115,13 @@ class Eve extends Component {
           ]}
         />
 
-        <List>
-          <SectionTitle color={SECTION_COLOR}>PROBLEM</SectionTitle>
-        </List>
-        <List>
-          <IntroTitle>
+        <Section>
+          <Section.Topic color={SECTION_COLOR}>PROBLEM</Section.Topic>
+          <Section.Header>
             People all over the world are struggling with their single existence
             and the resulting loneliness.
-          </IntroTitle>
-          <Introduction>
+          </Section.Header>
+          <Section.Text>
             In doing so, they often find themselves confronted with the problem
             of addressing other people or even longer having conversations with
             them. To remedy this, there are numerous dating coaches. Help in
@@ -146,7 +141,7 @@ class Eve extends Component {
             addition, the information media are tailored to the masses and offer
             no individual advice.
             <br />
-          </Introduction>
+          </Section.Text>
 
           <ImageContainer>
             <img
@@ -160,7 +155,8 @@ class Eve extends Component {
               alt="Chatbot"
             />
           </ImageContainer>
-        </List>
+        </Section>
+
         <FactList color={FACT_COLOR}>
           <Fact>
             <Emphasize color={EMPHASIZE_COLOR}>99% of Men</Emphasize> don’t
@@ -169,17 +165,16 @@ class Eve extends Component {
             Matthew Hussey
           </Fact>
         </FactList>
-        <List right>
-          <SectionTitle right color={SECTION_COLOR}>
+
+        <Section right>
+          <Section.Topic right color={SECTION_COLOR}>
             SOLUTION
-          </SectionTitle>
-        </List>
-        <List right>
-          <IntroTitle right>
+          </Section.Topic>
+          <Section.Header right>
             The solution to both problems offers the exercise with an artificial
             communication partner.
-          </IntroTitle>
-          <Introduction>
+          </Section.Header>
+          <Section.Text>
             However, physical forms of such a partner (e.g., robots) are very
             expensive. An alternative is offered by a virtual partner, which can
             be integrated into the everyday routines of the person concerned.
@@ -208,8 +203,7 @@ class Eve extends Component {
             It is desirable that the user obtains a learning effect and becomes
             safer in dating situations. He could address his own, individual bot
             from different platforms.
-          </Introduction>
-
+          </Section.Text>
           <ImageContainer>
             <img
               style={{
@@ -222,7 +216,7 @@ class Eve extends Component {
               alt="Chatbot"
             />
           </ImageContainer>
-          <IntroTitle right>
+          <Section.Header right>
             <ImageButton
               text="Test our Product!"
               color={"#6EB29D"}
@@ -233,8 +227,9 @@ class Eve extends Component {
               color={"#4c4c4c"}
               link="/documentationeve"
             />
-          </IntroTitle>
-        </List>
+          </Section.Header>
+        </Section>
+
         <FactList color={FACT_COLOR}>
           <Fact>
             <Emphasize color={EMPHASIZE_COLOR}>
@@ -243,15 +238,14 @@ class Eve extends Component {
             has problems with other people!
           </Fact>
         </FactList>
-        <List>
-          <SectionTitle color={SECTION_COLOR}>TARGET GROUP</SectionTitle>
-        </List>
-        <List>
-          <IntroTitle>
+
+        <Section>
+          <Section.Topic color={SECTION_COLOR}>TARGET GROUP</Section.Topic>
+          <Section.Header>
             The target group are single persons with deficits in verbal
             communication.
-          </IntroTitle>
-          <Introduction>
+          </Section.Header>
+          <Section.Text>
             This includes, on the one hand, the fears of shy people approaching
             other people and, on the other hand, problems in the expression and
             content choice of people willing to talk. The application focuses on
@@ -267,7 +261,7 @@ class Eve extends Component {
             Since the customer already has an existing audience through his
             videos and lectures, the age groups from 18 to 30 in particular must
             be considered.
-          </Introduction>
+          </Section.Text>
           <ImageContainer>
             <img
               style={{
@@ -280,18 +274,19 @@ class Eve extends Component {
               alt="Network"
             />
           </ImageContainer>
-        </List>
-        <List right>
-          <SectionTitle right color={SECTION_COLOR}>
+        </Section>
+
+        <Section right>
+          <Section.Topic right color={SECTION_COLOR}>
             DATA
-          </SectionTitle>
-        </List>
-        <List right>
-          <IntroTitle right>
+          </Section.Topic>
+
+          <Section.Header right>
             To ensure the most authentic chat experience possible with the bot,
             both an AI in the form of neural networks and static rules are used.
-          </IntroTitle>
-          <Introduction>
+          </Section.Header>
+
+          <Section.Text>
             <b>Records for speech recognition and general dialogues</b>
             <br /> To ensure answers in German and for a general understanding
             of the text, there must be many datasets with exemplary dialogues,
@@ -345,9 +340,10 @@ class Eve extends Component {
             are not mixed together. This ensures the privacy and privacy of the
             individual user and allows, depending on the context, an
             individualized response of the user to the user's request.
-          </Introduction>
-        </List>
-        <div style={{ position: "fixed", bottom: "20px", right: "6%" }}>
+          </Section.Text>
+        </Section>
+
+        <div style={{ position: "fixed", bottom: "20px", right: "3%" }}>
           <Chatbot />
         </div>
       </Main>

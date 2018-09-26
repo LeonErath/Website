@@ -1,6 +1,7 @@
 import React, { Component } from "react";
-
 import styled from "styled-components";
+import Section from "../modules/Section";
+import { Main } from "../modules/styles.js";
 
 const InfoTilte = styled.div`
   letter-spacing: 3px;
@@ -22,20 +23,6 @@ const ProjectInfo = styled.div`
   text-align: center;
 `;
 
-const List = styled.div`
-  justify-content: ${props => (props.center ? "center" : "left")};
-  width: 80%;
-  padding-left: 10%;
-  padding-right: 10%;
-  padding-top: 20px;
-  background: #f2f2f0;
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-`;
-
-const Main = styled.div``;
-
 class ProfileHeader extends Component {
   render() {
     const Information = this.props.information.map(info => {
@@ -49,7 +36,9 @@ class ProfileHeader extends Component {
 
     return (
       <Main>
-        <List center>{Information}</List>
+        <Section center header color={"#f2f2f0"}>
+          {Information}
+        </Section>
       </Main>
     );
   }

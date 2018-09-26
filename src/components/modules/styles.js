@@ -1,43 +1,10 @@
 import styled from "styled-components";
 import { BrowserRouter as Router, Route, Link, Switch } from "react-router-dom";
 
-export const SectionTitle = styled.div`
-  padding-right: ${props => (props.right ? "8px" : "30px")};
-  padding-left: ${props => (props.right ? "30px" : "8px")};
-  font-size: 12px;
-  letter-spacing: 3px;
-
-  padding-top: 8px;
-
-  padding-bottom: 8px;
-  color: #ffffff;
-  margin-left: 20px;
-  margin-top: 40px;
-  background: ${props => (props.color ? props.color : "#000000")};
-`;
-
 export const Emphasize = styled.b`
   color: ${props => (props.color ? props.color : "#000000")};
 `;
 
-export const IntroTitle = styled.div`
-  text-align: ${props => (props.right ? "right" : "left")};
-  width: 70%;
-  flex-grow: 1;
-  font-size: calc(15px + 1vw);
-  font-weight: 200;
-  line-height: 2;
-  margin: 24px;
-`;
-
-export const Introduction = styled.div`
-  width: 50%;
-  flex-grow: 1;
-  font-size: 16px;
-  font-weight: 100;
-  line-height: 2;
-  margin: 24px;
-`;
 export const FeatureTitle = styled.div`
   letter-spacing: 3px;
   font-weight: bold;
@@ -93,7 +60,8 @@ export const Div = styled.div`
 `;
 
 export const Main = styled.div`
-  font-family: Calibri, sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
 `;
 
 export const NavbarLink = styled.li`

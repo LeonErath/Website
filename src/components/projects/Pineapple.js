@@ -3,9 +3,6 @@ import { BrowserRouter as Router, Route, Link, Switch } from "react-router-dom";
 import {
   Main,
   List,
-  SectionTitle,
-  IntroTitle,
-  Introduction,
   ImageList,
   Image,
   SecurityList,
@@ -17,6 +14,9 @@ import {
   Fact,
   FactList
 } from "../modules/styles.js";
+
+import Section from "../modules/Section";
+import Card from "../modules/Card";
 
 import ProjectHeader from "./ProjectHeader.js";
 import PineappleGallery from "./PineappleGallery.js";
@@ -76,15 +76,13 @@ class Pineapple extends Component {
           ]}
         />
 
-        <List>
-          <SectionTitle color={SECTION_COLOR}>PROBLEM</SectionTitle>
-        </List>
-        <List>
-          <IntroTitle>
+        <Section>
+          <Section.Topic color={SECTION_COLOR}>PROBLEM</Section.Topic>
+          <Section.Header>
             We want to use the spirit of the times and use the features of the
             smartphone to help students organize their everyday school life.
-          </IntroTitle>
-          <Introduction>
+          </Section.Header>
+          <Section.Text>
             The computer science and especially the use of the smartphone is
             increasing more and more. Nowadays, it is hard to think away. The
             smartphone is now a must for many students, but many schools are
@@ -103,7 +101,7 @@ class Pineapple extends Component {
               actively integrated into the everyday life of the school.
             </Emphasize>
             <br />
-          </Introduction>
+          </Section.Text>
           <ImageContainer>
             <img
               style={{
@@ -116,7 +114,7 @@ class Pineapple extends Component {
               alt="Stress"
             />
           </ImageContainer>
-        </List>
+        </Section>
 
         <FactList color={FACT_COLOR}>
           <Fact>
@@ -133,23 +131,19 @@ class Pineapple extends Component {
           </Fact>
         </FactList>
 
-        <List>
-          <SectionTitle color={SECTION_COLOR}>SOLUTION</SectionTitle>
-        </List>
-
-        <List>
-          <IntroTitle>
+        <Section>
+          <Section.Topic color={SECTION_COLOR}>SOLUTION</Section.Topic>
+          <Section.Header>
             For each student, his or her own timetable, substitution plan, exam
             plan are put together and suitable articles of the website are
             dynamically displayed to him/her on the basis of his personal
             subjects and courses.
-          </IntroTitle>
-          <IntroTitle right>
-            {" "}
+          </Section.Header>
+          <Section.Header right>
             <ImageButton text="Android" link="/pineappleios" />
             <ImageButton text="iOS" link="/pineappleandroid" />
-          </IntroTitle>
-        </List>
+          </Section.Header>
+        </Section>
 
         <PineappleGallery />
 
@@ -184,75 +178,79 @@ class Pineapple extends Component {
             alt="Pineapple"
           />
         </ImageList>
-        <List>
-          <SectionTitle color={SECTION_COLOR}>SECURITY</SectionTitle>
-        </List>
 
-        <List>
-          <IntroTitle>
+        <Section>
+          <Section.Topic color={SECTION_COLOR}>SECURITY</Section.Topic>
+          <Section.Header>
             Data protection is the most important factor for a successfull
             school app.
-          </IntroTitle>
-          <Introduction>
+          </Section.Header>
+          <Section.Text>
             The data will be treated with the utmost confidence and the personal
             data will be protected against possible attackers. The app is only
             available to students of the Episcopal Marienschule Mönchengladbach
             and represents a project from students to students pose.
-          </Introduction>
-        </List>
+          </Section.Text>
+        </Section>
 
-        <SecurityList>
-          <Feature>
-            <FeatureTitle> Eine App ein User </FeatureTitle>
-          </Feature>
-          <Feature>
-            <FeatureTitle> SSL / TLS Verschlüsselung </FeatureTitle>
-            <FeatureText />
-          </Feature>
-          <Feature>
-            <FeatureTitle>Zugang nur für authentifizierte Nutzer </FeatureTitle>
-            <FeatureText>
-              - Face-to-Face Authentication
-              <br />- Moodle/ILIAS <br />- LDAP/Active Directory
-            </FeatureText>
-          </Feature>
-          <Feature>
-            <FeatureTitle>Datensparsamkeit (§3a BDSG) </FeatureTitle>
-            <FeatureText>
-              - Minimaler Datenaustausch mit dem Server <br />- Individuelle
-              Datenrückgabe für jeden Server
-            </FeatureText>
-          </Feature>
-          <Feature>
-            <FeatureTitle> Jede Schule hat eigenen Server </FeatureTitle>
-            <FeatureText>
-              - Schuldaten werden auf eigenen Server gespeichert <br />-
-              Alleinige Kontrolle bei der Schule
-              <br />- Unabhängigkeit
-            </FeatureText>
-          </Feature>
-          <Feature />
-        </SecurityList>
-        <List>
-          <Feature>
-            <img
-              src="./images/pineapple/pineapple_security.png"
-              alt="Pineapple Security System"
-              style={{ maxWidth: "600px" }}
-            />
-          </Feature>
-        </List>
+        <div
+          style={{
+            flexWrap: "wrap",
+            width: "80%",
+            paddingLeft: "10%",
+            paddingRight: "10%",
+            display: "flex",
+            justifyContent: "space-evenly"
+          }}
+        >
+          <Card>
+            <Card.Image url="url(./images/pineapple/encrpytion.png)">
+              <Card.Icon src="./images/pineapple/encrpytion_icon.png" />
+            </Card.Image>
+            <Card.Header>Encryption</Card.Header>
+            <Card.Text>
+              Every connection to the server is encrypted with SSL / TLS. Each
+              school has its own server so that no data can be tapped from other
+              schools. In addition, only one app can be used for one student
+              only. This ensures security and independence.
+            </Card.Text>
+          </Card>
+          <Card>
+            <Card.Image url="url(./images/pineapple/law.png)">
+              <Card.Icon src="./images/pineapple/law_icon.png" />
+            </Card.Image>
+            <Card.Header>Law</Card.Header>
+            <Card.Text>
+              The app meets the requirements of the law of data economy (§3a
+              BDSG). This means only a minimal exchange of data with the server
+              takes place. Only the individual data for each student will be
+              transferred. Even with theft of a cell phone, no data can be
+              collected from other students.
+            </Card.Text>
+          </Card>
 
-        <List>
-          {" "}
-          <SectionTitle color={SECTION_COLOR}>LONG TERM</SectionTitle>
-        </List>
-        <List>
-          <IntroTitle>
+          <Card>
+            <Card.Image url="url(./images/pineapple/authentication.png)">
+              <Card.Icon src="./images/pineapple/authentication_icon.png" />
+            </Card.Image>
+            <Card.Header>Authentication</Card.Header>
+            <Card.Text>
+              Access to the app is only available to authenticated users. These
+              different authentication options can be used:
+              <br />- Face-to-face authentication
+              <br />- Moodle/ILIAS
+              <br />- LDAP / Active Directory
+            </Card.Text>
+          </Card>
+        </div>
+
+        <Section>
+          <Section.Topic color={SECTION_COLOR}>LONG TERM</Section.Topic>
+          <Section.Header>
             To ensure the long-term success of the app, three things have been
             done.
-          </IntroTitle>
-        </List>
+          </Section.Header>
+        </Section>
 
         <List center>
           <Feature center>
