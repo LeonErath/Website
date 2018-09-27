@@ -1,31 +1,38 @@
-version: 2
-build:
-   machine: true
-   steps:
-     - checkout
-     # start proprietary DB using private Docker image
-     # with credentials stored in the UI
+version: 2.0
 
-     # build the application image
-     - run: docker build -f Dockerfile -t website .
-
-     # deploy the image
-     - run: docker run --name website -d -p 80:80 --rm website
-
-     - run: docker exec -it website bash -c "npm run build"
-
-deploy:
-    branch: master      
+jobs:
+  build:
+    machine: true
     steps:
       - checkout
-      - add_ssh_keys:
-          fingerprints:
-            - "33:c9:99:69:2b:8a:47:ee:d2:7f:87:17:a5:92:54:ce"
+      # start proprietary DB using private Docker image
+      # with credentials stored in the UI
 
-      - run:  scp -r circle-pushing/* leonerath@leonerath.de:/test/
+      # build the application image
+      - run: docker build -f Dockerfile -t website .
+
+      # deploy the image
+      - run: docker run --name website -d -p 80:80 --rm website
+
+      - run: docker exec -it website bash -c "npm run build"
+
+  deploy:  
+      steps:
+        - checkout
+        - add_ssh_keys:
+            fingerprints:
+              - "33:c9:99:69:2b:8a:47:ee:d2:7f:87:17:a5:92:54:ce"
+
+        - run:  scp -r circle-pushing/* leonerath@leonerath.de:/test/
+
 workflows:
   version: 2
-  build_and_deploy:
+  build-and-deploy:
     jobs:
       - build
-      - deploy
+      - deploy:
+          requires:
+            - build
+          filters:
+            branches:
+              only: master
