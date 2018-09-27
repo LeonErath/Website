@@ -17,6 +17,7 @@ jobs:
       - run: docker exec -it website bash -c "npm run build"
 
   deploy:  
+      machine: true
       steps:
         - checkout
         - add_ssh_keys:
