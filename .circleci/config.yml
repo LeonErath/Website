@@ -14,3 +14,13 @@ jobs:
      - run: docker run --name website -d -p 80:80 --rm website
 
      - run: docker exec -it website bash -c "npm run build"
+
+  deploy:
+    branch: master      
+    steps:
+      - checkout
+      - add_ssh_keys:
+          fingerprints:
+            - "33:c9:99:69:2b:8a:47:ee:d2:7f:87:17:a5:92:54:ce"
+
+      - run: scp -r circle-pushing/* leonerath@leonerath.de:/test/
