@@ -26,8 +26,7 @@ jobs:
 
         - run: 
             shell:ssh leonerath@leonerath.de
-            command: |
-              echo "Running test"
+            command: echo "Running test"
               
 
 workflows:
