@@ -24,7 +24,8 @@ jobs:
             fingerprints:
               - "33:c9:99:69:2b:8a:47:ee:d2:7f:87:17:a5:92:54:ce"
 
-        - run: scp -r . leonerath@leonerath.de:~/test/
+        - run: ssh leonerath@leonerath.de
+        - run: echo "hello"
 
 workflows:
   version: 2
