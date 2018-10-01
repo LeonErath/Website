@@ -33,11 +33,68 @@ const List2 = styled.div`
   flex-wrap: wrap;
 `;
 
+const Div1 = styled.div`
+  width: 100%;
+  height: 100vh;
+  background-image: url("./images/Watchlist/background.png");
+`;
+
+const Div2 = styled.div`
+  width: 100%;
+  height: 100vh;
+  background-image: linear-gradient(
+    -45deg,
+    rgba(35, 46, 120, 0.7),
+    rgba(178, 7, 65, 0.9),
+    rgba(215, 12, 81, 0.9)
+  );
+`;
+
+const H1 = styled.div`
+  color: #ffffff;
+  font-size: 80px;
+  letter-spacing: 20px;
+  font-weight: bold;
+`;
+
+const Div = styled.div`
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica,
+    Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: left;
+  margin: 20px;
+  width: 50%;
+  height: 70%;
+  min-width: 380px;
+`;
+
 class Watchlist extends Component {
   render() {
     return (
       <div>
-        Watchlist
+        <Div1>
+          <Div2>
+            <div>
+              <img src="./images/Watchlist/Movies.png" />
+              Projects <br />
+              Resume <br />
+              About Me <br />
+            </div>
+
+            <Div>
+              <H1>Watchlist</H1>
+              <h2>
+                See upcoming Movies and save them into your Watchlist to watch
+                them later.
+              </h2>
+              <button>DOWNLOAD</button>
+            </Div>
+          </Div2>
+        </Div1>
+
         <List2>
           <ProjectInfo>
             <InfoTilte>Technology</InfoTilte>
