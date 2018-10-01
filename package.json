@@ -11,7 +11,7 @@
     "chart.js": "^2.7.2",
     "react": "^16.5.2",
     "react-chartjs": "^1.2.0",
-    "react-dom": "^16.5.1",
+    "react-dom": "^16.5.2",
     "react-pdf": "^3.0.5",
     "react-router": "^4.3.1",
     "react-router-dom": "^4.3.1",
