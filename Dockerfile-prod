@@ -2,12 +2,9 @@
 FROM node:9.6.1 as builder
 RUN mkdir /usr/src/app
 WORKDIR /usr/src/app
-ENV PATH /usr/src/app/node_modules/.bin:$PATH
-COPY package.json /usr/src/app/package.json
-RUN yarn install --silent
-RUN yarn global add react-scripts@1.1.1 --silent
-COPY . /usr/src/app
-RUN yarn run build
+COPY . .
+RUN yarn install --frozen-lockfile --silent
+RUN yarn build
 
 # production environment
 FROM nginx:1.13.9-alpine
