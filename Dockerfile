@@ -7,7 +7,7 @@ WORKDIR /usr/src/app
 
 # install and cache app dependencies
 COPY . .
-RUN yarn intall --frozen-lockfile
+RUN yarn install --frozen-lockfile
 
 # start app
 CMD ["yarn", "start"]
