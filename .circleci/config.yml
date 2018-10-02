@@ -25,8 +25,7 @@ jobs:
             - "33:c9:99:69:2b:8a:47:ee:d2:7f:87:17:a5:92:54:ce"
 
       - run: |
-          TAG=0.1.$CIRCLE_BUILD_NUM
-          docker build -f Dockerfile-prod -t leonerath/website:$TAG .
+          docker build -f Dockerfile-prod -t leonerath/website .
           docker login -u $DOCKER_USER -p $DOCKER_PASS    
           docker push leonerath/website
             
@@ -37,8 +36,6 @@ workflows:
     jobs:
       - build
       - deploy:
-          requires:
-            - build
           filters:
             branches:
               only: master
