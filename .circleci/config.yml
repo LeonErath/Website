@@ -14,7 +14,14 @@ jobs:
       # deploy the image
       - run: docker run --name website -d -p 80:80 --rm website
 
-      - run: docker exec -it website bash -c "npm run build"
+      - run: docker exec -it website bash -c "yarn run build"
+  
+  test:
+    machine: true
+    steps:
+      - checkout
+
+      - run: docker exec -it website bash -c "yarn test"
 
   deploy:
     machine: true
@@ -35,6 +42,9 @@ workflows:
   build-and-deploy:
     jobs:
       - build
+      - test:
+          requires:
+            - build
       - deploy:
           filters:
             branches:
