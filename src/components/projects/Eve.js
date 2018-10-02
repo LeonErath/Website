@@ -28,6 +28,7 @@ const Image = styled.img`
 
 const Container = styled.div`
   display: flex;
+  width: 100%;
   flex-direction: row;
   flex-wrap: wrap-reverse;
   background: #7fd0c0;
@@ -98,11 +99,7 @@ class Eve extends Component {
             {
               title: "DREAM TEAM",
               text:
-                "Daniel Salomon (Design), \
-                Niklas Korz (Python-KI),\
-                Simon Niedermayr (Go-Webserver),\
-                Daniel Scholz (Python-KI),\
-                Leon Erath (Projectmanager)"
+                "Daniel Salomon (Design),Niklas Korz (Python-KI), Simon Niedermayr (Go-Webserver), Daniel Scholz (Python-KI), Leon Erath (Projectmanager"
             },
             {
               title: "GOAL",

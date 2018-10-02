@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { BrowserRouter as Router, Route, Link, Switch } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 export const Emphasize = styled.b`
   color: ${props => (props.color ? props.color : "#000000")};

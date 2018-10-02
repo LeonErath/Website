@@ -1,11 +1,10 @@
 import React, { Component } from "react";
 import ProjectHeader from "./ProjectHeader.js";
 import styled from "styled-components";
-import { BrowserRouter as Router, Route, Link, Switch } from "react-router-dom";
 import Navbar from "../modules/navbar.js";
 import ImageButton from "../modules/ImageButton.js";
 import Demo from "../modules/t2m_demo.js";
-var LineChart = require("react-chartjs").Line;
+let LineChart = require("react-chartjs").Line;
 
 const SectionTitle = styled.div`
   padding-right: ${props => (props.right ? "8px" : "30px")};
@@ -179,8 +178,7 @@ class T2M extends Component {
             {
               title: "DREAM TEAM",
               text:
-                "  Simon Niedermayr, Daniel Scholz, Ivan Marchuk, Marcello Eiermann,\
-                Leon Erath"
+                "  Simon Niedermayr, Daniel Scholz, Ivan Marchuk, Marcello Eiermann, Leon Erath"
             },
             {
               title: "GOAL",
@@ -213,12 +211,7 @@ class T2M extends Component {
           </Introduction>
 
           <ImageContainer>
-            <LineChart
-              data={data}
-              options={options}
-              width="400px"
-              height="300px"
-            />
+            <LineChart data={data} options={options} width="400" height="300" />
           </ImageContainer>
         </List>
 

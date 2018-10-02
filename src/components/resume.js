@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import { Document, Page } from "react-pdf";
 
 import styled from "styled-components";
 
@@ -21,23 +20,10 @@ const Div2 = styled.div`
 `;
 
 class Resume extends Component {
-  state = {
-    numPages: null,
-    pageNumber: 1
-  };
-
   render() {
-    const { pageNumber } = this.state;
     return (
       <Div>
-        <Div2>
-          <Document
-            file="./resume/resume.pdf"
-            onLoadSuccess={this.onDocumentLoad}
-          >
-            <Page pageNumber={pageNumber} />
-          </Document>
-        </Div2>
+        <Div2>Comming Soon...</Div2>
       </Div>
     );
   }

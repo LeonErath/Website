@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { BrowserRouter as Router, Route, Link, Switch } from "react-router-dom";
+import { Link } from "react-router-dom";
 import styled from "styled-components";
 
 const Section = styled.div`
@@ -116,6 +116,7 @@ class About extends Component {
             <ContactInfo>
               <Link to={`/github`}>
                 <img
+                  alt="github"
                   style={{
                     margin: "8px",
                     width: "20px",
@@ -128,6 +129,7 @@ class About extends Component {
               <Link to={`/linkedin`}>
                 {" "}
                 <img
+                  alt="linkedin"
                   style={{
                     margin: "8px",
                     width: "18px",
@@ -140,6 +142,7 @@ class About extends Component {
               <Link to={`/xing`}>
                 {" "}
                 <img
+                  alt="xing"
                   style={{
                     margin: "8px",
                     width: "18px",

@@ -8,6 +8,7 @@ class JournalismFuture extends Component {
     return (
       <Main>
         <img
+          alt="jounalism future banner"
           style={{ width: "100%", objectFit: "contain" }}
           src="./images/journalismfuture/JournalismFutureBanner.png"
         />
@@ -20,9 +21,7 @@ class JournalismFuture extends Component {
             {
               title: "IDEA",
               text:
-                " - World map as the basis for the presentation \
-                 - Connection between Events can be easily displayed \
-                 - Easy to understand"
+                " - World map as the basis for the presentation- Connection between Events can be easily displayed- Easy to understand"
             },
             {
               title: "PROJECT",
