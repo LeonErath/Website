@@ -26,7 +26,7 @@ jobs:
 
         - run: |
             TAG=0.1.$CIRCLE_BUILD_NUM
-            docker build -t  leonerath/Website:$TAG .      
+            docker build -t  leonerath/website:$TAG .      
             docker login -u $DOCKER_USER -p $DOCKER_PASS    
             docker push leonerath/website:$TAG
               
