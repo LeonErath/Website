@@ -16,20 +16,20 @@ jobs:
 
       - run: docker exec -it website bash -c "npm run build"
 
-  deploy:  
-      machine: true
-      steps:
-        - checkout
-        - add_ssh_keys:
-            fingerprints:
-              - "33:c9:99:69:2b:8a:47:ee:d2:7f:87:17:a5:92:54:ce"
+  deploy:
+    machine: true
+    steps:
+      - checkout
+      - add_ssh_keys:
+          fingerprints:
+            - "33:c9:99:69:2b:8a:47:ee:d2:7f:87:17:a5:92:54:ce"
 
-        - run: |
-            TAG=0.1.$CIRCLE_BUILD_NUM
-            docker build -t  leonerath/website:$TAG .      
-            docker login -u $DOCKER_USER -p $DOCKER_PASS    
-            docker push leonerath/website:$TAG
-              
+      - run: |
+          TAG=0.1.$CIRCLE_BUILD_NUM
+          docker build -f Dockerfile-prod -t leonerath/website:$TAG
+          docker login -u $DOCKER_USER -p $DOCKER_PASS    
+          docker push leonerath/website:$TAG
+            
 
 workflows:
   version: 2
