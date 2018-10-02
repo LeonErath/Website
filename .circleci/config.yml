@@ -28,7 +28,7 @@ jobs:
           TAG=0.1.$CIRCLE_BUILD_NUM
           docker build -f Dockerfile-prod -t leonerath/website:$TAG .
           docker login -u $DOCKER_USER -p $DOCKER_PASS    
-          docker push leonerath/website:$TAG
+          docker push leonerath/website
             
 
 workflows:
@@ -39,6 +39,6 @@ workflows:
       - deploy:
           requires:
             - build
-          # filters:
-          #   branches:
-          #     only: master
+          filters:
+            branches:
+              only: master
