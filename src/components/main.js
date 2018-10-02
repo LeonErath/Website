@@ -91,7 +91,7 @@ class Main extends Component {
     return (
       <div>
         <About>
-          <AboutTitle> Hey, I'm Leon.</AboutTitle>
+          <AboutTitle> Hey 👋🏼, I'm Leon.</AboutTitle>
           <AboutText>
             I am 20 years old, living in Mannheim Germany. I love developing
             Apps and want to take you with me, on my way to become a Developer.
