@@ -2,29 +2,35 @@ version: 2.0
 
 jobs:
   build:
-    machine: true
+    machine:
+      docker_layer_caching: true
     steps:
       - checkout
       # start proprietary DB using private Docker image
       # with credentials stored in the UI
-
+     
       # build the application image
       - run: docker build -f Dockerfile -t website .
 
-      # deploy the image
       - run: docker run --name website -d -p 80:80 --rm website
 
       - run: docker exec -it website bash -c "yarn run build"
-  
+    
   test:
-    machine: true
+    machine:
+      docker_layer_caching: true
     steps:
       - checkout
+      
+      - run: docker build -f Dockerfile -t website .
 
+      - run: docker run --name website -d -p 80:80 --rm website
+     
       - run: docker exec -it website bash -c "yarn test"
 
   deploy:
-    machine: true
+    machine:
+      docker_layer_caching: true
     steps:
       - checkout
       - add_ssh_keys:
