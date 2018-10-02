@@ -15,7 +15,7 @@
     "react-pdf": "^3.0.5",
     "react-router": "^4.3.1",
     "react-router-dom": "^4.3.1",
-    "react-scripts": "^1.1.5",
+    "react-scripts": "^2.0.3",
     "scripts": "^0.1.0",
     "styled-components": "^3.4.9"
   },
