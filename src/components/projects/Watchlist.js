@@ -78,7 +78,7 @@ class Watchlist extends Component {
         <Div1>
           <Div2>
             <div>
-              <img src="./images/Watchlist/Movies.png" />
+              <img src="./images/Watchlist/Movies.png" alt="movies" />
               Projects <br />
               Resume <br />
               About Me <br />

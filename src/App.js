@@ -189,6 +189,7 @@ class App extends Component {
                     <NavbarLinkBottom>
                       <LinkStyled2 to={`/github`}>
                         <img
+                          alt="github"
                           style={{
                             width: "20px",
                             objectFit: "contain"
@@ -201,6 +202,7 @@ class App extends Component {
                       <LinkStyled2 to={`/linkedin`}>
                         {" "}
                         <img
+                          alt="linkedin"
                           style={{
                             width: "18px",
                             objectFit: "contain"
@@ -213,6 +215,7 @@ class App extends Component {
                       <LinkStyled2 to={`/xing`}>
                         {" "}
                         <img
+                          alt="xing"
                           style={{
                             width: "18px",
                             objectFit: "contain"

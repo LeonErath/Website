@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import styled from "styled-components";
 import ChatClient from "./chatClient";
-import GithubIcon from "../../svg/github";
 import ChatIcon from "../../svg/chat";
 import DismissIcon from "../../svg/dismiss2";
 import SendIcon from "../../svg/send";
@@ -98,11 +97,6 @@ const ProfileImage = styled.div`
 
   background: #ffffff;
 `;
-const ChatMessages = styled.div`
-  height: 300px;
-  overflow: auto;
-  background: rgb(153, 172, 194);
-`;
 
 const PrivacyPolicy = styled.div`
   padding: 8px;
@@ -178,6 +172,7 @@ class Chatbot extends Component {
             <ProfileImage>
               {" "}
               <img
+                alt="profile"
                 style={{
                   height: "100%",
                   width: "100%",

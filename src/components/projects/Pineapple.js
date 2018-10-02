@@ -1,11 +1,9 @@
 import React, { Component } from "react";
-import { BrowserRouter as Router, Route, Link, Switch } from "react-router-dom";
 import {
   Main,
   List,
   ImageList,
   Image,
-  SecurityList,
   Feature,
   FeatureText,
   FeatureTitle,
@@ -38,6 +36,7 @@ class Pineapple extends Component {
           }}
         >
           <img
+            alt="pineapple banner"
             style={{ width: "100%", objectFit: "contain" }}
             src="./images/pineapple/PineappleBanner.png"
           />
@@ -106,8 +105,6 @@ class Pineapple extends Component {
             <img
               style={{
                 height: "260px",
-                height: "260px",
-
                 objectFit: "contain"
               }}
               src="./images/pineapple/stress.png"

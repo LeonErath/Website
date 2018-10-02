@@ -9,11 +9,10 @@
   "dependencies": {
     "axios": "^0.18.0",
     "browserslist": "^4.1.1",
-    "chart.js": "^2.7.2",
+    "chart.js": "^1.1.1",
     "react": "^16.5.2",
     "react-chartjs": "^1.2.0",
     "react-dom": "^16.5.2",
-    "react-pdf": "^3.0.5",
     "react-router": "^4.3.1",
     "react-router-dom": "^4.3.1",
     "react-scripts": "^2.0.3",
@@ -22,7 +21,8 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "build": "CI=false react-scripts build",
+    "build": "react-scripts build",
+    "test": "jest",
     "eject": "react-scripts eject"
   },
   "browserslist": [
@@ -30,5 +30,8 @@
     "> 1%",
     "maintained node versions",
     "not dead"
-  ]
+  ],
+  "devDependencies": {
+    "react-test-renderer": "^16.5.2"
+  }
 }

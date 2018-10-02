@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import styled from "styled-components";
-import { BrowserRouter as Router, Route, Link, Switch } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 const NavbarStyled = styled.div`
   padding-top: 10px;
@@ -144,7 +144,7 @@ class Navbar extends Component {
               </LinkStyled>
             </NavbarLink2>
             <NavbarLink2 onClick={this.menuClicked}>
-              <img style={{ width: "30px" }} src="./menu.png" />
+              <img alt="menu" style={{ width: "30px" }} src="./menu.png" />
             </NavbarLink2>
             <br />
             {!this.state.closed && (

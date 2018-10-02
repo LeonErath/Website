@@ -23,13 +23,6 @@ const ImpressumText = styled.div`
   letter-spacing: 3px;
 `;
 
-const LawText = styled.div`
-  font-family: "Courier New", Courier, monospace;
-  text-align: center;
-  margin-top: 20px;
-  font-size: 14px;
-`;
-
 class Credit extends Component {
   render() {
     return (
@@ -37,42 +30,49 @@ class Credit extends Component {
         <ImpressumBox>
           <ImpressumText>
             <img
+              alt="webapi"
               src="./copyright/webapi.svg"
               style={{ width: "100px", height: "100px" }}
             />
             Created by mikicon from the Noun Project
             <br />
             <img
+              alt="chatbot"
               src="./copyright/chatbot.svg"
               style={{ width: "100px", height: "100px" }}
             />
             Created by Oksana from the Noun Project
             <br />
             <img
+              alt="music"
               src="./copyright/music.svg"
               style={{ width: "100px", height: "100px" }}
             />
             Created by B Barren from the Noun Project
             <br />
             <img
+              alt="network"
               src="./copyright/network.svg"
               style={{ width: "100px", height: "100px" }}
             />
             Created by gilbert badget from the Noun Project
             <br />
             <img
+              alt="smartphone"
               src="./copyright/smartphone.svg"
               style={{ width: "100px", height: "100px" }}
             />
             Created by Matthias Van Wambeke from the Noun Project
             <br />
             <img
+              alt="stress"
               src="./copyright/stress.svg"
               style={{ width: "100px", height: "100px" }}
             />
             Created by Hare Krishna from the Noun Project
             <br />
             <img
+              alt="copyright"
               src="./copyright/text.svg"
               style={{ width: "100px", height: "100px" }}
             />

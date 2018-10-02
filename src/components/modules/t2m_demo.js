@@ -107,7 +107,7 @@ class Demo extends Component {
     let text = this.state.text;
     let preciseSearch = this.state.preciseSearch;
 
-    if (title.trim() != "" && text.trim().length > 50) {
+    if (title.trim() !== "" && text.trim().length > 50) {
       this.setState({ loading: true });
 
       let that = this;

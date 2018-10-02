@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import styled from "styled-components";
-import { BrowserRouter as Router, Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 const SVG = styled.svg`
   margin-left: 8px;
@@ -30,10 +30,6 @@ const Button = styled.button`
 `;
 
 class ImageButton extends Component {
-  constructor(props) {
-    super(props);
-  }
-
   render() {
     return (
       <Button color={this.props.color} textcolor={this.props.textcolor}>
