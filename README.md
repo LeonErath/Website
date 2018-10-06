@@ -1,4 +1,4 @@
-[![CircleCI](https://circleci.com/gh/LeonErath/Website/tree/master.svg?style=svg)](https://circleci.com/gh/LeonErath/Website/tree/master) [![Website leonerath.de](https://img.shields.io/website-up-down-green-red/http/leonerath.de.svg)](http://leonerath.de/)
+[![CircleCI](https://circleci.com/gh/LeonErath/Website/tree/master.svg?style=svg)](https://circleci.com/gh/LeonErath/Website/tree/master) [![Website leonerath.de](https://img.shields.io/website-up-down-green-red/http/leonerath.de.svg)](http://leonerath.de/)[![CodeFactor](https://www.codefactor.io/repository/github/leonerath/website/badge)](https://www.codefactor.io/repository/github/leonerath/website)
 
 
 # Website
