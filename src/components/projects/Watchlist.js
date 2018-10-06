@@ -313,7 +313,7 @@ class Watchlist extends Component {
                 <H1>Watchlist</H1>
                 <H2>
                   See upcoming Movies and save them into your Watchlist to watch
-                  them later.
+                  them later..
                 </H2>
                 <Button color="white" textcolor="black">
                   DOWNLOAD
