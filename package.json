@@ -8,7 +8,7 @@
   "private": true,
   "dependencies": {
     "axios": "^0.18.0",
-    "browserslist": "^4.1.2",
+    "browserslist": "^4.2.0",
     "chart.js": "^1.1.1",
     "jest-canvas-mock": "^1.1.0",
     "react": "^16.5.2",
