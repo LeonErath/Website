@@ -183,7 +183,6 @@ const Right = styled.div`
   justify-content: flex-end;
   align-items: flex-start;
   flex: 50%;
-  height: 70%;
   min-width: 300px;
 `;
 
