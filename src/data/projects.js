@@ -5,9 +5,27 @@ const data = [
     name: "Text2Music",
     sub: "Turn articles into music.",
     link: "../t2m",
-    icon: "./images/t2m_icon.png",
+    icon: "./images/t2m/terminal.png",
     thumbnail: "./images/t2m.png",
+    links: [
+      {
+        name: "github",
+        url: "github/t2m"
+      }
+    ],
     member: [
+      {
+        name: "Leon Erath",
+        task: "Developer"
+      },
+      {
+        name: "Ivan Marchuk",
+        task: "Developer"
+      },
+      {
+        name: "Tobias Wymer",
+        task: "Developer"
+      },
       {
         name: "Daniel Scholz",
         task: "Developer"
@@ -20,7 +38,7 @@ const data = [
     kind: [{ type: "Desktop" }],
     programmingLanguage: [
       {
-        name: "Php",
+        name: "JavaScript",
         function: "backend"
       },
       {
@@ -35,9 +53,15 @@ const data = [
     name: "EVE",
     sub:
       "Bot's going on<br />A maschine learning chatbot<br />Created with Go and Python",
-    icon: "./images/eve_icon.png",
+    icon: "./images/eve/Logo.png",
     link: "../eve",
     thumbnail: "./images/eve.png",
+    links: [
+      {
+        name: "github",
+        url: "github/eve"
+      }
+    ],
     member: [
       {
         name: "Daniel Scholz",
@@ -53,7 +77,7 @@ const data = [
       },
       {
         name: "Leon Erath",
-        task: "Projectmanagement, Documentation, Software testing"
+        task: "Backend, Documentation, Software testing"
       },
       {
         name: "Simon Niedermayr",
@@ -67,7 +91,7 @@ const data = [
         function: "Webserver"
       },
       {
-        name: "Python 3.6",
+        name: "Python",
         function: "KI"
       }
     ]
@@ -77,9 +101,23 @@ const data = [
     duration: "In progress",
     name: "JournalismFuture",
     sub: "Read the news of tomorrow!",
-    icon: "./images/jf_icon.png",
+    icon: "./images/journalismfuture/Logo.png",
     link: "../journalismfuture",
     thumbnail: "./images/journalismfuture.png",
+    links: [
+      {
+        name: "github",
+        url: ""
+      },
+      {
+        name: "playstore",
+        url: ""
+      },
+      {
+        name: "appstore",
+        url: ""
+      }
+    ],
     member: [
       {
         name: "Leon Erath",
@@ -106,9 +144,15 @@ const data = [
     duration: "1 year",
     name: "Pineapple",
     sub: " Der Ultimative Schulplaner<br />Eine App von Schüler für Schüler",
-    icon: "./images/pineapple_icon.png",
+    icon: "./images/pineapple/LogoBMS.png",
     link: "../pineapple",
     thumbnail: "./images/bmsapp4.png",
+    links: [
+      {
+        name: "github",
+        url: ""
+      }
+    ],
     member: [
       {
         name: "Leon Erath",
@@ -151,6 +195,12 @@ const data = [
     icon: "./images/cloudy_icon.png",
     link: "../cloudy",
     thumbnail: "./images/cloudy.png",
+    links: [
+      {
+        name: "github",
+        url: ""
+      }
+    ],
     member: [
       {
         name: "Leon Erath",
@@ -171,9 +221,19 @@ const data = [
     name: "Watchlist",
     sub:
       "See upcoming Movies and <br />save them into your Watchlist<br /> to watch them later.",
-    icon: "./images/watchlist_icon.png",
+    icon: "./images/Watchlist/Logo.png",
     link: "../watchlist",
     thumbnail: "./images/watchlist.png",
+    links: [
+      {
+        name: "github",
+        url: "github/watchlis"
+      },
+      {
+        name: "playstore",
+        url: ""
+      }
+    ],
     member: [
       {
         name: "Leon Erath",

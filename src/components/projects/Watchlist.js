@@ -183,7 +183,6 @@ const Right = styled.div`
   justify-content: flex-end;
   align-items: flex-start;
   flex: 50%;
-  height: 70%;
   min-width: 300px;
 `;
 
@@ -313,7 +312,7 @@ class Watchlist extends Component {
                 <H1>Watchlist</H1>
                 <H2>
                   See upcoming Movies and save them into your Watchlist to watch
-                  them later..
+                  them later.
                 </H2>
                 <Button color="white" textcolor="black">
                   DOWNLOAD
