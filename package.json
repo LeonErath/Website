@@ -8,7 +8,7 @@
   "private": true,
   "dependencies": {
     "axios": "^0.18.0",
-    "browserslist": "^4.1.2",
+    "browserslist": "^4.2.0",
     "chart.js": "^1.1.1",
     "jest-canvas-mock": "^1.1.0",
     "react": "^16.5.2",
@@ -36,8 +36,8 @@
     "babel-jest": "^23.6.0",
     "babel-preset-env": "^1.7.0",
     "babel-preset-react": "^6.24.1",
-    "enzyme": "^3.6.0",
-    "enzyme-adapter-react-16": "^1.5.0",
+    "enzyme": "^3.7.0",
+    "enzyme-adapter-react-16": "^1.6.0",
     "jest": "^23.6.0",
     "react-test-renderer": "^16.5.2"
   }
