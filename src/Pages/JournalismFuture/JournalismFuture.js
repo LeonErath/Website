@@ -1,7 +1,7 @@
 import React, { Component } from "react";
-import ProjectHeader from "./ProjectHeader.js";
-import Section from "../modules/Section";
-import { Main } from "../modules/styles.js";
+import ProjectHeader from "../../Header/ProjectHeader.js";
+import Section from "../../Section";
+import { Main } from "../../styles.js";
 
 class JournalismFuture extends Component {
   render() {

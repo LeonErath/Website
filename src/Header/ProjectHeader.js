@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import styled from "styled-components";
-import Section from "../modules/Section";
-import { Main } from "../modules/styles.js";
+import Section from "../Section";
+import { Main } from "../styles";
 
 const InfoTilte = styled.div`
   letter-spacing: 3px;

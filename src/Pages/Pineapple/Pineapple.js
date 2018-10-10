@@ -11,15 +11,15 @@ import {
   Emphasize,
   Fact,
   FactList
-} from "../modules/styles.js";
+} from "../../styles.js";
 
-import Section from "../modules/Section";
-import Card from "../modules/Card";
+import Section from "../../Section";
+import Card from "../../Card";
 
-import ProjectHeader from "./ProjectHeader.js";
+import ProjectHeader from "../../Header/ProjectHeader.js";
 import PineappleGallery from "./PineappleGallery.js";
-import Navbar from "../modules/navbar.js";
-import ImageButton from "../modules/ImageButton.js";
+import Navbar from "../../Navbar/navbar.js";
+import ImageButton from "../../Button/ImageButton.js";
 
 const SECTION_COLOR = "#162238";
 const EMPHASIZE_COLOR = "#162238";
