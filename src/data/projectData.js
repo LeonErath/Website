@@ -149,8 +149,12 @@ const data = [
     thumbnail: "./images/bmsapp4.png",
     links: [
       {
-        name: "pinappleandroid",
-        url: ""
+        name: "github",
+        url: "pineappleandroid"
+      },
+      {
+        name: "github",
+        url: "pineappleios"
       }
     ],
     member: [
@@ -192,13 +196,13 @@ const data = [
     duration: "3 months",
     name: "Cloudy",
     sub: "An alternative way to look<br /> at weather forecast.",
-    icon: "./images/cloudy_icon.png",
+    icon: "./images/cloudy/logo.png",
     link: "../cloudy",
     thumbnail: "./images/cloudy.png",
     links: [
       {
         name: "github",
-        url: ""
+        url: "githubcloudy"
       }
     ],
     member: [
@@ -231,7 +235,7 @@ const data = [
       },
       {
         name: "playstore",
-        url: ""
+        url: "playstorewatchlist"
       }
     ],
     member: [

@@ -160,6 +160,28 @@ class App extends Component {
                           "https://github.com/AudiophileDev/T2M")
                       }
                     />
+
+                    <Route
+                      path="/githubjournalismfuture"
+                      component={() =>
+                        (window.location =
+                          "https://github.com/JournalismFuture")
+                      }
+                    />
+                    <Route
+                      path="/playstorewatchlist"
+                      component={() =>
+                        (window.location =
+                          "https://play.google.com/store/apps/details?id=com.leon.app.watchlist")
+                      }
+                    />
+                    <Route
+                      path="/githubwatchlist"
+                      component={() =>
+                        (window.location =
+                          "https://github.com/LeonErath/Watchlist")
+                      }
+                    />
                     <Route
                       path="/pineappleios"
                       component={() =>
@@ -172,6 +194,13 @@ class App extends Component {
                       component={() =>
                         (window.location =
                           "https://github.com/LeonErath/Pineapple")
+                      }
+                    />
+                    <Route
+                      path="/githubcloudy"
+                      component={() =>
+                        (window.location =
+                          "https://github.com/LeonErath/Cloudy")
                       }
                     />
                   </Div>
