@@ -3,19 +3,19 @@ import { BrowserRouter as Router, Route, Link, Switch } from "react-router-dom";
 
 import styled from "styled-components";
 
-import About from "./components/about.js";
-import Projects from "./components/projects.js";
-import Resume from "./components/resume.js";
-import Main from "./components/main.js";
-import Impressum from "./components/impressum.js";
-import Eve from "./components/projects/Eve.js";
-import T2M from "./components/projects/T2M.js";
-import JournalismFuture from "./components/projects/JournalismFuture.js";
-import Pineapple from "./components/projects/Pineapple.js";
-import Watchlist from "./components/projects/Watchlist.js";
-import Cloudy from "./components/projects/Cloudy.js";
-import DataProtection from "./components/dataprotection";
-import Credit from "./components/credit";
+import About from "./Pages/About/about.js";
+import Projects from "./Pages/Projects/projects.js";
+import Resume from "./Pages/Resume/resume.js";
+import Main from "./Pages/Main/main.js";
+import Impressum from "./Pages/Impressum/impressum.js";
+import Eve from "./Pages/Eve/Eve.js";
+import T2M from "./Pages/T2M/T2M.js";
+import JournalismFuture from "./Pages/JournalismFuture/JournalismFuture.js";
+import Pineapple from "./Pages/Pineapple/Pineapple.js";
+import Watchlist from "./Pages/Watchlist/Watchlist.js";
+import Cloudy from "./Pages/Cloudy/Cloudy.js";
+import DataProtection from "./Pages/PrivacyPolicy/dataprotection.js";
+import Credit from "./Pages/Credit/credit.js";
 
 const Navbar = styled.div`
   padding-top: 10px;

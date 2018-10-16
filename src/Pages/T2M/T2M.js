@@ -1,9 +1,9 @@
 import React, { Component } from "react";
-import ProjectHeader from "./ProjectHeader.js";
+import ProjectHeader from "../../Header/ProjectHeader.js";
 import styled from "styled-components";
-import Navbar from "../modules/navbar.js";
-import ImageButton from "../modules/ImageButton.js";
-import Demo from "../modules/t2m_demo.js";
+import Navbar from "../../Navbar/navbar.js";
+import ImageButton from "../../Button/ImageButton.js";
+import Demo from "./Demo.js";
 let LineChart = require("react-chartjs").Line;
 
 const SectionTitle = styled.div`
@@ -127,6 +127,7 @@ const Container = styled.div`
   display: flex;
   flex-direction: row;
   flex-wrap: wrap-reverse;
+  width: 100%;
 `;
 
 class T2M extends Component {

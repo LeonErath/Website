@@ -10,7 +10,7 @@ const data = [
     links: [
       {
         name: "github",
-        url: "github/t2m"
+        url: "githubt2m"
       }
     ],
     member: [
@@ -59,7 +59,7 @@ const data = [
     links: [
       {
         name: "github",
-        url: "github/eve"
+        url: "githubeve"
       }
     ],
     member: [
@@ -107,7 +107,7 @@ const data = [
     links: [
       {
         name: "github",
-        url: ""
+        url: "githubjournalismfuture"
       },
       {
         name: "playstore",
@@ -149,7 +149,7 @@ const data = [
     thumbnail: "./images/bmsapp4.png",
     links: [
       {
-        name: "github",
+        name: "pinappleandroid",
         url: ""
       }
     ],
@@ -227,7 +227,7 @@ const data = [
     links: [
       {
         name: "github",
-        url: "github/watchlis"
+        url: "githubwatchlist"
       },
       {
         name: "playstore",

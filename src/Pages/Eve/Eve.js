@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 
-import ProjectHeader from "./ProjectHeader.js";
-import Navbar from "../modules/navbar.js";
+import ProjectHeader from "../../Header/ProjectHeader.js";
+import Navbar from "../../Navbar/navbar.js";
 import styled from "styled-components";
 import {
   Main,
@@ -9,11 +9,11 @@ import {
   Emphasize,
   Fact,
   FactList
-} from "../modules/styles.js";
-import Section from "../modules/Section";
+} from "../../styles.js";
+import Section from "../../Section";
 
-import ImageButton from "../modules/ImageButton.js";
-import Chatbot from "../modules/chatbot";
+import ImageButton from "../../Button/ImageButton.js";
+import Chatbot from "../../Chatbot/chatbot.js";
 
 const FACT_COLOR = "#f2f2f0";
 const EMPHASIZE_COLOR = "#4f4f4f";

@@ -1,9 +1,9 @@
 import React, { Component } from "react";
 import styled from "styled-components";
 import ChatClient from "./chatClient";
-import ChatIcon from "../../svg/chat";
-import DismissIcon from "../../svg/dismiss2";
-import SendIcon from "../../svg/send";
+import ChatIcon from "../svg/chat";
+import DismissIcon from "../svg/dismiss2";
+import SendIcon from "../svg/send";
 
 const SendButton = styled.button`
   display: flex;
