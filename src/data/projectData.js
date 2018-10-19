@@ -65,11 +65,11 @@ const data = [
     member: [
       {
         name: "Daniel Scholz",
-        task: "Python KI"
+        task: "Python AI"
       },
       {
         name: "Niklas Korz",
-        task: "Python KI"
+        task: "Python AI"
       },
       {
         name: "Daniel Salomon",
