@@ -18,7 +18,7 @@ const InfoText = styled.div`
 
 const ProjectInfo = styled.div`
   margin: 20px;
-  width: 140px;
+  min-width: 200px;
   flex-grow: 1;
   text-align: center;
 `;
