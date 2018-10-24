@@ -11,7 +11,7 @@
     "browserslist": "^4.3.2",
     "chart.js": "^1.1.1",
     "jest-canvas-mock": "^1.1.0",
-    "react": "^16.5.2",
+    "react": "^16.6.0",
     "react-chartjs": "^1.2.0",
     "react-dom": "^16.5.2",
     "react-router": "^4.3.1",
