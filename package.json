@@ -8,17 +8,17 @@
   "private": true,
   "dependencies": {
     "axios": "^0.18.0",
-    "browserslist": "^4.2.1",
+    "browserslist": "^4.3.4",
     "chart.js": "^1.1.1",
     "jest-canvas-mock": "^1.1.0",
-    "react": "^16.5.2",
+    "react": "^16.6.3",
     "react-chartjs": "^1.2.0",
-    "react-dom": "^16.5.2",
+    "react-dom": "^16.6.3",
     "react-router": "^4.3.1",
     "react-router-dom": "^4.3.1",
-    "react-scripts": "^2.0.5",
+    "react-scripts": "^2.1.1",
     "scripts": "^0.1.0",
-    "styled-components": "^4.0.2"
+    "styled-components": "^4.1.1"
   },
   "scripts": {
     "start": "react-scripts start",
@@ -37,8 +37,8 @@
     "babel-preset-env": "^1.7.0",
     "babel-preset-react": "^6.24.1",
     "enzyme": "^3.7.0",
-    "enzyme-adapter-react-16": "^1.6.0",
+    "enzyme-adapter-react-16": "^1.7.0",
     "jest": "^23.6.0",
-    "react-test-renderer": "^16.5.2"
+    "react-test-renderer": "^16.6.3"
   }
 }
