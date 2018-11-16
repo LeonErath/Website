@@ -10,4 +10,6 @@ COPY . .
 RUN yarn install --frozen-lockfile
 
 # start app
-CMD ["yarn", "start"]
+RUN yarn build
+
+EXPOSE 3000
