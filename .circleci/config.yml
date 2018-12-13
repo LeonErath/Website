@@ -4,8 +4,6 @@ jobs:
     machine: true
     steps:
       - checkout
-
-      - setup_remote_docker
       # start proprietary DB using private Docker image
       # with credentials stored in the UI
       # build the application image
