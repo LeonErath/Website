@@ -7,6 +7,8 @@ jobs:
       # start proprietary DB using private Docker image
       # with credentials stored in the UI
       # build the application image
+      - run: docker network create proxy
+
       - run: docker-compose build
 
       - run: docker-compose up -d
