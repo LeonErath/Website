@@ -6,12 +6,12 @@
 
 Build the container:
 ```
-docker build -f Dockerfile-prod -t website-prod .
+ docker-compose -f docker-compose-prod.yml up
 ```
 
-Spin up the container:
+Shut down the container:
 ```
-docker run -it -d -p 80:80 --rm website-prod
+ docker-compose -f docker-compose-prod.yml down
 ```
 
 
