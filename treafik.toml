@@ -1,0 +1,33 @@
+logLevel = "DEBUG"
+defaultEntryPoints = ["http", "https"]
+
+[entryPoints]
+  [entryPoints.http]
+  address = ":80"
+    [entryPoints.http.redirect]
+      entryPoint = "https"
+  [entryPoints.https]
+  address = ":443"
+    [entryPoints.https.tls]
+    
+
+[frontends]
+  [frontends.frontend1]
+  backend = "backend1"
+
+
+[api]
+entrypoint = "dashboard"
+
+[docker]
+endpoint = "unix:///var/run/docker.sock"
+domain = "leonerath.de"
+watch = true
+exposedByDefault = false
+
+[acme]
+email = "me@leonerath.de"
+storage = "acme.json"
+entryPoint = "https"
+onHostRule = true
+onDemand = false
