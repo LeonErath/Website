@@ -1,21 +1,20 @@
 version: 2.0
 jobs:
   build:
-    machine:
-      docker_layer_caching: true
+    machine: true
     steps:
       - checkout
       # start proprietary DB using private Docker image
       # with credentials stored in the UI
       # build the application image
-      - run: docker build -f Dockerfile -t website .
+      - run: docker network create proxy
 
-      - run: docker run --name website -d -p 80:80 --rm website
+      - run: docker-compose build
 
-      - run: docker exec -it website bash -c "yarn run build" 
+      - run: docker-compose up -d
   test:
     machine:
-      docker_layer_caching: true
+      machine: true
     steps:
       - checkout
       
@@ -26,7 +25,7 @@ jobs:
       - run: docker exec -it website bash -c "yarn test"
   deploy:
     machine:
-      docker_layer_caching: true
+      machine: true
     steps:
       - checkout
       - add_ssh_keys:
@@ -34,7 +33,7 @@ jobs:
             - "33:c9:99:69:2b:8a:47:ee:d2:7f:87:17:a5:92:54:ce"
 
       - run: |
-          docker build -f Dockerfile-prod -t leonerath/website .
+          docker build -f Dockerfile -t leonerath/website .
           docker login -u $DOCKER_USER -p $DOCKER_PASS    
           docker push leonerath/website
 workflows:
