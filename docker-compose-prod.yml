@@ -14,8 +14,7 @@ services:
     - /home/spme/.docker/config.json:/config.json
     command: --interval 300 --label-enable
   website:
-    build:
-      .
+    image: leonerath/website:latest
     ports:
       - "3000:3000"
     labels:
