@@ -15,7 +15,6 @@ services:
     command: --interval 300 --label-enable
   website:
     image: leonerath/website:latest
-    pull: true
     ports:
       - "3000:3000"
     labels:
