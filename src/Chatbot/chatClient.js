@@ -75,7 +75,7 @@ class ChatClient extends Component {
     let that = this;
     axios({
       method: "post",
-      url: "https://eve.leonerath.de/messageApi",
+      url: "https://eve.leonerath.de/message-api",
       data: {
         message: message,
         bot: 1

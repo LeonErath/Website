@@ -113,33 +113,34 @@ class Eve extends Component {
         />
 
         <Section>
-          <Section.Topic color={SECTION_COLOR}>PROBLEM</Section.Topic>
-          <Section.Header>
-            People all over the world are struggling with their single existence
-            and the resulting loneliness.
-          </Section.Header>
-          <Section.Text>
-            In doing so, they often find themselves confronted with the problem
-            of addressing other people or even longer having conversations with
-            them. To remedy this, there are numerous dating coaches. Help in
-            this form, however, is{" "}
-            <Emphasize color={EMPHASIZE_COLOR}>
-              very expensive and overcomes the need for introverted people to
-              seek help.
-            </Emphasize>{" "}
-            In addition, it is very difficult to provide the counseling service
-            for the many victims at any time anywhere in the world.
-            <br />
-            <br />
-            In addition, there are videos as well as books, articles in various
-            magazines and lectures, which can be seen on Youtube. However, there
-            is the problem that listeners and readers can only get theoretical
-            solutions to their problems, but can not do practical exercises. In
-            addition, the information media are tailored to the masses and offer
-            no individual advice.
-            <br />
-          </Section.Text>
-
+          <Section.Content>
+            <Section.Topic color={SECTION_COLOR}>PROBLEM</Section.Topic>
+            <Section.Header>
+              People all over the world are struggling with their single
+              existence and the resulting loneliness.
+            </Section.Header>
+            <Section.Text>
+              In doing so, they often find themselves confronted with the
+              problem of addressing other people or even longer having
+              conversations with them. To remedy this, there are numerous dating
+              coaches. Help in this form, however, is{" "}
+              <Emphasize color={EMPHASIZE_COLOR}>
+                very expensive and overcomes the need for introverted people to
+                seek help.
+              </Emphasize>{" "}
+              In addition, it is very difficult to provide the counseling
+              service for the many victims at any time anywhere in the world.
+              <br />
+              <br />
+              In addition, there are videos as well as books, articles in
+              various magazines and lectures, which can be seen on Youtube.
+              However, there is the problem that listeners and readers can only
+              get theoretical solutions to their problems, but can not do
+              practical exercises. In addition, the information media are
+              tailored to the masses and offer no individual advice.
+              <br />
+            </Section.Text>
+          </Section.Content>
           <ImageContainer>
             <img
               style={{
@@ -164,43 +165,45 @@ class Eve extends Component {
         </FactList>
 
         <Section right>
-          <Section.Topic right color={SECTION_COLOR}>
-            SOLUTION
-          </Section.Topic>
-          <Section.Header right>
-            The solution to both problems offers the exercise with an artificial
-            communication partner.
-          </Section.Header>
-          <Section.Text>
-            However, physical forms of such a partner (e.g., robots) are very
-            expensive. An alternative is offered by a virtual partner, which can
-            be integrated into the everyday routines of the person concerned.
-            While the younger part of the population communicates with "Instant
-            Messenger" (WhatsApp, Telegram) day in, day out, the older person is
-            mostly confined to the phone. At both endpoints, our bot "Eve" can
-            be a great way to communicate and create an excellent platform where
-            users can practice communication without pressure or fear of impact
-            in reality.
-            <br /> <br />
-            The main objectives of the project and the associated functionality
-            of the project "Eve" is the possibility of{" "}
-            <Emphasize>
-              communicating with a chatbot through a chat client.
-            </Emphasize>{" "}
-            The user interacts with a daily used and thus already known chat
-            interface. The user receives answers in German, which are influenced
-            by his messages. This allows him to practice what it would be like
-            in reality to communicate with a real potential partner. Each user
-            can create their own artificial partner, which is intended only for
-            one user and independent of the bots of the other users. The custom
-            adjustments made to the bot are saved and recalled when the bot is
-            again in contact. In addition, the learned behavior of the bot is
-            stored.
-            <br /> <br />
-            It is desirable that the user obtains a learning effect and becomes
-            safer in dating situations. He could address his own, individual bot
-            from different platforms.
-          </Section.Text>
+          <Section.Content>
+            <Section.Topic right color={SECTION_COLOR}>
+              SOLUTION
+            </Section.Topic>
+            <Section.Header right>
+              The solution to both problems offers the exercise with an
+              artificial communication partner.
+            </Section.Header>
+            <Section.Text>
+              However, physical forms of such a partner (e.g., robots) are very
+              expensive. An alternative is offered by a virtual partner, which
+              can be integrated into the everyday routines of the person
+              concerned. While the younger part of the population communicates
+              with "Instant Messenger" (WhatsApp, Telegram) day in, day out, the
+              older person is mostly confined to the phone. At both endpoints,
+              our bot "Eve" can be a great way to communicate and create an
+              excellent platform where users can practice communication without
+              pressure or fear of impact in reality.
+              <br /> <br />
+              The main objectives of the project and the associated
+              functionality of the project "Eve" is the possibility of{" "}
+              <Emphasize>
+                communicating with a chatbot through a chat client.
+              </Emphasize>{" "}
+              The user interacts with a daily used and thus already known chat
+              interface. The user receives answers in German, which are
+              influenced by his messages. This allows him to practice what it
+              would be like in reality to communicate with a real potential
+              partner. Each user can create their own artificial partner, which
+              is intended only for one user and independent of the bots of the
+              other users. The custom adjustments made to the bot are saved and
+              recalled when the bot is again in contact. In addition, the
+              learned behavior of the bot is stored.
+              <br /> <br />
+              It is desirable that the user obtains a learning effect and
+              becomes safer in dating situations. He could address his own,
+              individual bot from different platforms.
+            </Section.Text>
+          </Section.Content>
           <ImageContainer>
             <img
               style={{
@@ -237,28 +240,31 @@ class Eve extends Component {
         </FactList>
 
         <Section>
-          <Section.Topic color={SECTION_COLOR}>TARGET GROUP</Section.Topic>
-          <Section.Header>
-            The target group are single persons with deficits in verbal
-            communication.
-          </Section.Header>
-          <Section.Text>
-            This includes, on the one hand, the fears of shy people approaching
-            other people and, on the other hand, problems in the expression and
-            content choice of people willing to talk. The application focuses on
-            people who are familiar with the handling of an "instant messenger".
-            In the German market, this includes above{" "}
-            <Emphasize color={EMPHASIZE_COLOR}>
-              all people aged 14 to 49
-            </Emphasize>
-            , but also the age groups from 50 are strongly represented in
-            percent (Statista, 2018).
-            <br />
-            <br />
-            Since the customer already has an existing audience through his
-            videos and lectures, the age groups from 18 to 30 in particular must
-            be considered.
-          </Section.Text>
+          <Section.Content>
+            <Section.Topic color={SECTION_COLOR}>TARGET GROUP</Section.Topic>
+            <Section.Header>
+              The target group are single persons with deficits in verbal
+              communication.
+            </Section.Header>
+            <Section.Text>
+              This includes, on the one hand, the fears of shy people
+              approaching other people and, on the other hand, problems in the
+              expression and content choice of people willing to talk. The
+              application focuses on people who are familiar with the handling
+              of an "instant messenger". In the German market, this includes
+              above{" "}
+              <Emphasize color={EMPHASIZE_COLOR}>
+                all people aged 14 to 49
+              </Emphasize>
+              , but also the age groups from 50 are strongly represented in
+              percent (Statista, 2018).
+              <br />
+              <br />
+              Since the customer already has an existing audience through his
+              videos and lectures, the age groups from 18 to 30 in particular
+              must be considered.
+            </Section.Text>
+          </Section.Content>
           <ImageContainer>
             <img
               style={{
