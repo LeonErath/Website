@@ -3,7 +3,7 @@ import React, { Component } from "react";
 import styled from "styled-components";
 import { Link } from "react-router-dom";
 
-import Data from "../../data/projectData.js";
+import Data from "../../UTILS/Data";
 
 const Div = styled.div`
   width: 80%;
