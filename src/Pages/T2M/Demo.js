@@ -1,6 +1,9 @@
 import React, { Component } from "react";
 import styled from "styled-components";
 import axios from "axios";
+import APIs from "../../UTILS/API";
+
+const API = APIs.filter(obj => obj.project === "t2m");
 
 const Main = styled.div`
   width: 80%;
@@ -112,7 +115,7 @@ class Demo extends Component {
 
       let that = this;
       axios
-        .get("http://leonerath.de:1247/api/submit", {
+        .get(API + "/api/submit", {
           params: {
             title: title,
             text: text,
@@ -120,7 +123,7 @@ class Demo extends Component {
           }
         })
         .then(response => {
-          let musicPath = "http://leonerath.de:1247" + response.data;
+          let musicPath = API + response.data;
           console.log(response);
           that.setState({
             loading: false,

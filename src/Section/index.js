@@ -3,6 +3,7 @@ import styled from "styled-components";
 import Header from "./Header";
 import Topic from "./Topic";
 import Text from "./Text";
+import Content from "./Content";
 
 const Section = styled.div`
   justify-content: ${props => (props.center ? "center" : "left")};
@@ -22,6 +23,7 @@ const Section = styled.div`
   }
 `;
 
+Section.Content = Content;
 Section.Header = Header;
 Section.Topic = Topic;
 Section.Text = Text;
