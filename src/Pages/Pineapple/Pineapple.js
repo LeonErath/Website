@@ -76,31 +76,34 @@ class Pineapple extends Component {
         />
 
         <Section>
-          <Section.Topic color={SECTION_COLOR}>PROBLEM</Section.Topic>
-          <Section.Header>
-            We want to use the spirit of the times and use the features of the
-            smartphone to help students organize their everyday school life.
-          </Section.Header>
-          <Section.Text>
-            The computer science and especially the use of the smartphone is
-            increasing more and more. Nowadays, it is hard to think away. The
-            smartphone is now a must for many students, but many schools are
-            still reluctant to actively integrate the smartphone into everyday
-            school life.
-            <br />
-            <br />
-            Our project is about a school planner, which should{" "}
-            <Emphasize color={EMPHASIZE_COLOR}>
-              make the school day easier
-            </Emphasize>{" "}
-            for the pupils. The planner should remember as an app to the
-            homework or also to practice time for exams. The goal of the project
-            is to develop a fully functional app for Android and iOS that can be{" "}
-            <Emphasize color={EMPHASIZE_COLOR}>
-              actively integrated into the everyday life of the school.
-            </Emphasize>
-            <br />
-          </Section.Text>
+          <Section.Content>
+            <Section.Topic color={SECTION_COLOR}>PROBLEM</Section.Topic>
+            <Section.Header>
+              We want to use the spirit of the times and use the features of the
+              smartphone to help students organize their everyday school life.
+            </Section.Header>
+            <Section.Text>
+              The computer science and especially the use of the smartphone is
+              increasing more and more. Nowadays, it is hard to think away. The
+              smartphone is now a must for many students, but many schools are
+              still reluctant to actively integrate the smartphone into everyday
+              school life.
+              <br />
+              <br />
+              Our project is about a school planner, which should{" "}
+              <Emphasize color={EMPHASIZE_COLOR}>
+                make the school day easier
+              </Emphasize>{" "}
+              for the pupils. The planner should remember as an app to the
+              homework or also to practice time for exams. The goal of the
+              project is to develop a fully functional app for Android and iOS
+              that can be{" "}
+              <Emphasize color={EMPHASIZE_COLOR}>
+                actively integrated into the everyday life of the school.
+              </Emphasize>
+              <br />
+            </Section.Text>
+          </Section.Content>
           <ImageContainer>
             <img
               style={{

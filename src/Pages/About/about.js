@@ -106,7 +106,7 @@ class About extends Component {
             <ContactInfo>
               <Email>
                 <InfoTilte>EMAIL</InfoTilte>
-                <InfoText>leon-erath@hotmail.de</InfoText>
+                <InfoText>me@leonerath.de</InfoText>
               </Email>
               <Telephone>
                 <InfoTilte>CALL</InfoTilte>
