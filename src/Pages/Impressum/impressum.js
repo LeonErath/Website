@@ -43,7 +43,7 @@ class Impressum extends Component {
             <br />
             DE Germany
             <br />
-            leon-erath@hotmail.de
+            me@leonerath.de
           </ImpressumText>
           <LawText>
             Information according to §5 of the German TMG. Please always use my
