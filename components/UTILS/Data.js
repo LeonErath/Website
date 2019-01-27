@@ -73,7 +73,7 @@ const data = [
       },
       {
         name: "Daniel Salomon",
-        task: "Frontend Design"
+        task: "Frontend, Design"
       },
       {
         name: "Leon Erath",

@@ -69,7 +69,7 @@ const Gallery = [
     title: "GRADES",
     text:
       " In the Grade Planner, the student can enter his own notes. So he has a direct overview of his grade point and a grade pre-announcement for his next testimonial.",
-    image: "/static/images/pineapple/grades_pineapple.png"
+    image: "/static /images/pineapple/grades_pineapple.png"
   },
 
   {

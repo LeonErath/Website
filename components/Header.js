@@ -31,12 +31,14 @@ const Logo = styled.h1`
     text-decoration: none;
   }
   @media (max-width: 1300px) {
-    margin: 0;
+    margin: 8px;
+
     text-align: center;
     padding: 10px 10px 10px 10px;
   }
   @media (max-width: 700px) {
-    font-size: 14px;
+    margin: 8px;
+    font-size: 2rem;
     padding: 10px 10px 10px 10px;
   }
 `;

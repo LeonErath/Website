@@ -8,17 +8,35 @@ const About = styled.div`
   margin-top: 100px;
   margin-bottom: 80px;
   font-family: "Open Sans";
+  @media (max-width: 1300px) {
+    width: 100%;
+  }
+  @media (max-width: 700px) {
+    margin-top: 30px;
+    margin-left: 8px;
+    margin-right: 8px;
+    margin-bottom: 30px;
+    width: 100%;
+  }
 `;
 const AboutTitle = styled.div`
-  font-size: 28px;
+  font-size: 3rem;
   margin-left: 8px;
   margin-right: 8px;
   margin-bottom: 20px;
+
+  @media (max-width: 700px) {
+    font-size: 2.4rem;
+  }
 `;
 const AboutText = styled.div`
   margin: 8px;
   line-height: 2;
-  font-size: 16px;
+  font-size: 2rem;
+
+  @media (max-width: 700px) {
+    font-size: 1.4rem;
+  }
 `;
 
 const Div = styled.div`
@@ -55,24 +73,47 @@ const Project2 = styled.div`
 
 const Description = styled.div`
   margin: 10px;
-  font-size: 16px;
+  font-size: 2rem;
   letter-spacing: 2px;
   line-height: 2;
+
+  @media (max-width: 1300px) {
+    line-height: 1.8;
+    letter-spacing: 1.2px;
+  }
+  @media (max-width: 700px) {
+    line-height: 1.6;
+    letter-spacing: 1.2px;
+    font-size: 1.6rem;
+  }
 `;
 
 const Title = styled.div`
   margin: 10px;
   font-weight: bold;
-  font-size: 30px;
+  font-size: 3rem;
   letter-spacing: 10px;
+  @media (max-width: 1300px) {
+    letter-spacing: 1.4px;
+  }
+  @media (max-width: 700px) {
+    letter-spacing: 1.2px;
+    font-size: 2rem;
+  }
 `;
-const LinkStyled = styled(Link)`
+
+const LinkStyled = styled.a`
   margin: 10px;
-  letter-spacing: 2px;
-  font-size: 14px;
+  font-size: 1.8rem;
   color: #9f9f9f;
-  text-decoration: none;
-  font-weight: 400;
+  cursor: pointer;
+  @media (max-width: 1300px) {
+    letter-spacing: 1.2px;
+  }
+  @media (max-width: 700px) {
+    letter-spacing: 1.2px;
+    font-size: 1.4rem;
+  }
 `;
 
 const Element = styled.div`
@@ -80,8 +121,19 @@ const Element = styled.div`
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  min-width: 300px;
+
   flex-basis: 50%;
+  flex-grow: 1;
+`;
+
+const TextBox = styled.div`
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+
+  flex-basis: 40%;
+  margin: 16px;
   flex-grow: 1;
 `;
 
@@ -95,7 +147,7 @@ const App = () => (
       </AboutText>
     </About>
     <List>
-      <Project2>
+      <Project>
         <Element>
           <img
             alt="JournalismFuture Ad"
@@ -107,19 +159,19 @@ const App = () => (
             }}
           />
         </Element>
-        <Element>
+        <TextBox>
           <Div>
             <Title>JF</Title>
             <Description>Read the news of tomorrow!</Description>
-            <LinkStyled href="/journalismfuture">
-              <a>=> View Project</a>
-            </LinkStyled>
+            <Link href="/journalismfuture">
+              <LinkStyled>➡ View Project</LinkStyled>
+            </Link>
           </Div>
-        </Element>
-      </Project2>
+        </TextBox>
+      </Project>
 
-      <Project>
-        <Element>
+      <Project2>
+        <TextBox>
           <Div>
             <Title>PINEAPPLE</Title>
             <Description>
@@ -127,11 +179,11 @@ const App = () => (
               <br />
               An app from students for students.
             </Description>
-            <LinkStyled href="/pineapple">
-              <a>=> View Project</a>
-            </LinkStyled>
+            <Link href="/pineapple">
+              <LinkStyled>➡ View Project</LinkStyled>
+            </Link>
           </Div>
-        </Element>
+        </TextBox>
         <Element>
           <img
             alt="Pineapple Ad"
@@ -143,9 +195,9 @@ const App = () => (
             }}
           />
         </Element>
-      </Project>
+      </Project2>
 
-      <Project2>
+      <Project>
         <Element>
           {" "}
           <img
@@ -158,7 +210,7 @@ const App = () => (
             }}
           />
         </Element>
-        <Element>
+        <TextBox>
           <Div>
             <Title>EVE</Title>
             <Description>
@@ -167,25 +219,25 @@ const App = () => (
               <br />
               Created with Go and Python
             </Description>
-            <LinkStyled href="/eve">
-              <a>=> View Project</a>
-            </LinkStyled>
+            <Link href="/eve">
+              <LinkStyled>➡ View Project</LinkStyled>
+            </Link>
           </Div>
-        </Element>
-      </Project2>
-      <Project>
-        <Element>
+        </TextBox>
+      </Project>
+      <Project2>
+        <TextBox>
           <Div>
             <Title>Text2Music</Title>
             <Description>
               Create music from text
               <br />
             </Description>
-            <LinkStyled href="/t2m">
-              <a>=> View Project</a>
-            </LinkStyled>
+            <Link href="/t2m">
+              <LinkStyled>➡ View Project</LinkStyled>
+            </Link>
           </Div>
-        </Element>
+        </TextBox>
         <Element>
           {" "}
           <img
@@ -198,8 +250,8 @@ const App = () => (
             }}
           />
         </Element>
-      </Project>
-      <Project2>
+      </Project2>
+      <Project>
         <Element>
           <img
             alt="Cloudy Ad"
@@ -211,22 +263,22 @@ const App = () => (
             }}
           />
         </Element>
-        <Element>
+        <TextBox>
           <Div>
             <Title>CLOUDY</Title>
             <Description>
               An alternative way to look
               <br /> at weather forecast.
             </Description>
-            <LinkStyled href="/cloudy">
-              <a>=> View Project</a>
-            </LinkStyled>
+            <Link href="/cloudy">
+              <LinkStyled>➡ View Project</LinkStyled>
+            </Link>
           </Div>
-        </Element>
-      </Project2>
+        </TextBox>
+      </Project>
 
-      <Project>
-        <Element>
+      <Project2>
+        <TextBox>
           <Div>
             <Title>WATCHLIST</Title>
             <Description>
@@ -235,11 +287,11 @@ const App = () => (
               <br /> to watch them later.
               <br />
             </Description>
-            <LinkStyled href="/watchlist">
-              <a>=> View Project</a>
-            </LinkStyled>
+            <Link href="/watchlist">
+              <LinkStyled>➡ View Project</LinkStyled>
+            </Link>
           </Div>
-        </Element>
+        </TextBox>
         <Element>
           <img
             alt="Watchlist Ad"
@@ -251,7 +303,7 @@ const App = () => (
             }}
           />
         </Element>
-      </Project>
+      </Project2>
     </List>
   </div>
 );

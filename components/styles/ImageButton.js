@@ -10,13 +10,10 @@ const SVG = styled.svg`
   fill: ${props => (props.textcolor ? props.textcolor : "white")};
 `;
 
-const Button = styled.button`
+const Button = styled.div`
   cursor: pointer;
-  font-family: Calibri, sans-serif;
   letter-spacing: 1px;
-  color: ${props => (props.textcolor ? props.textcolor : "white")};
   background: ${props => (props.color ? props.color : "black")};
-  font-size: 16px;
   margin: 0.5em;
   padding: 0.25em 1em;
   border: 2px solid ${props => (props.color ? props.color : "black")};
@@ -28,6 +25,16 @@ const Button = styled.button`
   &:hover {
     transform: scale(1.3);
   }
+`;
+
+const LinkContent = styled.a`
+  color: ${props => (props.textcolor ? props.textcolor : "white")};
+  background: ${props => (props.color ? props.color : "black")};
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  line-height: 1;
+  font-weight: 400;
 `;
 
 class ImageButton extends Component {
@@ -43,7 +50,10 @@ class ImageButton extends Component {
           }}
           href={this.props.link}
         >
-          <a>
+          <LinkContent
+            color={this.props.color}
+            textcolor={this.props.textcolor}
+          >
             {this.props.text}
             <SVG
               viewBox="0 0 877.547 855.818"
@@ -57,7 +67,7 @@ class ImageButton extends Component {
                 transform="translate(0 -0.297)"
               />
             </SVG>
-          </a>
+          </LinkContent>
         </Link>
       </Button>
     );

@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 
-import ProjectHeader from "../../Header/ProjectHeader.js";
-import Navbar from "../../Navbar/navbar.js";
+import ProjectHeader from "../components/Header/ProjectHeader.js";
 import styled from "styled-components";
 import {
   Main,
@@ -9,11 +8,11 @@ import {
   Emphasize,
   Fact,
   FactList
-} from "../components/src/styles.js";
-import Section from "../components/src/Section";
+} from "../components/styles/styles.js";
+import Section from "../components/styles/Section";
 
-import ImageButton from "../../Button/ImageButton.js";
-import Chatbot from "../../Chatbot/chatbot.js";
+import ImageButton from "../components/styles/ImageButton.js";
+import Chatbot from "../components/Chatbot/chatbot.js";
 
 const FACT_COLOR = "#f2f2f0";
 const EMPHASIZE_COLOR = "#4f4f4f";
@@ -68,8 +67,6 @@ class Eve extends Component {
   render() {
     return (
       <Main>
-        <Navbar color={NAVBAR_COLOR} />
-
         <Container>
           <Div>
             <Title>EVE</Title>
@@ -80,17 +77,17 @@ class Eve extends Component {
               <ImageButton
                 text="Test our Product"
                 color={"#4c4c4c"}
-                link="/githubeve"
+                link="https://github.com/AAA-Intelligence/eve"
               />
               <ImageButton
                 text="Documentation"
                 color={"#4c4c4c"}
-                link="/documentationeve"
+                link="https://github.com/AAA-Intelligence/eve/wiki/EVE-API"
               />
             </div>
           </Div>
           <ImageContainer>
-            <Image src="./images/eve/iMac.png" alt="Pineapple" />
+            <Image src="/static/images/eve/iMac.png" alt="Pineapple" />
           </ImageContainer>
         </Container>
 
@@ -149,7 +146,7 @@ class Eve extends Component {
                 flexGrow: "1",
                 objectFit: "contain"
               }}
-              src="./images/eve/Chatbot.png"
+              src="/static/images/eve/Chatbot.png"
               alt="Chatbot"
             />
           </ImageContainer>
@@ -212,7 +209,7 @@ class Eve extends Component {
                 flexGrow: "1",
                 objectFit: "contain"
               }}
-              src="./images/eve/EveArchitecture.png"
+              src="/static/images/eve/EveArchitecture.png"
               alt="Chatbot"
             />
           </ImageContainer>
@@ -273,7 +270,7 @@ class Eve extends Component {
                 flexGrow: "1",
                 objectFit: "contain"
               }}
-              src="./images/eve/network.png"
+              src="/static/images/eve/network.png"
               alt="Network"
             />
           </ImageContainer>

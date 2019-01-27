@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import styled from "styled-components";
-import WatchlistNavbar from "./WatchlistNavbar";
 
 const ImageDiv = styled.div`
   width: 100%;
@@ -103,6 +102,10 @@ const Seperator = styled.div`
   }
 `;
 
+const Div = styled.div`
+  margin-top: -20px;
+`;
+
 class WatchlistCover extends Component {
   constructor(props) {
     super(props);
@@ -120,10 +123,9 @@ class WatchlistCover extends Component {
 
   render() {
     return (
-      <div>
+      <Div>
         <ImageDiv>
           <GradientDiv>
-            <WatchlistNavbar />
             <DivContent>
               <Left>
                 <H1>Watchlist</H1>
@@ -137,7 +139,7 @@ class WatchlistCover extends Component {
               </Left>
               <Right>
                 <img
-                  src="./images/Watchlist/movie_covers.png"
+                  src="/static/images/Watchlist/movie_covers.png"
                   style={{
                     objectFit: "contain",
                     width: "50%",
@@ -150,7 +152,7 @@ class WatchlistCover extends Component {
             <Seperator />
           </GradientDiv>
         </ImageDiv>
-      </div>
+      </Div>
     );
   }
 }

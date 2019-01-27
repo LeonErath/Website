@@ -1,10 +1,10 @@
 import React, { Component } from "react";
-import ProjectHeader from "../components/src/Header/ProjectHeader.js";
+import ProjectHeader from "../components/Header/ProjectHeader.js";
 import styled from "styled-components";
-import Navbar from "../components/src/Navbar/navbar.js";
-import ImageButton from "../components/src/Button/ImageButton.js";
-import Demo from "../components/src/Pages/T2M/Demo.js";
-import Section from "../components/src/Section";
+import Demo from "../components/Demo.js";
+import Section from "../components/styles/Section";
+
+import ImageButton from "../components/styles/ImageButton.js";
 
 let LineChart = require("react-chartjs").Line;
 
@@ -162,7 +162,6 @@ class T2M extends Component {
 
     return (
       <Main>
-        <Navbar color="#ffffff" textcolor="#000000" />
         <Container>
           <Div>
             <Title>T2M</Title>
@@ -177,7 +176,7 @@ class T2M extends Component {
             </div>
           </Div>
           <ImageContainer>
-            <Image src="./images/t2m/terminal.png" alt="terminal" />
+            <Image src="/static/images/t2m/terminal.png" alt="terminal" />
           </ImageContainer>
         </Container>
 
@@ -263,7 +262,7 @@ class T2M extends Component {
                 flexGrow: "1",
                 objectFit: "contain"
               }}
-              src="./images/t2m/t2marchitecture.png"
+              src="/static/images/t2m/t2marchitecture.png"
               alt="Chatbot"
             />
             <audio controls>
