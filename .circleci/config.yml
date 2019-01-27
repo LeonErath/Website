@@ -12,17 +12,6 @@ jobs:
       - run: docker-compose build
 
       - run: docker-compose up -d
-  test:
-    machine:
-      machine: true
-    steps:
-      - checkout
-      
-      - run: docker build -f Dockerfile -t website .
-
-      - run: docker run --name website -d -p 80:80 --rm website
-     
-      - run: docker exec -it website bash -c "yarn test"
   deploy:
     machine:
       machine: true
@@ -47,7 +36,6 @@ workflows:
       - deploy:
           requires:
             - build
-            - test
           filters:
             branches:
               only: master

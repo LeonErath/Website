@@ -7,7 +7,11 @@ WORKDIR /usr/src/app
 
 # install and cache app dependencies
 COPY . .
-RUN yarn install --frozen-lockfile
+
+
+RUN npm install
+
+RUN npm run build
 
 # start app
-CMD ["yarn", "start"]
+CMD ["npm", "start"]
