@@ -1,16 +1,13 @@
 import React, { Component } from "react";
-
-import ProjectHeader from "../components/Header/ProjectHeader.js";
 import styled from "styled-components";
 import {
-  Main,
   ImageContainer,
   Emphasize,
   Fact,
   FactList
 } from "../components/styles/styles.js";
 import Section from "../components/styles/Section";
-
+import { ProjectBar, SubItem } from "../components/styles/ProjectBar";
 import ImageButton from "../components/styles/ImageButton.js";
 import Chatbot from "../components/Chatbot/chatbot.js";
 
@@ -44,7 +41,7 @@ const Div = styled.div`
   align-items: center;
   margin: 20px;
   width: 50%;
-  min-width: 380px;
+  flex-basis: 380px;
 `;
 
 const Title = styled.div`
@@ -53,6 +50,9 @@ const Title = styled.div`
   font-weight: 100;
   margin: 8px;
   color: #ffffff;
+  @media (max-width: 700px) {
+    letter-spacing: 10px;
+  }
 `;
 
 const Subtitle = styled.div`
@@ -61,12 +61,22 @@ const Subtitle = styled.div`
   font-weight: 100;
   margin: 8px;
   color: #ffffff;
+  @media (max-width: 700px) {
+    letter-spacing: 4px;
+  }
+`;
+
+const ImageStyled = styled.img`
+  max-height: 80%;
+  max-width: 80%;
+  flex-grow: 1;
+  object-fit: contain;
 `;
 
 class Eve extends Component {
   render() {
     return (
-      <Main>
+      <div>
         <Container>
           <Div>
             <Title>EVE</Title>
@@ -91,23 +101,24 @@ class Eve extends Component {
           </ImageContainer>
         </Container>
 
-        <ProjectHeader
-          information={[
-            {
-              title: "DREAM TEAM",
-              text:
-                "Daniel Salomon (Design),Niklas Korz (Python-KI), Simon Niedermayr (Go-Webserver), Daniel Scholz (Python-KI), Leon Erath (Projectmanager"
-            },
-            {
-              title: "GOAL",
-              text: "the simulation of chat parteners with machine learing"
-            },
-            {
-              title: "DURATION",
-              text: "3 months"
-            }
-          ]}
-        />
+        <ProjectBar>
+          <SubItem>
+            <div>Dream Team</div>
+            <div>
+              Daniel Salomon (Design),Niklas Korz (Python-KI), Simon Niedermayr
+              (Go-Webserver), Daniel Scholz (Python-KI), Leon Erath
+              (Projectmanager)
+            </div>
+          </SubItem>
+          <SubItem>
+            <div>GOAL</div>
+            <div>The simulation of chat parteners with machine learing</div>
+          </SubItem>
+          <SubItem>
+            <div>DURATION</div>
+            <div>3 months</div>
+          </SubItem>
+        </ProjectBar>
 
         <Section>
           <Section.Content>
@@ -139,16 +150,7 @@ class Eve extends Component {
             </Section.Text>
           </Section.Content>
           <ImageContainer>
-            <img
-              style={{
-                maxHeight: "80%",
-                maxWidth: "80%",
-                flexGrow: "1",
-                objectFit: "contain"
-              }}
-              src="/static/images/eve/Chatbot.png"
-              alt="Chatbot"
-            />
+            <ImageStyled src="/static/images/eve/Chatbot.png" alt="Chatbot" />
           </ImageContainer>
         </Section>
 
@@ -163,9 +165,7 @@ class Eve extends Component {
 
         <Section right>
           <Section.Content>
-            <Section.Topic right color={SECTION_COLOR}>
-              SOLUTION
-            </Section.Topic>
+            <Section.Topic color={SECTION_COLOR}>SOLUTION</Section.Topic>
             <Section.Header right>
               The solution to both problems offers the exercise with an
               artificial communication partner.
@@ -202,13 +202,7 @@ class Eve extends Component {
             </Section.Text>
           </Section.Content>
           <ImageContainer>
-            <img
-              style={{
-                maxHeight: "80%",
-                maxWidth: "80%",
-                flexGrow: "1",
-                objectFit: "contain"
-              }}
+            <ImageStyled
               src="/static/images/eve/EveArchitecture.png"
               alt="Chatbot"
             />
@@ -263,25 +257,13 @@ class Eve extends Component {
             </Section.Text>
           </Section.Content>
           <ImageContainer>
-            <img
-              style={{
-                maxHeight: "60%",
-                maxWidth: "60%",
-                flexGrow: "1",
-                objectFit: "contain"
-              }}
-              src="/static/images/eve/network.png"
-              alt="Network"
-            />
+            <ImageStyled src="/static/images/eve/network.png" alt="Network" />
           </ImageContainer>
         </Section>
 
-        <Section right>
-          <Section.Topic right color={SECTION_COLOR}>
-            DATA
-          </Section.Topic>
-
-          <Section.Header right>
+        <Section>
+          <Section.Topic color={SECTION_COLOR}>DATA</Section.Topic>
+          <Section.Header>
             To ensure the most authentic chat experience possible with the bot,
             both an AI in the form of neural networks and static rules are used.
           </Section.Header>
@@ -346,7 +328,7 @@ class Eve extends Component {
         <div style={{ position: "fixed", bottom: "20px", right: "3%" }}>
           <Chatbot />
         </div>
-      </Main>
+      </div>
     );
   }
 }

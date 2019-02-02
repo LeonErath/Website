@@ -25,35 +25,25 @@ const Button = styled.div`
   &:hover {
     transform: scale(1.3);
   }
-`;
 
-const LinkContent = styled.a`
-  color: ${props => (props.textcolor ? props.textcolor : "white")};
-  background: ${props => (props.color ? props.color : "black")};
-  font-size: 16px;
-  display: flex;
-  align-items: center;
-  line-height: 1;
-  font-weight: 400;
+  a {
+    color: ${props => (props.textcolor ? props.textcolor : "white")};
+    background: ${props => (props.color ? props.color : "black")};
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+
+    line-height: 1;
+    font-weight: 400;
+  }
 `;
 
 class ImageButton extends Component {
   render() {
     return (
       <Button color={this.props.color} textcolor={this.props.textcolor}>
-        <Link
-          style={{
-            color: "inherit",
-            textDecoration: "inherit",
-            display: "inherit",
-            alignItems: "inherit"
-          }}
-          href={this.props.link}
-        >
-          <LinkContent
-            color={this.props.color}
-            textcolor={this.props.textcolor}
-          >
+        <Link href={this.props.link}>
+          <a>
             {this.props.text}
             <SVG
               viewBox="0 0 877.547 855.818"
@@ -67,7 +57,7 @@ class ImageButton extends Component {
                 transform="translate(0 -0.297)"
               />
             </SVG>
-          </LinkContent>
+          </a>
         </Link>
       </Button>
     );

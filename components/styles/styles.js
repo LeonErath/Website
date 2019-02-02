@@ -33,6 +33,9 @@ export const Fact = styled.div`
   line-height: 2;
   font-weight: 100;
   margin: 24px;
+  @media (max-width: 700px) {
+    margin: 10px;
+  }
 `;
 
 export const List = styled.div`
@@ -57,11 +60,6 @@ export const NavbarStyled = styled.div`
 export const Div = styled.div`
   background: ${props => (props.color ? props.color : "#000000")};
   height: 57px;
-`;
-
-export const Main = styled.div`
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
-    Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
 `;
 
 export const NavbarLink = styled.li`
@@ -105,8 +103,8 @@ export const LinkStyled = styled(Link)`
 
 export const ImageContainer = styled.div`
   flex-grow: 1;
-  width: 44%;
-  min-width: 400px;
+  width: 46%;
+  flex-basis: 400px;
   display: flex;
   align-items: center;
   justify-content: center;

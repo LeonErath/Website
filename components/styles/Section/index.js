@@ -21,6 +21,18 @@ const Section = styled.div`
     padding-left: 3%;
     padding-right: 3%;
   }
+
+  ${Content} {
+    align-items: ${props => (props.right ? "flex-end" : "flex-start")};
+  }
+
+  ${Topic} {
+    padding-right: ${props => (props.right ? "8px" : "30px")};
+    padding-left: ${props => (props.right ? "30px" : "8px")};
+  }
+  ${Header} {
+    text-align: ${props => (props.right ? "right" : "left")};
+  }
 `;
 
 Section.Content = Content;

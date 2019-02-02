@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import {
-  Main,
   List,
   ImageList,
   Image,
@@ -16,7 +15,7 @@ import {
 import Section from "../components/styles/Section";
 import Card from "../components/styles/Card";
 
-import ProjectHeader from "../components/Header/ProjectHeader.js";
+import { ProjectBar, SubItem } from "../components/styles/ProjectBar";
 import PineappleGallery from "../components/PineappleGallery.js";
 
 import ImageButton from "../components/styles/ImageButton.js";
@@ -28,7 +27,7 @@ const FACT_COLOR = "#f2f2f0";
 class Pineapple extends Component {
   render() {
     return (
-      <Main>
+      <div>
         <div
           style={{
             position: "relative"
@@ -56,23 +55,23 @@ class Pineapple extends Component {
           </div>
         </div>
 
-        <ProjectHeader
-          information={[
-            {
-              title: "Dream Team",
-              text:
-                "Gero Embser (iOS-App), Leon Erath (Android App), Florian Brandt (Server)"
-            },
-            {
-              title: "AWARDS",
-              text: "Top 10 of 1600 Projects"
-            },
-            {
-              title: "PROJECT",
-              text: "1 year."
-            }
-          ]}
-        />
+        <ProjectBar>
+          <SubItem>
+            <div>Dream Team</div>
+            <div>
+              Gero Embser (iOS-App), Leon Erath (Android App), Florian Brandt
+              (Server)
+            </div>
+          </SubItem>
+          <SubItem>
+            <div>AWARDS</div>
+            <div>Top 10 of 1600 Projects</div>
+          </SubItem>
+          <SubItem>
+            <div>PROJECT</div>
+            <div>1 year.</div>
+          </SubItem>
+        </ProjectBar>
 
         <Section>
           <Section.Content>
@@ -279,7 +278,7 @@ class Pineapple extends Component {
             </FeatureText>
           </Feature>
         </List>
-      </Main>
+      </div>
     );
   }
 }

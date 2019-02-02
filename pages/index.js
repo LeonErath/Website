@@ -107,6 +107,23 @@ const LinkStyled = styled.a`
   font-size: 1.8rem;
   color: #9f9f9f;
   cursor: pointer;
+  background: linear-gradient(
+    to top,
+    #fff 0%,
+    ${props => props.backgroundColor || "palevioletred"} 100%
+  );
+  background-position: 0 100%;
+  background-repeat: repeat-x;
+  background-size: 2px 2px;
+  color: #000;
+  text-decoration: none;
+  transition: background-size 0.2s;
+
+  padding: 2px;
+  :hover {
+    background-size: 4px 50px;
+  }
+
   @media (max-width: 1300px) {
     letter-spacing: 1.2px;
   }
@@ -164,7 +181,9 @@ const App = () => (
             <Title>JF</Title>
             <Description>Read the news of tomorrow!</Description>
             <Link href="/journalismfuture">
-              <LinkStyled>➡ View Project</LinkStyled>
+              <LinkStyled backgroundColor="#009587">
+                ➡ View Project ⬅
+              </LinkStyled>
             </Link>
           </Div>
         </TextBox>
@@ -180,7 +199,9 @@ const App = () => (
               An app from students for students.
             </Description>
             <Link href="/pineapple">
-              <LinkStyled>➡ View Project</LinkStyled>
+              <LinkStyled backgroundColor="#ff4a42">
+                ➡ View Project ⬅
+              </LinkStyled>
             </Link>
           </Div>
         </TextBox>
@@ -220,7 +241,9 @@ const App = () => (
               Created with Go and Python
             </Description>
             <Link href="/eve">
-              <LinkStyled>➡ View Project</LinkStyled>
+              <LinkStyled backgroundColor="#49b49c">
+                ➡ View Project ⬅
+              </LinkStyled>
             </Link>
           </Div>
         </TextBox>
@@ -234,7 +257,9 @@ const App = () => (
               <br />
             </Description>
             <Link href="/t2m">
-              <LinkStyled>➡ View Project</LinkStyled>
+              <LinkStyled backgroundColor="#d662c0">
+                ➡ View Project ⬅
+              </LinkStyled>
             </Link>
           </Div>
         </TextBox>
@@ -251,7 +276,7 @@ const App = () => (
           />
         </Element>
       </Project2>
-      <Project>
+      {/* <Project>
         <Element>
           <img
             alt="Cloudy Ad"
@@ -303,7 +328,7 @@ const App = () => (
             }}
           />
         </Element>
-      </Project2>
+      </Project2> */}
     </List>
   </div>
 );

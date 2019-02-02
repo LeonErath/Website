@@ -1,47 +1,22 @@
 import React, { Component } from "react";
-import ProjectHeader from "../components/Header/ProjectHeader.js";
+
 import styled from "styled-components";
 import Demo from "../components/Demo.js";
 import Section from "../components/styles/Section";
-
+import { ProjectBar, SubItem } from "../components/styles/ProjectBar";
 import ImageButton from "../components/styles/ImageButton.js";
-
+import {
+  ImageContainer,
+  Emphasize,
+  Fact,
+  FactList
+} from "../components/styles/styles.js";
 let LineChart = require("react-chartjs").Line;
 
 const FACT_COLOR = "#f2f2f0";
 const EMPHASIZE_COLOR = "#4f4f4f";
 const NAVBAR_COLOR = "#7fd0c0";
 const SECTION_COLOR = "#730000";
-
-const SectionTitle = styled.div`
-  padding-right: ${props => (props.right ? "8px" : "30px")};
-  padding-left: ${props => (props.right ? "30px" : "8px")};
-  font-size: 12px;
-  letter-spacing: 3px;
-
-  padding-top: 8px;
-
-  padding-bottom: 8px;
-  color: #ffffff;
-  margin-left: 20px;
-  margin-top: 40px;
-  background: #730000;
-`;
-
-const Fact = styled.div`
-  text-align: center;
-
-  font-size: calc(12px + 1vw);
-
-  font-family: Calibri, sans-serif;
-  line-height: 2;
-  font-weight: 100;
-  margin: 24px;
-`;
-
-const Emphasize = styled.b`
-  color: #730000;
-`;
 
 const IntroTitle = styled.div`
   text-align: ${props => (props.right ? "right" : "left")};
@@ -52,46 +27,6 @@ const IntroTitle = styled.div`
   font-weight: 200;
   line-height: 2;
   margin: 24px;
-`;
-
-const Introduction = styled.div`
-  flex-grow: 1;
-  width: 50%;
-  font-size: 16px;
-  font-weight: 100;
-  line-height: 2;
-  margin: 24px;
-`;
-
-const ImageContainer = styled.div`
-  flex-grow: 1;
-  width: 45%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-`;
-
-const List = styled.div`
-  justify-content: ${props => (props.center ? "center" : "left")};
-
-  width: 80%;
-  padding-left: 10%;
-  padding-right: 10%;
-  margin-top: 20px;
-
-  display: flex;
-  flex-direction: ${props => (props.right ? "row-reverse" : "row")};
-  flex-wrap: wrap;
-`;
-
-const FactList = styled(List)`
-  justify-content: center;
-  background: #f2f2f0;
-`;
-
-const Main = styled.div`
-  font-family: Calibri, sans-serif;
 `;
 
 const Div = styled.div`
@@ -105,7 +40,7 @@ const Div = styled.div`
   align-items: center;
   margin: 20px;
   width: 50%;
-  min-width: 380px;
+  flex-basis: 380px;
 `;
 
 const Title = styled.div`
@@ -114,6 +49,9 @@ const Title = styled.div`
   font-weight: 100;
   margin: 8px;
   color: #000000;
+  @media (max-width: 700px) {
+    letter-spacing: 10px;
+  }
 `;
 
 const Subtitle = styled.div`
@@ -122,12 +60,26 @@ const Subtitle = styled.div`
   font-weight: 100;
   margin: 8px;
   color: #000000;
+  @media (max-width: 700px) {
+    letter-spacing: 4px;
+  }
 `;
 
 const Image = styled.img`
   margin: 20px;
   width: 80%;
   object-fit: contain;
+`;
+
+const MusicContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  audio {
+    margin-top: 30px;
+    width: 300px;
+  }
 `;
 
 const Container = styled.div`
@@ -161,7 +113,7 @@ class T2M extends Component {
     };
 
     return (
-      <Main>
+      <div>
         <Container>
           <Div>
             <Title>T2M</Title>
@@ -180,23 +132,23 @@ class T2M extends Component {
           </ImageContainer>
         </Container>
 
-        <ProjectHeader
-          information={[
-            {
-              title: "DREAM TEAM",
-              text:
-                "Simon Niedermayr, Daniel Scholz, Ivan Marchuk, Marcello Eiermann, Leon Erath"
-            },
-            {
-              title: "GOAL",
-              text: "Generate music from text"
-            },
-            {
-              title: "DURATION",
-              text: "3 moths."
-            }
-          ]}
-        />
+        <ProjectBar>
+          <SubItem>
+            <div>Dream Team</div>
+            <div>
+              Simon Niedermayr, Daniel Scholz, Ivan Marchuk, Marcello Eiermann,
+              Leon Erath
+            </div>
+          </SubItem>
+          <SubItem>
+            <div>GOAL</div>
+            <div>Generate music from text</div>
+          </SubItem>
+          <SubItem>
+            <div>DURATION</div>
+            <div>3 months</div>
+          </SubItem>
+        </ProjectBar>
 
         <Section>
           <Section.Content>
@@ -219,14 +171,21 @@ class T2M extends Component {
             </Section.Text>
           </Section.Content>
           <ImageContainer>
-            <LineChart data={data} options={options} width="400" height="300" />
+            <LineChart
+              data={data}
+              options={options}
+              width="400"
+              height="300"
+              responsive
+            />
           </ImageContainer>
         </Section>
 
-        <FactList>
+        <FactList color={FACT_COLOR}>
           <Fact>
-            Sold circulation drop <Emphasize>over 40%</Emphasize> in the last 20
-            years in Germany.
+            Sold circulation drop{" "}
+            <Emphasize color={EMPHASIZE_COLOR}>over 40%</Emphasize> in the last
+            20 years in Germany.
           </Fact>
         </FactList>
 
@@ -255,29 +214,31 @@ class T2M extends Component {
             </IntroTitle>
           </Section.Content>
           <ImageContainer>
-            <img
-              style={{
-                maxHeight: "80%",
-                maxWidth: "80%",
-                flexGrow: "1",
-                objectFit: "contain"
-              }}
-              src="/static/images/t2m/t2marchitecture.png"
-              alt="Chatbot"
-            />
-            <audio controls>
-              <source src="./music/t2m/music.wav" type="audio/ogg" />
-              Your browser does not support the audio element.
-            </audio>
+            <MusicContainer>
+              <img
+                style={{
+                  maxHeight: "80%",
+                  maxWidth: "80%",
+                  flexGrow: "1",
+                  objectFit: "contain"
+                }}
+                src="/static/images/t2m/t2marchitecture.png"
+                alt="Chatbot"
+              />
+              <audio controls>
+                <source src="./music/t2m/music.wav" type="audio/ogg" />
+                Your browser does not support the audio element.
+              </audio>
+            </MusicContainer>
           </ImageContainer>
         </Section>
 
-        <FactList>
+        <FactList color={FACT_COLOR}>
           <Fact>Demo</Fact>
         </FactList>
 
         <Demo />
-      </Main>
+      </div>
     );
   }
 }

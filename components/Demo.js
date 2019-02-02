@@ -18,15 +18,16 @@ const Main = styled.div`
 `;
 const Textarea = styled.textarea`
   padding: 8px;
-  display: inline-block;
+
   border: none;
   border: 1px solid #ccc;
-  width: 600px;
+  width: 100%;
   font-size: 14px;
   font-weight: 100;
   letter-spacing: 1px;
   outline: none !important;
   resize: none;
+
   height: 300px;
   :focus {
     outline: none !important;
@@ -39,8 +40,9 @@ const Input = styled.input`
   display: inline-block;
   text-align: center;
   border: none;
+  flex-grow: 1;
   border-bottom: 1px solid #ccc;
-  width: 600px;
+  width: 100%;
   font-size: 20px;
   color: #000;
   font-weight: 100;
@@ -67,13 +69,16 @@ const Button = styled.button`
   box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
   align-items: center;
   transition: all 0.3s ease;
+  cursor: pointer;
   outline: none !important;
   &:hover {
     transform: scale(1.3);
   }
 `;
 const Form = styled.div`
-  margin: 20px;
+  margin: 0;
+  padding: 0;
+
   position: relative;
 `;
 

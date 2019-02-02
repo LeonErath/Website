@@ -1,31 +1,32 @@
-import ProjectHeader from "../components/Header/ProjectHeader.js";
+import { ProjectBar, SubItem } from "../components/styles/ProjectBar";
 import Section from "../components/styles/Section";
-import { Main } from "../components/styles/styles.js";
 
 const JournalismFuture = () => (
-  <Main>
+  <div>
     <img
       alt="jounalism future banner"
       style={{ width: "100%", objectFit: "contain" }}
       src="/static/images/journalismfuture/JournalismFutureBanner.png"
     />
-    <ProjectHeader
-      information={[
-        {
-          title: "Principle",
-          text: " OpenSource Free Democratic"
-        },
-        {
-          title: "IDEA",
-          text:
-            " - World map as the basis for the presentation- Connection between Events can be easily displayed- Easy to understand"
-        },
-        {
-          title: "PROJECT",
-          text: "In Progress."
-        }
-      ]}
-    />
+
+    <ProjectBar>
+      <SubItem>
+        <div>Principle</div>
+        <div>OpenSource. Free. Democratic.</div>
+      </SubItem>
+      <SubItem>
+        <div>IDEA</div>
+        <div>
+          World map as the basis for the presentation. Connection between Events
+          can be easily displayed. Easy to understand.
+        </div>
+      </SubItem>
+      <SubItem>
+        <div>PROJECT</div>
+        <div>In Progress.</div>
+      </SubItem>
+    </ProjectBar>
+
     <Section center>
       <Section.Header>Functionality</Section.Header>
       <img
@@ -61,7 +62,7 @@ const JournalismFuture = () => (
         src="/static/images/journalismfuture/jf_payment.png"
       />
     </Section>
-  </Main>
+  </div>
 );
 
 export default JournalismFuture;
