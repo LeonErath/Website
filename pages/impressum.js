@@ -24,7 +24,6 @@ const ImpressumBox = styled.div`
   border-radius: 4px;
 `;
 const ImpressumText = styled.div`
-  font-family: "Open Sans";
   line-height: 2;
 `;
 

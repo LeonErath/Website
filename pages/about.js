@@ -30,7 +30,7 @@ const Div = styled.div`
   padding-top: 100px;
   padding-left: 10%;
   padding-right: 10%;
-  font-family: "Open Sans";
+
   @media (max-width: 700px) {
     padding-top: 10px;
     font-size: 12px;
@@ -118,10 +118,13 @@ const About = () => (
         <ContactInfo>
           <Email>
             <InfoTilte>EMAIL</InfoTilte>
-            <InfoText>me@leonerath.de</InfoText>
+            <a href="mailto:me@leonerath.de">
+              <InfoText>me@leonerath.de</InfoText>
+            </a>
           </Email>
           <Telephone>
             <InfoTilte>CALL</InfoTilte>
+            <a href="tel:491768121597" />
             <InfoText>+49 176 81215974</InfoText>
           </Telephone>
         </ContactInfo>

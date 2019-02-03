@@ -16,7 +16,6 @@ const ImpressumBox = styled.div`
 `;
 
 const Text = styled.div`
-  font-family: "Open Sans";
   line-height: 1.5;
 `;
 

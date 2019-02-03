@@ -15,10 +15,9 @@
   "private": true,
   "dependencies": {
     "axios": "^0.18.0",
-    "chart.js": "^1.1.1",
-    "react-chartjs": "^1.2.0",
     "babel-core": "^7.0.0-bridge.0",
     "babel-plugin-styled-components": "^1.7.1",
+    "chart.js": "^1.1.1",
     "date-fns": "^2.0.0-alpha.7",
     "downshift": "^2.2.3",
     "enzyme": "^3.6.0",
@@ -29,7 +28,11 @@
     "prop-types": "^15.6.2",
     "react": "^16.5.2",
     "react-adopt": "^0.6.0",
+    "react-chartjs": "^1.2.0",
     "react-dom": "^16.5.2",
+    "react-pdf": "^4.0.2",
+    "react-reveal": "^1.2.2",
+    "react-spinners": "^0.5.1",
     "react-stripe-checkout": "^2.6.3",
     "react-transition-group": "^2.5.0",
     "styled-components": "^3.4.9",
@@ -70,7 +73,8 @@
               "ssr": true,
               "displayName": true
             }
-          ]
+          ],["emotion"]
+          
         ]
       },
       "production": {
@@ -84,7 +88,7 @@
               "ssr": true,
               "displayName": true
             }
-          ]
+          ],["emotion"]
         ]
       },
       "test": {
@@ -105,7 +109,7 @@
               "ssr": true,
               "displayName": true
             }
-          ]
+          ],["emotion"]
         ]
       }
     }

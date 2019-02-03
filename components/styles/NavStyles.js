@@ -52,7 +52,7 @@ const NavStyles = styled.ul`
         width: calc(100% - 60px);
       }
       @media (max-width: 700px) {
-        width: calc(33% - 30px);
+        width: 1;
       }
     }
   }

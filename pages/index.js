@@ -1,22 +1,20 @@
 import styled from "styled-components";
 import Link from "next/link";
+import Fade from "react-reveal/Fade";
 
 const About = styled.div`
-  width: 60%;
-  margin-left: 80px;
-  margin-right: 80px;
-  margin-top: 100px;
-  margin-bottom: 80px;
-  font-family: "Open Sans";
+  padding-left: 80px;
+  padding-top: 100px;
+  padding-bottom: 80px;
+  max-width: 100%;
+
   @media (max-width: 1300px) {
-    width: 100%;
   }
   @media (max-width: 700px) {
-    margin-top: 30px;
-    margin-left: 8px;
-    margin-right: 8px;
-    margin-bottom: 30px;
-    width: 100%;
+    padding-top: 30px;
+    padding-left: 8px;
+    padding-right: 8px;
+    padding-bottom: 30px;
   }
 `;
 const AboutTitle = styled.div`
@@ -33,6 +31,7 @@ const AboutText = styled.div`
   margin: 8px;
   line-height: 2;
   font-size: 2rem;
+  max-width: 100%;
 
   @media (max-width: 700px) {
     font-size: 1.4rem;
@@ -42,7 +41,6 @@ const AboutText = styled.div`
 const Div = styled.div`
   margin-bottom: 30px;
   margin-top: 30px;
-  font-family: "Open Sans";
 `;
 
 const Project = styled.div`
@@ -149,11 +147,20 @@ const TextBox = styled.div`
   justify-content: center;
   align-items: center;
 
-  flex-basis: 40%;
+  flex-basis: 46%;
   margin: 16px;
   flex-grow: 1;
+
+  @media (max-width: 700px) {
+    text-align: center;
+  }
 `;
 
+const CoverImage = styled.img`
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+`;
 const App = () => (
   <div>
     <About>
@@ -166,54 +173,48 @@ const App = () => (
     <List>
       <Project>
         <Element>
-          <img
+          <CoverImage
             alt="JournalismFuture Ad"
             src="/static/images/journalismfuture/journalismfuture.png"
-            style={{
-              width: "100%",
-              height: "100%",
-              objectFit: "cover"
-            }}
           />
         </Element>
         <TextBox>
-          <Div>
-            <Title>JF</Title>
-            <Description>Read the news of tomorrow!</Description>
-            <Link href="/journalismfuture">
-              <LinkStyled backgroundColor="#009587">
-                ➡ View Project ⬅
-              </LinkStyled>
-            </Link>
-          </Div>
+          <Fade bottom>
+            <Div>
+              <Title>JF</Title>
+              <Description>Read the news of tomorrow!</Description>
+              <Link href="/journalismfuture">
+                <LinkStyled backgroundColor="#009587">
+                  ➡ View Project ⬅
+                </LinkStyled>
+              </Link>
+            </Div>
+          </Fade>
         </TextBox>
       </Project>
 
       <Project2>
         <TextBox>
-          <Div>
-            <Title>PINEAPPLE</Title>
-            <Description>
-              The ultimate school organizer!
-              <br />
-              An app from students for students.
-            </Description>
-            <Link href="/pineapple">
-              <LinkStyled backgroundColor="#ff4a42">
-                ➡ View Project ⬅
-              </LinkStyled>
-            </Link>
-          </Div>
+          <Fade bottom>
+            <Div>
+              <Title>PINEAPPLE</Title>
+              <Description>
+                The ultimate school organizer!
+                <br />
+                An app from students for students.
+              </Description>
+              <Link href="/pineapple">
+                <LinkStyled backgroundColor="#ff4a42">
+                  ➡ View Project ⬅
+                </LinkStyled>
+              </Link>
+            </Div>
+          </Fade>
         </TextBox>
         <Element>
-          <img
+          <CoverImage
             alt="Pineapple Ad"
             src="/static/images/pineapple/bmsapp4.png"
-            style={{
-              width: "100%",
-              height: "100%",
-              objectFit: "cover"
-            }}
           />
         </Element>
       </Project2>
@@ -221,59 +222,47 @@ const App = () => (
       <Project>
         <Element>
           {" "}
-          <img
-            alt="Eve Ad"
-            src="/static/images/eve/eve.png"
-            style={{
-              width: "100%",
-              height: "100%",
-              objectFit: "cover"
-            }}
-          />
+          <CoverImage alt="Eve Ad" src="/static/images/eve/eve.png" />
         </Element>
         <TextBox>
-          <Div>
-            <Title>EVE</Title>
-            <Description>
-              Bot's going on?
-              <br />A maschine learning chatbot
-              <br />
-              Created with Go and Python
-            </Description>
-            <Link href="/eve">
-              <LinkStyled backgroundColor="#49b49c">
-                ➡ View Project ⬅
-              </LinkStyled>
-            </Link>
-          </Div>
+          <Fade bottom>
+            <Div>
+              <Title>EVE</Title>
+              <Description>
+                Bot's going on?
+                <br />A maschine learning chatbot
+                <br />
+                Created with Go and Python
+              </Description>
+              <Link href="/eve">
+                <LinkStyled backgroundColor="#49b49c">
+                  ➡ View Project ⬅
+                </LinkStyled>
+              </Link>
+            </Div>
+          </Fade>
         </TextBox>
       </Project>
       <Project2>
         <TextBox>
-          <Div>
-            <Title>Text2Music</Title>
-            <Description>
-              Create music from text
-              <br />
-            </Description>
-            <Link href="/t2m">
-              <LinkStyled backgroundColor="#d662c0">
-                ➡ View Project ⬅
-              </LinkStyled>
-            </Link>
-          </Div>
+          <Fade bottom>
+            <Div>
+              <Title>Text2Music</Title>
+              <Description>
+                Create music from text
+                <br />
+              </Description>
+              <Link href="/t2m">
+                <LinkStyled backgroundColor="#d662c0">
+                  ➡ View Project ⬅
+                </LinkStyled>
+              </Link>
+            </Div>
+          </Fade>
         </TextBox>
         <Element>
           {" "}
-          <img
-            alt="T2M Ad"
-            src="/static/images/t2m.png"
-            style={{
-              width: "100%",
-              height: "100%",
-              objectFit: "cover"
-            }}
-          />
+          <CoverImage alt="T2M Ad" src="/static/images/t2m.png" />
         </Element>
       </Project2>
       {/* <Project>

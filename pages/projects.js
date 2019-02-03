@@ -6,7 +6,6 @@ const Div = styled.div`
   width: 80%;
   padding-left: 10%;
   padding-right: 10%;
-  font-family: "Open Sans";
 `;
 
 const Duration = styled.div`
@@ -189,13 +188,7 @@ const Projects = () => {
     );
   });
 
-  return (
-    <Div>
-      Projects
-      <p />
-      {projects}
-    </Div>
-  );
+  return <Div>{projects}</Div>;
 };
 
 export default Projects;
