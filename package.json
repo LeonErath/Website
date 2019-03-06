@@ -26,7 +26,7 @@
     "next": "^7.0.0",
     "nprogress": "^0.2.0",
     "prop-types": "^15.6.2",
-    "react": "^16.5.2",
+    "react": "^16.8.4",
     "react-adopt": "^0.6.0",
     "react-chartjs": "^1.2.0",
     "react-dom": "^16.5.2",
