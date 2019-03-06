@@ -29,7 +29,7 @@
     "react": "^16.8.4",
     "react-adopt": "^0.6.0",
     "react-chartjs": "^1.2.0",
-    "react-dom": "^16.5.2",
+    "react-dom": "^16.8.4",
     "react-pdf": "^4.0.2",
     "react-reveal": "^1.2.2",
     "react-spinners": "^0.5.1",
