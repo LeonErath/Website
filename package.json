@@ -41,7 +41,7 @@
   "devDependencies": {
     "babel-jest": "^24.3.1",
     "babel-plugin-module-resolver": "^3.2.0",
-    "casual": "^1.5.19",
+    "casual": "^1.6.0",
     "enzyme-to-json": "^3.3.4",
     "graphql-tools": "^4.0.4",
     "jest": "^23.6.0",
