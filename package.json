@@ -23,13 +23,13 @@
     "enzyme": "^3.6.0",
     "enzyme-adapter-react-16": "^1.5.0",
     "lodash.debounce": "^4.0.8",
-    "next": "^7.0.0",
+    "next": "^7.0.3",
     "nprogress": "^0.2.0",
     "prop-types": "^15.6.2",
-    "react": "^16.5.2",
+    "react": "^16.8.4",
     "react-adopt": "^0.6.0",
     "react-chartjs": "^1.2.0",
-    "react-dom": "^16.5.2",
+    "react-dom": "^16.8.4",
     "react-pdf": "^4.0.2",
     "react-reveal": "^1.2.2",
     "react-spinners": "^0.5.1",
@@ -73,8 +73,10 @@
               "ssr": true,
               "displayName": true
             }
-          ],["emotion"]
-          
+          ],
+          [
+            "emotion"
+          ]
         ]
       },
       "production": {
@@ -88,7 +90,10 @@
               "ssr": true,
               "displayName": true
             }
-          ],["emotion"]
+          ],
+          [
+            "emotion"
+          ]
         ]
       },
       "test": {
@@ -109,7 +114,10 @@
               "ssr": true,
               "displayName": true
             }
-          ],["emotion"]
+          ],
+          [
+            "emotion"
+          ]
         ]
       }
     }
