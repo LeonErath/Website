@@ -34,7 +34,7 @@
     "react-reveal": "^1.2.2",
     "react-spinners": "^0.5.3",
     "react-stripe-checkout": "^2.6.3",
-    "react-transition-group": "^2.7.1",
+    "react-transition-group": "^2.8.0",
     "styled-components": "^4.2.0",
     "waait": "^1.0.4"
   },
