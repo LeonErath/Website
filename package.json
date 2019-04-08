@@ -32,7 +32,7 @@
     "react-dom": "^16.8.6",
     "react-pdf": "^4.0.5",
     "react-reveal": "^1.2.2",
-    "react-spinners": "^0.5.3",
+    "react-spinners": "^0.5.4",
     "react-stripe-checkout": "^2.6.3",
     "react-transition-group": "^2.9.0",
     "styled-components": "^4.2.0",
