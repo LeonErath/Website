@@ -19,7 +19,7 @@
     "babel-plugin-styled-components": "^1.7.1",
     "chart.js": "^1.1.1",
     "date-fns": "^2.0.0-alpha.7",
-    "downshift": "^3.2.7",
+    "downshift": "^3.2.8",
     "enzyme": "^3.6.0",
     "enzyme-adapter-react-16": "^1.12.1",
     "lodash.debounce": "^4.0.8",
