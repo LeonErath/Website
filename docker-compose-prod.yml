@@ -8,10 +8,10 @@ networks:
 
 services:
   watchtower:
-    image:  v2tec/watchtower
+    image:  containrrr/watchtower
     volumes:
-    - /var/run/docker.sock:/var/run/docker.sock
-    - /home/spme/.docker/config.json:/config.json
+      - /var/run/docker.sock:/var/run/docker.sock
+      - /root/.docker/config.json:/config.json
     command: --interval 300 --label-enable
   website:
     image: leonerath/website:latest
