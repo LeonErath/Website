@@ -39,7 +39,7 @@
   },
   "devDependencies": {
     "babel-plugin-styled-components": "^1.7.1",
-    "babel-jest": "^24.7.1",
+    "babel-jest": "^24.8.0",
     "babel-plugin-module-resolver": "^3.2.0",
     "casual": "^1.6.0",
     "enzyme-to-json": "^3.3.4",
