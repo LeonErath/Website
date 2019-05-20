@@ -20,7 +20,7 @@
     "date-fns": "^2.0.0-alpha.7",
     "downshift": "^3.2.10",
     "enzyme": "^3.6.0",
-    "enzyme-adapter-react-16": "^1.13.0",
+    "enzyme-adapter-react-16": "^1.13.1",
     "lodash.debounce": "^4.0.8",
     "next": "^8.0.4",
     "nprogress": "^0.2.0",
