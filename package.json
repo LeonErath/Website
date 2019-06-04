@@ -19,7 +19,7 @@
     "chart.js": "^1.1.1",
     "date-fns": "^2.0.0-alpha.7",
     "downshift": "^3.2.10",
-    "enzyme": "^3.6.0",
+    "enzyme": "^3.10.0",
     "enzyme-adapter-react-16": "^1.14.0",
     "lodash.debounce": "^4.0.8",
     "next": "^8.0.4",
