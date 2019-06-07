@@ -35,7 +35,7 @@
     "react-stripe-checkout": "^2.6.3",
     "react-transition-group": "^4.1.0",
     "styled-components": "^3.4.9",
-    "waait": "^1.0.4"
+    "waait": "^1.0.5"
   },
   "devDependencies": {
     "babel-plugin-styled-components": "^1.7.1",
