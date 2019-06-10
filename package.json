@@ -14,7 +14,7 @@
   },
   "private": true,
   "dependencies": {
-    "axios": "^0.18.0",
+    "axios": "^0.19.0",
     "babel-core": "^7.0.0-bridge.0",
     "chart.js": "^1.1.1",
     "date-fns": "^2.0.0-alpha.7",
