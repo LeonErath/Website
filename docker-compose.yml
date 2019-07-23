@@ -20,7 +20,7 @@ services:
       - "3000:3000"
     labels:
       - traefik.backend=website
-      - traefik.frontend.rule=Host:leonerath.de,www.leonerath.de
+      - traefik.frontend.rule=Host:leonerath.de,www.leonerath.de,erath.dev,www.erath.dev
       - traefik.docker.network=proxy
       - traefik.port=3000
       - traefik.enable=true
