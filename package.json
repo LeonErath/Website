@@ -24,8 +24,8 @@
     "enzyme": "^3.10.0",
     "enzyme-adapter-react-16": "^1.14.0",
     "lodash.debounce": "^4.0.8",
-    "next": "^8.0.4",
-    "next-offline": "^3.3.6",
+    "next": "^9.0.4",
+    "next-offline": "^4.0.5",
     "nprogress": "^0.2.0",
     "prop-types": "^15.7.2",
     "react": "^16.9.0",
@@ -37,7 +37,7 @@
     "react-spinners": "^0.5.4",
     "react-stripe-checkout": "^2.6.3",
     "react-transition-group": "^4.2.2",
-    "styled-components": "^3.4.9",
+    "styled-components": "^4.3.2",
     "waait": "^1.0.5"
   },
   "devDependencies": {
