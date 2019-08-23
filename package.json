@@ -10,10 +10,12 @@
     "dev": "next -p 7777",
     "build": "next build",
     "start": "next start",
+    "sw": " next build && next export && cp your-sw.js out/sw.js",
     "test": "NODE_ENV=test jest --watch"
   },
   "private": true,
   "dependencies": {
+    "@sentry/browser": "^5.6.2",
     "axios": "^0.18.0",
     "babel-core": "^7.0.0-bridge.0",
     "babel-plugin-styled-components": "^1.7.1",
@@ -24,6 +26,7 @@
     "enzyme-adapter-react-16": "^1.11.0",
     "lodash.debounce": "^4.0.8",
     "next": "^8.0.3",
+    "next-offline": "^3.3.6",
     "nprogress": "^0.2.0",
     "prop-types": "^15.7.2",
     "react": "^16.8.4",

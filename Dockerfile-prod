@@ -1,0 +1,16 @@
+# base image
+FROM node:latest as build-stage
+
+# set working directory
+RUN mkdir /usr/src/app
+WORKDIR /usr/src/app
+COPY package.json package-lock.json ./
+RUN npm install
+COPY . ./
+RUN npm run build
+
+
+FROM nginx:latest
+COPY --from=build-stage /usr/src/app/static /usr/share/nginx/html
+EXPOSE 80
+CMD ["nginx", "-g", "daemon off;"]
