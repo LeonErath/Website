@@ -7,24 +7,11 @@ networks:
     external: false
 
 services:
-  watchtower:
-    image:  v2tec/watchtower
-    volumes:
-      - /var/run/docker.sock:/var/run/docker.sock
-      - /root/.docker/config.json:/config.json
-    command: --interval 300 --label-enable
   website:
     build:
       .
     ports:
       - "3000:3000"
-    labels:
-      - traefik.backend=website
-      - traefik.frontend.rule=Host:leonerath.de,www.leonerath.de,erath.dev,www.erath.dev
-      - traefik.docker.network=proxy
-      - traefik.port=3000
-      - traefik.enable=true
-      - com.centurylinklabs.watchtower.enable=true
     networks:
       - internal
       - proxy

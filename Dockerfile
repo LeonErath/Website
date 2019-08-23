@@ -3,15 +3,15 @@ FROM node:latest
 
 # set working directory
 RUN mkdir /usr/src/app
+
 WORKDIR /usr/src/app
 
-# install and cache app dependencies
-COPY . .
-
+COPY package.json package-lock.json ./
 
 RUN npm install
 
+COPY . ./
+
 RUN npm run build
 
-# start app
 CMD ["npm", "start"]
