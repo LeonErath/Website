@@ -13,6 +13,14 @@ const Container = styled.div`
 		padding-left: 0px;
 		padding-right: 0px;
 	}
+	@media (min-width: 768px) and (max-width: 1024px) {
+		padding-left: 0px;
+		padding-right: 0px;
+	}
+	@media (min-width: 1025px) and (max-width: 1280px) {
+		padding-left: 0px;
+		padding-right: 0px;
+	}
 `;
 
 const TextContainer = styled.div`
