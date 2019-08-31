@@ -41,14 +41,9 @@ const Projects = props => (
 				<Card.Main>
 					<Card.Background>spellcheck</Card.Background>
 					<Card.Foreground>
-						<Link href="/verifica">
-							<Card.Title>verifica</Card.Title>
-						</Link>
-						<Link href="https://github.com/LeonErath/verifica">
-							<a target="_blank">
-								<img src="/static/github-icon.svg"></img>
-							</a>
-						</Link>
+						<Card.Title>verifica</Card.Title>
+
+						<div>(coming soon)</div>
 					</Card.Foreground>
 				</Card.Main>
 				<Card.Stack>
