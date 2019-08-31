@@ -5,76 +5,57 @@ import Router from "next/router";
 import NProgress from "nprogress";
 
 Router.onRouteChangeStart = () => {
-  NProgress.start();
+	NProgress.start();
 };
 
 Router.onRouteChangeComplete = () => {
-  NProgress.done();
+	NProgress.done();
 };
 
 Router.onRouteChangeError = () => {
-  NProgress.done();
+	NProgress.done();
 };
 
-const Logo = styled.h1`
-  font-size: 3rem;
-  margin-left: 2rem;
-  position: relative;
-
-  z-index: 2;
-  transform: skew(-20deg);
-  a {
-    background: black;
-    padding: 0.5rem 2rem;
-    color: white;
-    text-transform: uppercase;
-    text-decoration: none;
-  }
-  @media (max-width: 1300px) {
-    margin: 8px;
-
-    text-align: center;
-    padding: 10px 10px 10px 10px;
-  }
-  @media (max-width: 700px) {
-    margin: 8px;
-    font-size: 2rem;
-    padding: 10px 10px 10px 10px;
-  }
+const Logo = styled.div`
+	cursor: pointer;
 `;
 
 const StyledHeader = styled.header`
-  position: -webkit-sticky;
-  position: sticky;
-  top: 0;
-  z-index: 1;
-  background: white;
-
-  .bar {
-    border-bottom: 2px solid ${props => props.theme.black};
-    display: grid;
-    grid-template-columns: auto 1fr;
-    justify-content: space-between;
-    align-items: stretch;
-    @media (max-width: 1300px) {
-      grid-template-columns: 1fr;
-      justify-content: center;
-    }
-  }
+	position: sticky;
+	top: 0;
+	z-index: 1;
+	background: white;
+	display: flex;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	padding-left: 200px;
+	padding-right: 200px;
+	flex-direction: row;
+	box-shadow: 0 10px 20px 0
+		${props => (props.shadow ? "rgb(0,0,0,0)" : "rgba(0,0,0,.05)")};
+	@media (min-width: 320px) and (max-width: 480px) {
+		padding-left: 0px;
+		padding-right: 0px;
+	}
 `;
 
-const Header = () => (
-  <StyledHeader>
-    <div className="bar">
-      <Logo>
-        <Link href="/">
-          <a>Leon Erath</a>
-        </Link>
-      </Logo>
+class Header extends React.Component {
+	constructor(props) {
+		super(props);
+	}
+	render() {
+		return (
+			<StyledHeader shadow={this.props.scrollPosition === 0}>
+				<Logo>
+					<Link href="/">
+						<img src="static/logo.png" width="80"></img>
+					</Link>
+				</Logo>
 
-      <Nav />
-    </div>
-  </StyledHeader>
-);
+				<Nav />
+			</StyledHeader>
+		);
+	}
+}
 
 export default Header;

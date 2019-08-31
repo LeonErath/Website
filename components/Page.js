@@ -5,12 +5,11 @@ import Meta from "./Meta";
 import Footer from "./Footer";
 
 const theme = {
-	red: "#FF0000",
-	black: "#393939",
-	grey: "#3A3A3A",
-	lightgrey: "#E1E1E1",
-	offWhite: "#EDEDED",
-	maxWidth: "1000px",
+	darkblue: "#4285F4",
+	blue: "#35A0F7",
+	gray: "#363636",
+	lightblue: "#EBF3FE",
+	gradient: "linear-gradient(145deg, #4285F4, #35A0F7)",
 	bs: "0 12px 24px 0 rgba(0, 0, 0, 0.09)"
 };
 
@@ -49,13 +48,33 @@ const GlobalStyle = createGlobalStyle`
 `;
 
 class Page extends Component {
+	constructor(props) {
+		super(props);
+
+		this.state = {
+			scrollPosition: 0
+		};
+	}
+
+	componentDidMount() {
+		window.addEventListener("scroll", this.handleScroll);
+	}
+
+	componentWillUnmount() {
+		window.removeEventListener("scroll", this.handleScroll);
+	}
+
+	handleScroll = e => {
+		this.setState({ scrollPosition: e.pageY });
+	};
+
 	render() {
 		return (
 			<ThemeProvider theme={theme}>
 				<StyledPage>
 					<GlobalStyle />
 					<Meta />
-					<Header />
+					<Header scrollPosition={this.state.scrollPosition} />
 					<main>
 						<Inner>{this.props.children}</Inner>
 					</main>

@@ -1,325 +1,157 @@
-import styled from "styled-components";
-import Link from "next/link";
-import Fade from "react-reveal/Fade";
+import styled, { keyframes } from "styled-components";
+import Skill from "../components/Skill";
+import Projects from "../components/Projects";
+import About from "../components/About";
+import Contact from "../components/Contact";
 
-const About = styled.div`
-  padding-left: 80px;
-  padding-top: 100px;
-  padding-bottom: 80px;
-  max-width: 100%;
+const Root = styled.div``;
 
-  @media (max-width: 1300px) {
-  }
-  @media (max-width: 700px) {
-    padding-top: 30px;
-    padding-left: 8px;
-    padding-right: 8px;
-    padding-bottom: 30px;
-  }
-`;
-const AboutTitle = styled.div`
-  font-size: 3rem;
-  margin-left: 8px;
-  margin-right: 8px;
-  margin-bottom: 20px;
-
-  @media (max-width: 700px) {
-    font-size: 2.4rem;
-  }
-`;
-const AboutText = styled.div`
-  margin: 8px;
-  line-height: 2;
-  font-size: 2rem;
-  max-width: 100%;
-
-  @media (max-width: 700px) {
-    font-size: 1.4rem;
-  }
+const Container = styled.div`
+	padding-left: 200px;
+	padding-right: 200px;
+	@media (min-width: 320px) and (max-width: 480px) {
+		padding-left: 0px;
+		padding-right: 0px;
+	}
 `;
 
-const Div = styled.div`
-  margin-bottom: 30px;
-  margin-top: 30px;
+const TextContainer = styled.div`
+	margin-top: 300px;
+	width: 50%;
+	h1 {
+		font-size: 2.6em;
+		font-weight: 400;
+		color: black;
+	}
+	h2 {
+		width: 400px;
+		line-height: 1.5;
+		font-weight: 400;
+		font-size: 1.4em;
+		color: ${props => props.theme.gray};
+	}
 `;
 
-const Project = styled.div`
-  width: 100%;
-  max-height: 1200px;
-  display: flex;
-  align-items: center;
-  flex-direction: row;
-  align-content: stretch;
-  flex-basis: 40%;
-  flex-wrap: wrap;
+const LandingPage = styled.div`
+	height: 86vh;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap-reverse;
+`;
+const MoveUpDown = keyframes`
+  0% { transform: translateY(0); }
+  100% { transform: translateY(-20px); }
+`;
+const ScrollDown = styled.div`
+	height: 6vh;
+	width: 100%;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	animation: ${MoveUpDown} 0.6s infinite alternate;
 `;
 
-const List = styled.div`
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-`;
-const Project2 = styled.div`
-  max-height: 1200px;
-  display: flex;
-  align-items: center;
-  flex-direction: row;
-  align-content: stretch;
-  flex-basis: 40%;
-  flex-wrap: wrap-reverse;
-`;
+const ImageContainer = styled.div`
+	flex-grow: 1;
+	min-width: 50%;
+	display: flex;
 
-const Description = styled.div`
-  margin: 10px;
-  font-size: 2rem;
-  letter-spacing: 2px;
-  line-height: 2;
+	flex-direction: row-reverse;
 
-  @media (max-width: 1300px) {
-    line-height: 1.8;
-    letter-spacing: 1.2px;
-  }
-  @media (max-width: 700px) {
-    line-height: 1.6;
-    letter-spacing: 1.2px;
-    font-size: 1.6rem;
-  }
+	img {
+		object-fit: contain;
+		max-width: 400px;
+	}
+`;
+const Skills = styled.div`
+	height: 86vh;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
 `;
 
-const Title = styled.div`
-  margin: 10px;
-  font-weight: bold;
-  font-size: 3rem;
-  letter-spacing: 10px;
-  @media (max-width: 1300px) {
-    letter-spacing: 1.4px;
-  }
-  @media (max-width: 700px) {
-    letter-spacing: 1.2px;
-    font-size: 2rem;
-  }
+const SkillContainer = styled.div`
+	width: 50%;
 `;
 
-const LinkStyled = styled.a`
-  margin: 10px;
-  font-size: 1.8rem;
-  color: #9f9f9f;
-  cursor: pointer;
-  background: linear-gradient(
-    to top,
-    #fff 0%,
-    ${props => props.backgroundColor || "palevioletred"} 100%
-  );
-  background-position: 0 100%;
-  background-repeat: repeat-x;
-  background-size: 2px 2px;
-  color: #000;
-  text-decoration: none;
-  transition: background-size 0.2s;
-
-  padding: 2px;
-  :hover {
-    background-size: 4px 50px;
-  }
-
-  @media (max-width: 1300px) {
-    letter-spacing: 1.2px;
-  }
-  @media (max-width: 700px) {
-    letter-spacing: 1.2px;
-    font-size: 1.4rem;
-  }
+const Headline = styled.div`
+	margin-top: 30px;
+	width: 100%;
+	text-align: center;
+	font-size: 2em;
 `;
 
-const Element = styled.div`
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-
-  flex-basis: 50%;
-  flex-grow: 1;
+const Tools = styled.div`
+	margin-top: 60px;
+	width: 500px;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
 `;
 
-const TextBox = styled.div`
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-
-  flex-basis: 46%;
-  margin: 16px;
-  flex-grow: 1;
-
-  @media (max-width: 700px) {
-    text-align: center;
-  }
-`;
-
-const CoverImage = styled.img`
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-`;
 const App = () => (
-  <div>
-    <About>
-      <AboutTitle> Hey, I'm Leon.</AboutTitle>
-      <AboutText>
-        I am 20 years old, living in Mannheim Germany. I love developing Apps
-        and want to take you with me, on my way to become a Developer.
-      </AboutText>
-    </About>
-    <List>
-      <Project>
-        <Element>
-          <CoverImage
-            alt="JournalismFuture Ad"
-            src="/static/images/journalismfuture/journalismfuture.png"
-          />
-        </Element>
-        <TextBox>
-          <Fade bottom>
-            <Div>
-              <Title>JF</Title>
-              <Description>Read the news of tomorrow!</Description>
-              <Link href="/journalismfuture">
-                <LinkStyled backgroundColor="#009587">
-                  ➡ View Project ⬅
-                </LinkStyled>
-              </Link>
-            </Div>
-          </Fade>
-        </TextBox>
-      </Project>
+	<Root>
+		<Container>
+			<LandingPage>
+				<TextContainer>
+					<h1>Hey, I’m Leon 👋</h1>
+					<h2>I’m a Fullstack Developer based in Düsseldorf, Germany.</h2>
+				</TextContainer>
+				<ImageContainer>
+					<img src="/static/profile.png"></img>
+				</ImageContainer>
+			</LandingPage>
+			<ScrollDown>
+				<img src="/static/scroll.svg"></img>
+			</ScrollDown>
 
-      <Project2>
-        <TextBox>
-          <Fade bottom>
-            <Div>
-              <Title>PINEAPPLE</Title>
-              <Description>
-                The ultimate school organizer!
-                <br />
-                An app from students for students.
-              </Description>
-              <Link href="/pineapple">
-                <LinkStyled backgroundColor="#ff4a42">
-                  ➡ View Project ⬅
-                </LinkStyled>
-              </Link>
-            </Div>
-          </Fade>
-        </TextBox>
-        <Element>
-          <CoverImage
-            alt="Pineapple Ad"
-            src="/static/images/pineapple/bmsapp4.png"
-          />
-        </Element>
-      </Project2>
+			<Headline>Skills & Tools</Headline>
+			<Skills>
+				<ImageContainer style={{ flexDirection: "row" }}>
+					<img src="/static/developer.svg"></img>
+				</ImageContainer>
+				<SkillContainer>
+					<Skill name="JavaScript" time="2 years" progress="0.7" />
+					<Skill name="CSS/HTML" time="2 years" progress="0.5" />
+					<Skill name="Java" time="4 years" progress="0.9" />
+					<Skill name="React" time="2 years" progress="0.8" />
+					<Skill name="CI/CD" time="1 years" progress="0.5" />
+					<Skill name="Docker" time="1 years" progress="0.8" />
+					<Tools>
+						<div>Tools</div>
+						<div style={{ display: "flex", alignItems: "center" }}>
+							<img
+								width="40"
+								src="/static/github-icon.svg"
+								style={{ margin: "8px" }}></img>
+							<img
+								width="40"
+								src="/static/android-icon.svg"
+								style={{ margin: "8px" }}></img>
+							<img
+								width="40"
+								src="/static/terminal.svg"
+								style={{ margin: "8px" }}></img>
+							<img
+								width="40"
+								src="/static/visual-studio-code.svg"
+								style={{ margin: "8px" }}></img>
+						</div>
+					</Tools>
+				</SkillContainer>
+			</Skills>
+			<Headline id="projects">Projects</Headline>
 
-      <Project>
-        <Element>
-          {" "}
-          <CoverImage alt="Eve Ad" src="/static/images/eve/eve.png" />
-        </Element>
-        <TextBox>
-          <Fade bottom>
-            <Div>
-              <Title>EVE</Title>
-              <Description>
-                Bot's going on?
-                <br />A maschine learning chatbot
-                <br />
-                Created with Go and Python
-              </Description>
-              <Link href="/eve">
-                <LinkStyled backgroundColor="#49b49c">
-                  ➡ View Project ⬅
-                </LinkStyled>
-              </Link>
-            </Div>
-          </Fade>
-        </TextBox>
-      </Project>
-      <Project2>
-        <TextBox>
-          <Fade bottom>
-            <Div>
-              <Title>Text2Music</Title>
-              <Description>
-                Create music from text
-                <br />
-              </Description>
-              <Link href="/t2m">
-                <LinkStyled backgroundColor="#d662c0">
-                  ➡ View Project ⬅
-                </LinkStyled>
-              </Link>
-            </Div>
-          </Fade>
-        </TextBox>
-        <Element>
-          {" "}
-          <CoverImage alt="T2M Ad" src="/static/images/t2m.png" />
-        </Element>
-      </Project2>
-      {/* <Project>
-        <Element>
-          <img
-            alt="Cloudy Ad"
-            src="/static/images/cloudy.png"
-            style={{
-              width: "100%",
-              height: "100%",
-              objectFit: "cover"
-            }}
-          />
-        </Element>
-        <TextBox>
-          <Div>
-            <Title>CLOUDY</Title>
-            <Description>
-              An alternative way to look
-              <br /> at weather forecast.
-            </Description>
-            <Link href="/cloudy">
-              <LinkStyled>➡ View Project</LinkStyled>
-            </Link>
-          </Div>
-        </TextBox>
-      </Project>
+			<Projects />
 
-      <Project2>
-        <TextBox>
-          <Div>
-            <Title>WATCHLIST</Title>
-            <Description>
-              See upcoming Movies and <br />
-              save them into your Watchlist
-              <br /> to watch them later.
-              <br />
-            </Description>
-            <Link href="/watchlist">
-              <LinkStyled>➡ View Project</LinkStyled>
-            </Link>
-          </Div>
-        </TextBox>
-        <Element>
-          <img
-            alt="Watchlist Ad"
-            src="/static/images/watchlist.png"
-            style={{
-              width: "100%",
-              height: "100%",
-              objectFit: "cover"
-            }}
-          />
-        </Element>
-      </Project2> */}
-    </List>
-  </div>
+			<Headline id="about">About Me</Headline>
+
+			<About />
+
+			<Contact></Contact>
+		</Container>
+	</Root>
 );
 
 export default App;
