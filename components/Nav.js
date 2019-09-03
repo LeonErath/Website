@@ -14,7 +14,7 @@ const NavStyles = styled.div`
 const LinkDiv = styled.div`
 	display: flex;
 	flex-direction: row;
-	@media (min-width: 320px) and (max-width: 480px) {
+	@media (min-width: 320px) and (max-width: 767px) {
 		display: none;
 	}
 `;
@@ -43,7 +43,8 @@ const ContactDiv = styled.div`
 const ContactButton = styled.div`
 	padding: 14px 24px 14px 24px;
 	background: ${props => props.theme.gradient};
-
+	width: 100px;
+	text-align: center;
 	font-size: 1em;
 	border-radius: 24px;
 	font-weight: bold;
@@ -53,7 +54,7 @@ const ContactButton = styled.div`
 	box-shadow: 6px 6px 10px 1px rgba(0, 0, 0, 0.1);
 	transition: all 0.2s ease;
 	:hover {
-		transform: scale(1.2);
+		transform: scale(1.05);
 	}
 `;
 
@@ -71,7 +72,9 @@ const Nav = () => (
 			</Link>
 		</LinkDiv>
 		<ContactDiv>
-			<ContactButton>Contact Me</ContactButton>
+			<Link href="#contact">
+				<ContactButton>Contact Me</ContactButton>
+			</Link>
 		</ContactDiv>
 	</NavStyles>
 );

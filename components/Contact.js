@@ -3,32 +3,67 @@ import styled from "styled-components";
 const Div = styled.div`
 	display: flex;
 	justify-content: center;
+	flex-wrap: wrap;
 	align-items: center;
 	height: 90vh;
-	background: no-repeat url("/static/contact_background.svg");
+	background-image: url("/static/contact_background.svg");
+	background-repeat: no-repeat;
+
+	background-position: center;
 `;
 
 const Container = styled.div`
 	display: flex;
 	flex-direction: row;
+	flex-wrap: wrap;
+	align-items: center;
+	justify-content: center;
+	line-height: 1.5;
+	width: 100%;
+	div {
+	}
+	img {
+		margin: 32px;
+		min-width: 30%;
+		max-width: 200px;
+		max-height: 200px;
+	}
+`;
+
+const Container2 = styled.div`
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
 	align-items: center;
 	justify-content: space-between;
-	width: 60%;
-	line-height: 1.5;
 `;
 
 const Headline = styled.div`
-	font-size: 4em;
+	font-size: 3em;
+	@media (min-width: 768px) and (max-width: 1024px) {
+		font-size: 2em;
+	}
+	@media (min-width: 320px) and (max-width: 767px) {
+		font-size: 2em;
+	}
 `;
 
 const Text = styled.div`
 	margin-top: 44px;
 	margin-bottom: 64px;
 	font-size: 2em;
-	width: 500px;
+	max-width: 500px;
 
 	color: #363636;
 	font-weight: 300;
+	@media (min-width: 768px) and (max-width: 1024px) {
+		font-size: 1.4em;
+		max-width: 300px;
+	}
+	@media (min-width: 320px) and (max-width: 767px) {
+		font-size: 1.4em;
+		max-width: 300px;
+	}
 `;
 
 const Contact = props => (
@@ -40,7 +75,7 @@ const Contact = props => (
 				<Text>
 					I’m available for full contract work and would love to get in touch.
 				</Text>
-				<Container>
+				<Container2>
 					<div>
 						<div>
 							<b>Telephone</b>
@@ -53,7 +88,7 @@ const Contact = props => (
 						</div>
 						<div>me@leonerath.de</div>
 					</div>
-				</Container>
+				</Container2>
 			</div>
 		</Container>
 	</Div>

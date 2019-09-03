@@ -1,8 +1,8 @@
 import styled from "styled-components";
 
 const Div = styled.div`
-	margin: 30px 0px 30px 0px;
-	width: 500px;
+	margin: 30px 30px 30px 30px;
+	width: 460px;
 	display: flex;
 	flex-direction: column;
 `;
@@ -22,14 +22,14 @@ const Div3 = styled.div`
 const Progress = styled.div`
 	border-radius: 10px;
 	height: 6px;
-	width: 400px;
+	width: 360px;
 	background: ${props => props.theme.lightblue};
 `;
 
 const Bar = styled.div`
 	border-radius: 10px;
 	height: 6px;
-	width: ${props => Math.min(props.progress * 400, 400)}px;
+	width: ${props => Math.min(props.progress * 360, 360)}px;
 	background: ${props => props.theme.blue};
 `;
 

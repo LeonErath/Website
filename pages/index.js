@@ -4,28 +4,23 @@ import Projects from "../components/Projects";
 import About from "../components/About";
 import Contact from "../components/Contact";
 
-const Root = styled.div``;
+const Root = styled.div`
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+`;
 
 const Container = styled.div`
-	padding-left: 200px;
-	padding-right: 200px;
-	@media (min-width: 320px) and (max-width: 480px) {
-		padding-left: 0px;
-		padding-right: 0px;
-	}
-	@media (min-width: 768px) and (max-width: 1024px) {
-		padding-left: 0px;
-		padding-right: 0px;
-	}
+	width: 80%;
 	@media (min-width: 1025px) and (max-width: 1280px) {
-		padding-left: 0px;
-		padding-right: 0px;
+	}
+	@media (min-width: 320px) and (max-width: 1024px) {
+		width: 100%;
 	}
 `;
 
 const TextContainer = styled.div`
-	margin-top: 300px;
-	width: 50%;
+	min-width: 400px;
 	h1 {
 		font-size: 2.6em;
 		font-weight: 400;
@@ -38,6 +33,9 @@ const TextContainer = styled.div`
 		font-size: 1.4em;
 		color: ${props => props.theme.gray};
 	}
+	@media (min-width: 320px) and (max-width: 767px) {
+		text-align: center;
+	}
 `;
 
 const LandingPage = styled.div`
@@ -45,6 +43,14 @@ const LandingPage = styled.div`
 	display: flex;
 	flex-direction: row;
 	flex-wrap: wrap-reverse;
+	justify-content: space-between;
+	align-items: center;
+
+	padding-left: 32px;
+	padding-right: 32px;
+	@media (min-width: 320px) and (max-width: 1024px) {
+		justify-content: center;
+	}
 `;
 const MoveUpDown = keyframes`
   0% { transform: translateY(0); }
@@ -60,27 +66,30 @@ const ScrollDown = styled.div`
 `;
 
 const ImageContainer = styled.div`
-	flex-grow: 1;
-	min-width: 50%;
 	display: flex;
-
 	flex-direction: row-reverse;
 
 	img {
 		object-fit: contain;
 		max-width: 400px;
+		@media (min-width: 320px) and (max-width: 1024px) {
+			max-width: 300px;
+		}
 	}
 `;
 const Skills = styled.div`
 	height: 86vh;
 	display: flex;
 	flex-direction: row;
+	flex-wrap: wrap;
 	align-items: center;
+	justify-content: space-between;
+	@media (min-width: 320px) and (max-width: 1024px) {
+		justify-content: center;
+	}
 `;
 
-const SkillContainer = styled.div`
-	width: 50%;
-`;
+const SkillContainer = styled.div``;
 
 const Headline = styled.div`
 	margin-top: 30px;
@@ -91,7 +100,8 @@ const Headline = styled.div`
 
 const Tools = styled.div`
 	margin-top: 60px;
-	width: 500px;
+	width: 460px;
+	margin: 30px 30px 30px 30px;
 	display: flex;
 	flex-direction: row;
 	justify-content: space-between;
@@ -157,6 +167,7 @@ const App = () => (
 
 			<About />
 
+			<div id="contact"></div>
 			<Contact></Contact>
 		</Container>
 	</Root>

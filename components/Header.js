@@ -17,25 +17,31 @@ Router.onRouteChangeError = () => {
 };
 
 const Logo = styled.div`
+	width: 100px;
 	cursor: pointer;
 `;
 
-const StyledHeader = styled.header`
+const StyledHeader = styled.div`
+	> div {
+		width: 80%;
+		display: flex;
+		flex-direction: row;
+	}
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
 	position: sticky;
 	top: 0;
 	z-index: 1;
 	background: white;
 	display: flex;
-	padding-top: 10px;
-	padding-bottom: 10px;
-	padding-left: 200px;
-	padding-right: 200px;
+	padding: 10px;
+
 	flex-direction: row;
 	box-shadow: 0 10px 20px 0
 		${props => (props.shadow ? "rgb(0,0,0,0)" : "rgba(0,0,0,.05)")};
-	@media (min-width: 320px) and (max-width: 480px) {
-		padding-left: 0px;
-		padding-right: 0px;
+	@media (min-width: 320px) and (max-width: 1024px) {
+		width: 100%;
 	}
 `;
 
@@ -46,13 +52,15 @@ class Header extends React.Component {
 	render() {
 		return (
 			<StyledHeader shadow={this.props.scrollPosition === 0}>
-				<Logo>
-					<Link href="/">
-						<img src="static/logo.png" width="80"></img>
-					</Link>
-				</Logo>
+				<div>
+					<Logo>
+						<Link href="/">
+							<img src="static/logo.png" width="80"></img>
+						</Link>
+					</Logo>
 
-				<Nav />
+					<Nav />
+				</div>
 			</StyledHeader>
 		);
 	}

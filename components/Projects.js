@@ -15,15 +15,22 @@ const Item = styled.div`
 	}
 `;
 
+const Backtext = styled.div`
+	position: absolute;
+	font-size: 6em;
+	color: ${props => props.color};
+	font-weight: bold;
+`;
+
 const ProjectDiv = styled.div`
 	margin-top: 100px;
 	display: grid;
 	grid-template-columns: 1fr 1fr;
 	grid-template-rows: repeat(4, 400px);
 
-	@media (min-width: 320px) and (max-width: 480px) {
+	@media (min-width: 320px) and (max-width: 767px) {
 		grid-template-columns: 1fr;
-		grid-template-rows: 400px 400px 400px 400px 400px 400px;
+		grid-template-rows: 400px 400px 400px 400px 400px 400px 400px;
 	}
 `;
 
@@ -115,16 +122,9 @@ const Projects = props => (
 						justifyContent: "center",
 						alignItems: "center"
 					}}>
-					<div
-						style={{
-							transform: "rotate(-3deg)",
-							position: "absolute",
-							fontSize: "8em",
-							color: "#AA4D4D",
-							fontWeight: "bold"
-						}}>
+					<Backtext color="#AA4D4D" style={{ transform: "rotate(-3deg)" }}>
 						Pineapple
-					</div>
+					</Backtext>
 					<img
 						width="480"
 						src="static/pineapple.png"
@@ -164,16 +164,13 @@ const Projects = props => (
 						justifyContent: "center",
 						alignItems: "center"
 					}}>
-					<div
+					<Backtext
+						color="#202C77"
 						style={{
-							transform: "rotate(-3deg)",
-							position: "absolute",
-							fontSize: "8em",
-							color: "#202C77",
-							fontWeight: "bold"
+							transform: "rotate(-3deg)"
 						}}>
 						Journalism
-					</div>
+					</Backtext>
 					<img
 						width="200"
 						src="static/jf.png"
@@ -230,7 +227,7 @@ const Projects = props => (
 				</Card.Stack>
 			</Card>
 		</Item>
-		<div></div>
+
 		<Item style={{ background: "#B20741" }}>
 			<Link href="watchlist">
 				<div
@@ -240,16 +237,13 @@ const Projects = props => (
 						justifyContent: "center",
 						alignItems: "center"
 					}}>
-					<div
+					<Backtext
+						color="#860430"
 						style={{
-							transform: "rotate(2deg)",
-							position: "absolute",
-							fontSize: "8em",
-							color: "#860430",
-							fontWeight: "bold"
+							transform: "rotate(2deg)"
 						}}>
 						Watchlist
-					</div>
+					</Backtext>
 					<img
 						width="200"
 						src="static/watchlist.png"
