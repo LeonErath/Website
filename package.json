@@ -31,7 +31,7 @@
     "react": "^16.10.2",
     "react-adopt": "^0.6.0",
     "react-chartjs": "^1.2.0",
-    "react-dom": "^16.10.1",
+    "react-dom": "^16.10.2",
     "react-pdf": "^4.1.0",
     "react-reveal": "^1.2.2",
     "react-spinners": "^0.5.4",
