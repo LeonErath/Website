@@ -40,6 +40,7 @@ const Foreground = styled.div`
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
+
 	position: absolute;
 `;
 

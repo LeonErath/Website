@@ -87,8 +87,10 @@ const Projects = props => (
 			</Card>
 		</Item>
 		<Item style={{ background: "#344A5F" }}>
-			<Link href="audio3d">
-				<img width="400" src="static/audio3d.png"></img>
+			<Link href="https://niklaskorz.github.io/audio3d/">
+				<a target="_blank">
+					<img width="400" src="static/audio3d.png"></img>
+				</a>
 			</Link>
 			<Card>
 				<Card.Header>
@@ -98,8 +100,12 @@ const Projects = props => (
 				<Card.Main>
 					<Card.Background>audio only</Card.Background>
 					<Card.Foreground>
-						<Link href="audio3d">
-							<Card.Title>Audio 3D</Card.Title>
+						<Link href="https://niklaskorz.github.io/audio3d/">
+							<a
+								target="_blank"
+								style={{ color: "black", textDecoration: "none" }}>
+								<Card.Title>Audio 3D</Card.Title>
+							</a>
 						</Link>
 						<Link href="https://github.com/niklaskorz/audio3d">
 							<a target="_blank">
