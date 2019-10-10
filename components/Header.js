@@ -33,11 +33,11 @@ const StyledHeader = styled.div`
 	position: sticky;
 	top: 0;
 	z-index: 1;
-	background: white;
+	background: ${props => (props.shadow ? "transparent" : "white")};
 	display: flex;
 	padding: 10px;
-
 	flex-direction: row;
+	transition: background-color 0.3s linear;
 	box-shadow: 0 10px 20px 0
 		${props => (props.shadow ? "rgb(0,0,0,0)" : "rgba(0,0,0,.05)")};
 	@media (min-width: 320px) and (max-width: 1024px) {
@@ -51,17 +51,19 @@ class Header extends React.Component {
 	}
 	render() {
 		return (
-			<StyledHeader shadow={this.props.scrollPosition === 0}>
-				<div>
-					<Logo>
-						<Link href="/">
-							<img src="static/logo.png" width="80"></img>
-						</Link>
-					</Logo>
+			<div style={{ position: "absolute", width: "100vw", height: "100vh" }}>
+				<StyledHeader shadow={this.props.scrollPosition < 10}>
+					<div>
+						<Logo>
+							<Link href="/">
+								<img src="static/logo.png" width="80"></img>
+							</Link>
+						</Logo>
 
-					<Nav />
-				</div>
-			</StyledHeader>
+						<Nav />
+					</div>
+				</StyledHeader>
+			</div>
 		);
 	}
 }

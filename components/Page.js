@@ -15,6 +15,7 @@ const theme = {
 
 const StyledPage = styled.div`
 	background: white;
+
 	color: ${props => props.theme.black};
 	margin: 0;
 	padding: 0;
@@ -65,7 +66,7 @@ class Page extends Component {
 	}
 
 	handleScroll = e => {
-		this.setState({ scrollPosition: e.pageY });
+		this.setState({ scrollPosition: window.scrollY });
 	};
 
 	render() {
@@ -74,6 +75,7 @@ class Page extends Component {
 				<StyledPage>
 					<GlobalStyle />
 					<Meta />
+
 					<Header scrollPosition={this.state.scrollPosition} />
 					<main>
 						<Inner>{this.props.children}</Inner>
