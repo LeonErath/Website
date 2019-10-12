@@ -7,14 +7,8 @@ networks:
     external: false
 
 services:
-  watchtower:
-    image:  containrrr/watchtower
-    volumes:
-      - /var/run/docker.sock:/var/run/docker.sock
-      - /root/.docker/config.json:/config.json
-    command: --interval 300 --label-enable
   website:
-    build: .
+    build: leonerath/website:latest
     ports:
       - "3000:3000"
     restart: always
@@ -28,3 +22,9 @@ services:
     networks:
       - internal
       - proxy
+  watchtower:
+    image:  containrrr/watchtower
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+      - /root/.docker/config.json:/config.json
+    command: --interval 300
