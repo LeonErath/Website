@@ -43,7 +43,7 @@
   "devDependencies": {
     "babel-plugin-styled-components": "^1.7.1",
     "babel-jest": "^24.7.1",
-    "babel-plugin-module-resolver": "^3.2.0",
+    "babel-plugin-module-resolver": "^4.0.0",
     "casual": "^1.6.0",
     "enzyme-to-json": "^3.4.1",
     "graphql-tools": "^4.0.4",
