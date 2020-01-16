@@ -6,12 +6,12 @@ RUN mkdir /usr/src/app
 
 WORKDIR /usr/src/app
 
-COPY package.json package-lock.json ./
+COPY package.json yarn.lock ./
 
-RUN npm install
+RUN yarn
 
 COPY . ./
 
-RUN npm run build
+RUN yarn run build
 
-CMD ["npm", "start"]
+CMD ["yarn", "start"]
