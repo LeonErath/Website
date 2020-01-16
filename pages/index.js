@@ -45,7 +45,6 @@ const LandingPage = styled.div`
 	flex-wrap: wrap-reverse;
 	justify-content: space-between;
 	align-items: center;
-
 	padding-left: 32px;
 	padding-right: 32px;
 	@media (min-width: 320px) and (max-width: 1024px) {
@@ -69,27 +68,38 @@ const ImageContainer = styled.div`
 	display: flex;
 	flex-direction: row-reverse;
 
+	@media (max-width: 1024px) {
+		margin-top: 100px;
+		justify-content: center;
+		align-items: center;
+	}
+
 	img {
 		object-fit: contain;
 		max-width: 400px;
-		@media (min-width: 320px) and (max-width: 1024px) {
-			max-width: 300px;
-		}
 	}
 `;
 const Skills = styled.div`
 	height: 86vh;
 	display: flex;
 	flex-direction: row;
-	flex-wrap: wrap;
+	width: 100%;
 	align-items: center;
 	justify-content: space-between;
-	@media (min-width: 320px) and (max-width: 1024px) {
+	@media (max-width: 1024px) {
+		align-items: center;
 		justify-content: center;
+		flex-direction: column;
 	}
 `;
 
-const SkillContainer = styled.div``;
+const SkillContainer = styled.div`
+	width: 100%;
+	max-width: 600px;
+	@media (max-width: 1024px) {
+		width: 90%;
+	}
+`;
 
 const Headline = styled.div`
 	margin-top: 30px;
@@ -99,12 +109,10 @@ const Headline = styled.div`
 `;
 
 const Tools = styled.div`
-	margin-top: 60px;
-	width: 460px;
+	width: 80%;
 	margin: 30px 30px 30px 30px;
 	display: flex;
 	flex-direction: row;
-	justify-content: space-between;
 	align-items: center;
 `;
 
@@ -117,43 +125,49 @@ const App = () => (
 					<h2>I’m a Fullstack Developer based in Düsseldorf, Germany.</h2>
 				</TextContainer>
 				<ImageContainer>
-					<img src="/static/profile.png"></img>
+					<img src="/profile.png"></img>
 				</ImageContainer>
 			</LandingPage>
 			<ScrollDown>
-				<img src="/static/scroll.svg"></img>
+				<img src="/scroll.svg"></img>
 			</ScrollDown>
 
 			<Headline>Skills & Tools</Headline>
 			<Skills>
 				<ImageContainer style={{ flexDirection: "row" }}>
-					<img src="/static/developer.svg"></img>
+					<img src="/developer.svg"></img>
 				</ImageContainer>
 				<SkillContainer>
-					<Skill name="JavaScript" time="2 years" progress="0.7" />
-					<Skill name="CSS/HTML" time="2 years" progress="0.5" />
-					<Skill name="Java" time="4 years" progress="0.9" />
-					<Skill name="React" time="2 years" progress="0.8" />
-					<Skill name="CI/CD" time="1 years" progress="0.5" />
-					<Skill name="Docker" time="1 years" progress="0.8" />
+					<Skill name="JavaScript" time="2 years" progress="70" />
+					<Skill name="CSS/HTML" time="2 years" progress="50" />
+					<Skill name="Java" time="4 years" progress="90" />
+					<Skill name="React" time="2 years" progress="80" />
+					<Skill name="CI/CD" time="1 years" progress="50" />
+					<Skill name="Docker" time="1 years" progress="80" />
 					<Tools>
 						<div>Tools</div>
-						<div style={{ display: "flex", alignItems: "center" }}>
+						<div
+							style={{
+								display: "flex",
+								alignItems: "center",
+								width: "100%",
+								flexDirection: "row-reverse"
+							}}>
 							<img
 								width="40"
-								src="/static/github-icon.svg"
+								src="/github-icon.svg"
 								style={{ margin: "8px" }}></img>
 							<img
 								width="40"
-								src="/static/android-icon.svg"
+								src="/android-icon.svg"
 								style={{ margin: "8px" }}></img>
 							<img
 								width="40"
-								src="/static/terminal.svg"
+								src="/terminal.svg"
 								style={{ margin: "8px" }}></img>
 							<img
 								width="40"
-								src="/static/visual-studio-code.svg"
+								src="/visual-studio-code.svg"
 								style={{ margin: "8px" }}></img>
 						</div>
 					</Tools>

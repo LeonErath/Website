@@ -6,7 +6,7 @@ const NavStyles = styled.div`
 	display: flex;
 	flex-direction: row;
 	align-items: center;
-	@media (min-width: 320px) and (max-width: 480px) {
+	@media (max-width: 480px) {
 		margin: 8px;
 	}
 `;
@@ -14,7 +14,7 @@ const NavStyles = styled.div`
 const LinkDiv = styled.div`
 	display: flex;
 	flex-direction: row;
-	@media (min-width: 320px) and (max-width: 767px) {
+	@media (max-width: 767px) {
 		display: none;
 	}
 `;
@@ -61,7 +61,7 @@ const ContactButton = styled.div`
 const Nav = () => (
 	<NavStyles>
 		<LinkDiv>
-			<Link href="/static/resume/Leon_Erath_Resume_2019.pdf">
+			<Link href="/resume/Leon_Erath_Resume_2019.pdf">
 				<StyledLink>Resume</StyledLink>
 			</Link>
 			<Link href="#projects">

@@ -97,7 +97,7 @@ class Eve extends Component {
 						</div>
 					</Div>
 					<ImageContainer>
-						<Image src="/static/images/eve/iMac.png" alt="Pineapple" />
+						<Image src="/images/eve/iMac.png" alt="Pineapple" />
 					</ImageContainer>
 				</Container>
 
@@ -150,7 +150,7 @@ class Eve extends Component {
 						</Section.Text>
 					</Section.Content>
 					<ImageContainer>
-						<ImageStyled src="/static/images/eve/Chatbot.png" alt="Chatbot" />
+						<ImageStyled src="/images/eve/Chatbot.png" alt="Chatbot" />
 					</ImageContainer>
 				</Section>
 
@@ -203,7 +203,7 @@ class Eve extends Component {
 					</Section.Content>
 					<ImageContainer>
 						<ImageStyled
-							src="/static/images/eve/EveArchitecture.png"
+							src="/images/eve/EveArchitecture.png"
 							alt="Chatbot"
 						/>
 					</ImageContainer>
@@ -257,7 +257,7 @@ class Eve extends Component {
 						</Section.Text>
 					</Section.Content>
 					<ImageContainer>
-						<ImageStyled src="/static/images/eve/network.png" alt="Network" />
+						<ImageStyled src="/images/eve/network.png" alt="Network" />
 					</ImageContainer>
 				</Section>
 
@@ -265,7 +265,7 @@ class Eve extends Component {
 					<Section.Topic color={SECTION_COLOR}>DATA</Section.Topic>
 					<Section.Header>
 						To ensure the most authentic chat experience possible with the bot,
-						both an AI in the form of neural networks and static rules are used.
+						both an AI in the form of neural networks and public rules are used.
 					</Section.Header>
 
 					<Section.Text>

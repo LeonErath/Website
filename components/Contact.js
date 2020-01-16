@@ -6,7 +6,7 @@ const Div = styled.div`
 	flex-wrap: wrap;
 	align-items: center;
 	height: 90vh;
-	background-image: url("/static/contact_background.svg");
+	background-image: url("/contact_background.svg");
 	background-repeat: no-repeat;
 
 	background-position: center;
@@ -69,7 +69,7 @@ const Text = styled.div`
 const Contact = props => (
 	<Div>
 		<Container>
-			<img width="200" src="/static/email.svg"></img>
+			<img width="200" src="/email.svg"></img>
 			<div>
 				<Headline>Have a Question?</Headline>
 				<Text>

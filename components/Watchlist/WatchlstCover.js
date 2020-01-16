@@ -139,7 +139,7 @@ class WatchlistCover extends Component {
               </Left>
               <Right>
                 <img
-                  src="/static/images/Watchlist/movie_covers.png"
+                  src="/images/Watchlist/movie_covers.png"
                   style={{
                     objectFit: "contain",
                     width: "50%",

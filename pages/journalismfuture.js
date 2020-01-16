@@ -6,7 +6,7 @@ const JournalismFuture = () => (
     <img
       alt="jounalism future banner"
       style={{ width: "100%", objectFit: "contain" }}
-      src="/static/images/journalismfuture/JournalismFutureBanner.png"
+      src="/images/journalismfuture/JournalismFutureBanner.png"
     />
 
     <ProjectBar>
@@ -36,7 +36,7 @@ const JournalismFuture = () => (
           height: "70%"
         }}
         alt="JournalismFuture Functionality"
-        src="/static/images/journalismfuture/jf_functionality.png"
+        src="/images/journalismfuture/jf_functionality.png"
       />
     </Section>
 
@@ -48,7 +48,7 @@ const JournalismFuture = () => (
           height: "70%"
         }}
         alt="JournalismFuture Democratic Voting System"
-        src="/static/images/journalismfuture/jf_voting.png"
+        src="/images/journalismfuture/jf_voting.png"
       />
     </Section>
     <Section center>
@@ -59,7 +59,7 @@ const JournalismFuture = () => (
           height: "70%"
         }}
         alt="JournalismFuture Payment System"
-        src="/static/images/journalismfuture/jf_payment.png"
+        src="/images/journalismfuture/jf_payment.png"
       />
     </Section>
   </div>

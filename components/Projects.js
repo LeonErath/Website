@@ -20,17 +20,21 @@ const Backtext = styled.div`
 	font-size: 6em;
 	color: ${props => props.color};
 	font-weight: bold;
+	@media (min-width: 320px) and (max-width: 1024px) {
+		font-size: 5em;
+	}
 `;
 
 const ProjectDiv = styled.div`
+	width: 100%;
 	margin-top: 100px;
 	display: grid;
 	grid-template-columns: 1fr 1fr;
 	grid-template-rows: repeat(4, 400px);
 
-	@media (min-width: 320px) and (max-width: 767px) {
+	@media (max-width: 767px) {
 		grid-template-columns: 1fr;
-		grid-template-rows: 400px 400px 400px 400px 400px 400px 400px;
+		grid-template-rows: repeat(7, 400px);
 	}
 `;
 
@@ -38,7 +42,7 @@ const Projects = props => (
 	<ProjectDiv>
 		<Item style={{ background: "#F4F4F4" }}>
 			<Link href="/verifica">
-				<img width="130" src="static/verifica.png"></img>
+				<img width="130" src="/verifica.png"></img>
 			</Link>
 			<Card>
 				<Card.Header>
@@ -54,13 +58,13 @@ const Projects = props => (
 					</Card.Foreground>
 				</Card.Main>
 				<Card.Stack>
-					<img width="40" src="/static/react.svg"></img>
+					<img width="40" src="/react.svg"></img>
 				</Card.Stack>
 			</Card>
 		</Item>
 		<Item style={{ background: "#505050" }}>
 			<Link href="/eve">
-				<img width="400" src="static/eve.png"></img>
+				<img width="400" src="/eve.png"></img>
 			</Link>
 			<Card>
 				<Card.Header>
@@ -75,21 +79,21 @@ const Projects = props => (
 						</Link>
 						<Link href="https://github.com/AAA-Intelligence/eve">
 							<a target="_blank">
-								<img src="/static/github-icon.svg"></img>
+								<img src="/github-icon.svg"></img>
 							</a>
 						</Link>
 					</Card.Foreground>
 				</Card.Main>
 				<Card.Stack>
-					<img width="40" src="/static/python.svg"></img>
-					<img width="40" src="/static/gopher.svg"></img>
+					<img width="40" src="/python.svg"></img>
+					<img width="40" src="/gopher.svg"></img>
 				</Card.Stack>
 			</Card>
 		</Item>
 		<Item style={{ background: "#344A5F" }}>
 			<Link href="https://niklaskorz.github.io/audio3d/">
 				<a target="_blank">
-					<img width="400" src="static/audio3d.png"></img>
+					<img width="400" src="/audio3d.png"></img>
 				</a>
 			</Link>
 			<Card>
@@ -109,13 +113,13 @@ const Projects = props => (
 						</Link>
 						<Link href="https://github.com/niklaskorz/audio3d">
 							<a target="_blank">
-								<img src="/static/github-icon.svg"></img>
+								<img src="/github-icon.svg"></img>
 							</a>
 						</Link>
 					</Card.Foreground>
 				</Card.Main>
 				<Card.Stack>
-					<img width="40" src="/static/react.svg"></img>
+					<img width="40" src="/react.svg"></img>
 				</Card.Stack>
 			</Card>
 		</Item>
@@ -132,8 +136,8 @@ const Projects = props => (
 						Pineapple
 					</Backtext>
 					<img
-						width="480"
-						src="static/pineapple.png"
+						width="400"
+						src="/pineapple.png"
 						style={{ position: "absolute" }}></img>
 				</div>
 			</Link>
@@ -150,14 +154,14 @@ const Projects = props => (
 						</Link>
 						<Link href="https://github.com/LeonErath/Pineapple">
 							<a target="_blank">
-								<img src="/static/github-icon.svg"></img>
+								<img src="/github-icon.svg"></img>
 							</a>
 						</Link>
 					</Card.Foreground>
 				</Card.Main>
 				<Card.Stack>
-					<img width="40" src="/static/android-icon.svg"></img>
-					<img width="40" src="/static/brand/apple.svg"></img>
+					<img width="40" src="/android-icon.svg"></img>
+					<img width="40" src="/brand/apple.svg"></img>
 				</Card.Stack>
 			</Card>
 		</Item>
@@ -177,10 +181,7 @@ const Projects = props => (
 						}}>
 						Journalism
 					</Backtext>
-					<img
-						width="200"
-						src="static/jf.png"
-						style={{ position: "absolute" }}></img>
+					<img width="200" src="/jf.png" style={{ position: "absolute" }}></img>
 				</div>
 			</Link>
 			<Card>
@@ -196,19 +197,19 @@ const Projects = props => (
 						</Link>
 						<Link href="https://github.com/JournalismFuture/Journalism-Future-App">
 							<a target="_blank">
-								<img src="/static/github-icon.svg"></img>
+								<img src="/github-icon.svg"></img>
 							</a>
 						</Link>
 					</Card.Foreground>
 				</Card.Main>
 				<Card.Stack>
-					<img width="40" src="/static/android-icon.svg"></img>
+					<img width="40" src="/android-icon.svg"></img>
 				</Card.Stack>
 			</Card>
 		</Item>
 		<Item style={{ background: "#F4F4F4" }}>
 			<Link href="t2m">
-				<img width="400" src="static/t2m.png"></img>
+				<img width="400" src="/t2m.png"></img>
 			</Link>
 			<Card>
 				<Card.Header>
@@ -223,13 +224,13 @@ const Projects = props => (
 						</Link>
 						<Link href="https://github.com/AudiophileDev/T2M">
 							<a target="_blank">
-								<img src="/static/github-icon.svg"></img>
+								<img src="/github-icon.svg"></img>
 							</a>
 						</Link>
 					</Card.Foreground>
 				</Card.Main>
 				<Card.Stack>
-					<img width="40" height="60" src="/static/java.svg"></img>
+					<img width="40" height="60" src="/java.svg"></img>
 				</Card.Stack>
 			</Card>
 		</Item>
@@ -252,7 +253,7 @@ const Projects = props => (
 					</Backtext>
 					<img
 						width="200"
-						src="static/watchlist.png"
+						src="/watchlist.png"
 						style={{ position: "absolute" }}></img>
 				</div>
 			</Link>
@@ -269,13 +270,13 @@ const Projects = props => (
 						</Link>
 						<Link href="https://github.com/LeonErath/Watchlist">
 							<a target="_blank">
-								<img src="/static/github-icon.svg"></img>
+								<img src="/github-icon.svg"></img>
 							</a>
 						</Link>
 					</Card.Foreground>
 				</Card.Main>
 				<Card.Stack>
-					<img width="40" src="/static/android-icon.svg"></img>
+					<img width="40" src="/android-icon.svg"></img>
 				</Card.Stack>
 			</Card>
 		</Item>

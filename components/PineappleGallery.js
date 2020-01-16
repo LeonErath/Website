@@ -69,32 +69,32 @@ const Gallery = [
     title: "GRADES",
     text:
       " In the Grade Planner, the student can enter his own notes. So he has a direct overview of his grade point and a grade pre-announcement for his next testimonial.",
-    image: "/static /images/pineapple/grades_pineapple.png"
+    image: " /images/pineapple/grades_pineapple.png"
   },
 
   {
     title: "QUIZ",
     text:
       "The app is not only intended to inform, but also to assist students in learning by incorporating a quiz function that queries quiz questions created by the teachers of each class based on the current school material or prepare for the next exam. <br /> <br /> In the quiz, the students can prove their knowledge. The Quizzes are created by the teachers and are meant to be the student help to learn the lesson easier.",
-    image: "/static/images/pineapple/quiz_pineapple.png"
+    image: "/images/pineapple/quiz_pineapple.png"
   },
   {
     title: "EXAMS",
     text:
       "The exam plan is automatically loaded into the app and contains all necessary information for planning the exam phase.",
-    image: "/static/images/pineapple/exams_pineapple.png"
+    image: "/images/pineapple/exams_pineapple.png"
   },
   {
     title: "HOMEWORK",
     text:
       "With the task scheduler, the student can easily and easily organize and manage their homework.",
-    image: "/static/images/pineapple/homework_pineapple.png"
+    image: "/images/pineapple/homework_pineapple.png"
   },
   {
     title: "TIMETABLE",
     text:
       "The timetable automatically integrates the customized substitution plan for the student.",
-    image: "/static/images/pineapple/course_pineapple.png"
+    image: "/images/pineapple/course_pineapple.png"
   }
 ];
 

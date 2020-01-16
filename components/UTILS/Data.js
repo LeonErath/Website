@@ -5,8 +5,8 @@ const data = [
     name: "Text2Music",
     sub: "Turn articles into music.",
     link: "../t2m",
-    icon: "/static/images/t2m/terminal.png",
-    thumbnail: "/static/images/t2m.png",
+    icon: "/images/t2m/terminal.png",
+    thumbnail: "/images/t2m.png",
     links: [
       {
         name: "github",
@@ -53,9 +53,9 @@ const data = [
     name: "EVE",
     sub:
       "Bot's going on<br />A maschine learning chatbot<br />Created with Go and Python",
-    icon: "/static/images/eve/Logo.png",
+    icon: "/images/eve/Logo.png",
     link: "../eve",
-    thumbnail: "/static/images/eve.png",
+    thumbnail: "/images/eve.png",
     links: [
       {
         name: "github",
@@ -101,9 +101,9 @@ const data = [
     duration: "In progress",
     name: "JournalismFuture",
     sub: "Read the news of tomorrow!",
-    icon: "/static/images/journalismfuture/Logo.png",
+    icon: "/images/journalismfuture/Logo.png",
     link: "../journalismfuture",
-    thumbnail: "/static/images/journalismfuture.png",
+    thumbnail: "/images/journalismfuture.png",
     links: [
       {
         name: "github",
@@ -144,9 +144,9 @@ const data = [
     duration: "1 year",
     name: "Pineapple",
     sub: " Der Ultimative Schulplaner<br />Eine App von Schüler für Schüler",
-    icon: "/static/images/pineapple/LogoBMS.png",
+    icon: "/images/pineapple/LogoBMS.png",
     link: "../pineapple",
-    thumbnail: "/static/images/bmsapp4.png",
+    thumbnail: "/images/bmsapp4.png",
     links: [
       {
         name: "github",
@@ -196,9 +196,9 @@ const data = [
     duration: "3 months",
     name: "Cloudy",
     sub: "An alternative way to look<br /> at weather forecast.",
-    icon: "/static/images/cloudy/logo.png",
+    icon: "/images/cloudy/logo.png",
     link: "../cloudy",
-    thumbnail: "/static/images/cloudy.png",
+    thumbnail: "/images/cloudy.png",
     links: [
       {
         name: "github",
@@ -225,9 +225,9 @@ const data = [
     name: "Watchlist",
     sub:
       "See upcoming Movies and <br />save them into your Watchlist<br /> to watch them later.",
-    icon: "/static/images/Watchlist/Logo.png",
+    icon: "/images/Watchlist/Logo.png",
     link: "../watchlist",
-    thumbnail: "/static/images/watchlist.png",
+    thumbnail: "/images/watchlist.png",
     links: [
       {
         name: "github",

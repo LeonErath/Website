@@ -7,9 +7,9 @@ const Div = styled.div`
 	grid-template-columns: 1fr 1fr;
 	grid-template-rows: 400px 400px;
 
-	@media (min-width: 320px) and (max-width: 1024px) {
+	@media (max-width: 1024px) {
 		grid-template-columns: 1fr;
-		grid-template-rows: 400px 400px 400px 400px;
+		grid-template-rows: 1fr 1fr 1fr 1fr;
 	}
 `;
 
@@ -30,6 +30,10 @@ const Category = styled.div`
 `;
 const Headline = styled.div`
 	font-size: 2em;
+	text-align: center;
+	@media (max-width: 1024px) {
+		font-size: 1.6em;
+	}
 `;
 
 const Content = styled.div`
@@ -49,7 +53,6 @@ const Icon = styled.img`
 `;
 
 const List = styled.div`
-	min-width: 350px;
 	margin-left: 20px;
 	display: flex;
 	flex-direction: column;
@@ -61,6 +64,9 @@ const Item = styled.div`
 	display: flex;
 	flex-direction: row;
 	align-items: center;
+	:first-child {
+		margin-top: 16px;
+	}
 `;
 
 const Point = styled.div`
@@ -95,7 +101,7 @@ const About = props => (
 		<Category>
 			<Headline>Programming & Design</Headline>
 			<Content>
-				<Icon src="/static/categorie1.svg"></Icon>
+				<Icon src="/categorie1.svg"></Icon>
 				<List>
 					<Item>
 						<Point inverse>
@@ -124,7 +130,7 @@ const About = props => (
 		<Category>
 			<Headline>Research</Headline>
 			<Content>
-				<Icon src="/static/categorie2.svg"></Icon>
+				<Icon src="/categorie2.svg"></Icon>
 				<List>
 					<Item>
 						<Point>
@@ -150,7 +156,7 @@ const About = props => (
 		<Category>
 			<Headline>Globally Present</Headline>
 			<Content>
-				<Icon src="/static/categorie3.svg"></Icon>
+				<Icon src="/categorie3.svg"></Icon>
 				<List>
 					<Item>
 						<Point>
@@ -176,7 +182,7 @@ const About = props => (
 		<Category>
 			<Headline>Searching for a Challenge</Headline>
 			<Content>
-				<Icon src="/static/categorie4.svg"></Icon>
+				<Icon src="/categorie4.svg"></Icon>
 				<List>
 					<Item>
 						<Point inverse>

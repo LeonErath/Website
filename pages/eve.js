@@ -8,7 +8,7 @@ import Link from "next/link";
 const Header = styled.div`
 	width: 100%;
 	height: 100vh;
-	background-image: url("/static/eve_blob.svg");
+	background-image: url("/eve_blob.svg");
 	background-repeat: no-repeat;
 	background-position-x: -600px;
 	background-position-y: -300px;
@@ -161,7 +161,7 @@ const eve = props => {
 						width: "100%"
 					}}>
 					<img
-						src="/static/darting_assistant.svg"
+						src="/darting_assistant.svg"
 						alt="assistant"
 						width="600"></img>
 				</div>
@@ -180,7 +180,7 @@ const eve = props => {
 					</Text>
 				</div>
 				<ImageContainer>
-					<img src="/static/dark_alley.svg" alt="dark_alley" width="400"></img>
+					<img src="/dark_alley.svg" alt="dark_alley" width="400"></img>
 				</ImageContainer>
 			</Container>
 
@@ -197,13 +197,13 @@ const eve = props => {
 					</Text>
 				</div>
 				<ImageContainer>
-					<img src="/static/opinion.svg" alt="dark_alley" width="400"></img>
+					<img src="/opinion.svg" alt="dark_alley" width="400"></img>
 				</ImageContainer>
 			</Container>
 
 			<Banner>
 				<div style={{ marginRight: "100px" }}>
-					<img src="/static/eve_second_logo.svg" alt="eve" width="200"></img>
+					<img src="/eve_second_logo.svg" alt="eve" width="200"></img>
 				</div>
 				<div>
 					<H2 style={{ color: "white" }}>Available everywhere.</H2>
@@ -211,10 +211,10 @@ const eve = props => {
 						Chat with your AI wherever you want from the web or as an app.
 					</Text>
 					<Software>
-						<img src="/static/brand/googlechrome.svg"></img>
-						<img src="/static/brand/mozillafirefox.svg"></img>
-						<img src="/static/brand/apple.svg"></img>
-						<img src="/static/brand/android.svg"></img>
+						<img src="/brand/googlechrome.svg"></img>
+						<img src="/brand/mozillafirefox.svg"></img>
+						<img src="/brand/apple.svg"></img>
+						<img src="/brand/android.svg"></img>
 					</Software>
 				</div>
 			</Banner>

@@ -40,32 +40,26 @@ const StyledHeader = styled.div`
 	transition: background-color 0.3s linear;
 	box-shadow: 0 10px 20px 0
 		${props => (props.shadow ? "rgb(0,0,0,0)" : "rgba(0,0,0,.05)")};
-	@media (min-width: 320px) and (max-width: 1024px) {
-		width: 100%;
+	@media (max-width: 1024px) {
 	}
 `;
 
-class Header extends React.Component {
-	constructor(props) {
-		super(props);
-	}
-	render() {
-		return (
-			<div style={{ position: "absolute", width: "100vw", height: "100vh" }}>
-				<StyledHeader shadow={this.props.scrollPosition < 10}>
-					<div>
-						<Logo>
-							<Link href="/">
-								<img src="static/logo.png" width="80"></img>
-							</Link>
-						</Logo>
+const Header = props => {
+	return (
+		<div style={{ position: "absolute", width: "100vw", height: "100vh" }}>
+			<StyledHeader shadow={props.scrollPosition < 10}>
+				<div>
+					<Logo>
+						<Link href="/">
+							<img src="/logo.png" width="80"></img>
+						</Link>
+					</Logo>
 
-						<Nav />
-					</div>
-				</StyledHeader>
-			</div>
-		);
-	}
-}
+					<Nav />
+				</div>
+			</StyledHeader>
+		</div>
+	);
+};
 
 export default Header;

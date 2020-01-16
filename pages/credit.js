@@ -30,25 +30,25 @@ const Credit = () => (
   <Div>
     <ImpressumBox>
       <ImpressumText>
-        <Image alt="webapi" src="/static/copyright/webapi.svg" />
+        <Image alt="webapi" src="/copyright/webapi.svg" />
         Created by mikicon from the Noun Project
         <br />
-        <Image alt="chatbot" src="/static/copyright/chatbot.svg" />
+        <Image alt="chatbot" src="/copyright/chatbot.svg" />
         Created by Oksana from the Noun Project
         <br />
-        <Image alt="music" src="/static/copyright/music.svg" />
+        <Image alt="music" src="/copyright/music.svg" />
         Created by B Barren from the Noun Project
         <br />
-        <Image alt="network" src="/static/copyright/network.svg" />
+        <Image alt="network" src="/copyright/network.svg" />
         Created by gilbert badget from the Noun Project
         <br />
-        <Image alt="smartphone" src="/static/copyright/smartphone.svg" />
+        <Image alt="smartphone" src="/copyright/smartphone.svg" />
         Created by Matthias Van Wambeke from the Noun Project
         <br />
-        <Image alt="stress" src="/static/copyright/stress.svg" />
+        <Image alt="stress" src="/copyright/stress.svg" />
         Created by Hare Krishna from the Noun Project
         <br />
-        <Image alt="copyright" src="/static/copyright/text.svg" />
+        <Image alt="copyright" src="/copyright/text.svg" />
         Created by Adnen Kari from the Noun Project
       </ImpressumText>
     </ImpressumBox>

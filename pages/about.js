@@ -132,7 +132,7 @@ const About = () => (
           <Link href="https://github.com/LeonErath">
             <a>
               <img
-                src="/static/github.png"
+                src="/github.png"
                 style={{
                   margin: "8px",
                   width: "18px",
@@ -146,7 +146,7 @@ const About = () => (
             <a>
               {" "}
               <img
-                src="/static/brand/xing_black.svg"
+                src="/brand/xing_black.svg"
                 style={{
                   margin: "8px",
                   width: "18px",
@@ -160,7 +160,7 @@ const About = () => (
             <a>
               {" "}
               <img
-                src="/static/brand/linkedin_black.svg"
+                src="/brand/linkedin_black.svg"
                 style={{
                   margin: "8px",
                   width: "18px",
@@ -173,7 +173,7 @@ const About = () => (
         </ContactInfo>
       </Section>
 
-      <Image src="/static/profile.jpg" />
+      <Image src="/profile.jpg" />
     </AboutSection>
     <List>
       <Topic>
