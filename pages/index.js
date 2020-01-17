@@ -122,7 +122,7 @@ const App = () => (
 			<LandingPage>
 				<TextContainer>
 					<h1>Hey, I’m Leon 👋</h1>
-					<h2>I’m a Fullstack Developer based in Düsseldorf.</h2>
+					<h2>I’m a Fullstack Developer based in Düsseldorf, Germany.</h2>
 				</TextContainer>
 				<ImageContainer>
 					<img src="/profile.png"></img>
