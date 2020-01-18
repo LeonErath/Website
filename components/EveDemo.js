@@ -21,6 +21,17 @@ const ProfileContainer = styled.div`
 	}
 `;
 
+const StatusBubble = styled.div`
+	height: 12px;
+	width: 12px;
+	border: 3px solid #2f2b41;
+	border-radius: 50%;
+	background: ${props => (props.online ? "#00E30A" : "#E3000A")};
+	position: absolute;
+	top: 58px;
+	left: 58px;
+`;
+
 const Header = styled.div`
 	height: 80px;
 	position: relative;
@@ -142,16 +153,35 @@ const customStyles = {
 };
 const EveDemo = props => {
 	const [messages, setMessages] = useState([]);
+	const [isOffline, setOffline] = useState(false);
 	const [loading, setLoading] = useState(false);
 	const [message, setMessage] = useState("");
 
 	const URL =
 		process.env.NODE_ENV === "development"
-			? "http://localhost:3001/message-api"
-			: "/api/eve/message-api";
+			? "http://localhost:3001/api/eve"
+			: "/api/eve";
+
+	useEffect(() => {
+		try {
+			setInterval(async () => {
+				axios({
+					method: "get",
+					url: `${URL}/health-check`,
+					timeout: 1000
+				})
+					.then(() => {
+						setOffline(false);
+					})
+					.catch(e => {
+						setOffline(true);
+					});
+			}, 3000);
+		} catch (e) {}
+	}, []);
 
 	const askEve = async message => {
-		if (loading) {
+		if (loading || isOffline) {
 			return;
 		}
 		setLoading(true);
@@ -160,7 +190,7 @@ const EveDemo = props => {
 
 		axios({
 			method: "post",
-			url: URL,
+			url: `${URL}/message-api`,
 			data: {
 				message: message
 			}
@@ -186,8 +216,10 @@ const EveDemo = props => {
 				<ProfileContainer>
 					<img src="/images/eve/smile2.jpg"></img>
 				</ProfileContainer>
+				<StatusBubble online={!isOffline}></StatusBubble>
 				<Name>Eve</Name>
 				{loading && <Status>writing...</Status>}
+				{isOffline && <Status>offline</Status>}
 			</Header>
 			<MessageContainer>
 				{messages.map((message, i) => (
