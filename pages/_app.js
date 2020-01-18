@@ -4,7 +4,7 @@ import Page from "../components/Page";
 
 if (process.env.NODE_ENV !== "development") {
 	Sentry.init({
-		dsn: "https://892dfd2bab7342319ad690cef5779988@sentry.io/1886915"
+		dsn: "https://6c61dd2c70a4401ebce9ba477fcd6542@sentry.io/1539721"
 	});
 }
 
