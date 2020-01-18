@@ -12,7 +12,7 @@ export default props => (
 		{...props}
 		xmlns="http://www.w3.org/2000/svg"
 		width="1523"
-		height="615"
+		height="1015"
 		viewBox="0 0 1523 615">
 		<g id="Methods" transform="translate(-237 -3232)">
 			<g id="icon">
@@ -24,7 +24,7 @@ export default props => (
 						type="rotate"
 						from="0 1036 3476"
 						to="80 1036 3476"
-						dur="40s"
+						dur="30s"
 						begin="0s; anim2.end"
 					/>
 					<animateTransform
@@ -34,7 +34,7 @@ export default props => (
 						type="rotate"
 						from="80 1036 3476"
 						to="0 1036 3476"
-						dur="40s"
+						dur="30s"
 						begin="anim1.end"
 					/>
 					<rect
@@ -248,14 +248,14 @@ export default props => (
 			<g id="Group_195" data-name="Group 195">
 				<text
 					class="text"
-					id="We_are_using_state_of_the_artificial_intelligence_to_generate_the_best_answers_for_your_conversation."
-					data-name="We are using state of the artificial intelligence to generate the best answers for your conversation."
+					id="We_are_using_state_of_the_art_artificial_intelligence_to_generate_the_best_answers_for_your_conversation."
+					data-name="We are using state of the art artificial intelligence to generate the best answers for your conversation."
 					transform="translate(237 3590)"
 					fill="#404040"
 					font-size="23"
 					font-family="HelveticaNeue, Helvetica Neue">
 					<tspan x="0" y="22">
-						We are using state of the artificial intelligence to{" "}
+						We are using state of the art artificial intelligence to{" "}
 					</tspan>
 					<tspan x="0" y="62">
 						generate the best answers for your conversation.

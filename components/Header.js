@@ -46,7 +46,7 @@ const StyledHeader = styled.div`
 
 const Header = props => {
 	return (
-		<div style={{ position: "absolute", width: "100vw", height: "100vh" }}>
+		<div style={{ position: "absolute", width: "100vw" }}>
 			<StyledHeader shadow={props.scrollPosition < 10}>
 				<div>
 					<Logo>
