@@ -15,6 +15,8 @@ const ProfileContainer = styled.div`
 		border-radius: 50%;
 		width: 80%;
 		max-width: 60px;
+		max-height: 60px;
+
 		object-fit: cover;
 	}
 `;
