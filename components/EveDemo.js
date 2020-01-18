@@ -140,7 +140,7 @@ const EveDemo = props => {
 	const URL =
 		process.env.NODE_ENV === "development"
 			? "http://localhost:3001/message-api"
-			: "https://eve.erath.dev/message-api";
+			: "/api/eve/message-api";
 
 	const askEve = async message => {
 		setLoading(true);
