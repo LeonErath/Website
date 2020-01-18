@@ -86,7 +86,7 @@ const Projects = props => (
 						alignItems: "center"
 					}}>
 					<img
-						width="400"
+						width="340"
 						src="/eve.svg"
 						style={{ position: "absolute" }}></img>
 				</div>

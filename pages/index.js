@@ -3,6 +3,7 @@ import Skill from "../components/Skill";
 import Projects from "../components/Projects";
 import About from "../components/About";
 import Contact from "../components/Contact";
+import Github from "../components/Github";
 
 const Root = styled.div`
 	display: flex;
@@ -80,7 +81,6 @@ const ImageContainer = styled.div`
 	}
 `;
 const Skills = styled.div`
-	height: 70vh;
 	display: flex;
 	flex-direction: row;
 	width: 100%;
@@ -94,6 +94,7 @@ const Skills = styled.div`
 `;
 
 const SkillContainer = styled.div`
+	margin-top: 30px;
 	width: 100%;
 	max-width: 600px;
 	@media (max-width: 1024px) {
@@ -102,7 +103,7 @@ const SkillContainer = styled.div`
 `;
 
 const Headline = styled.div`
-	margin-top: 30px;
+	margin-top: 64px;
 	width: 100%;
 	text-align: center;
 	font-size: 2em;
@@ -116,75 +117,72 @@ const Tools = styled.div`
 	align-items: center;
 `;
 
-const App = () => (
-	<Root>
-		<Container>
-			<LandingPage>
-				<TextContainer>
-					<h1>Hey, I’m Leon 👋</h1>
-					<h2>I’m a Fullstack Developer based in Düsseldorf, Germany.</h2>
-				</TextContainer>
-				<ImageContainer>
-					<img src="/profile.png"></img>
-				</ImageContainer>
-			</LandingPage>
-			<ScrollDown>
-				<img src="/scroll.svg"></img>
-			</ScrollDown>
+const App = () => {
+	return (
+		<Root>
+			<Container>
+				<LandingPage>
+					<TextContainer>
+						<h1>Hey, I’m Leon 👋</h1>
+						<h2>I’m a Fullstack Developer based in Düsseldorf, Germany.</h2>
+					</TextContainer>
+					<ImageContainer>
+						<img src="/profile.png"></img>
+					</ImageContainer>
+				</LandingPage>
+				<ScrollDown>
+					<img src="/scroll.svg"></img>
+				</ScrollDown>
 
-			<Headline>Skills & Tools</Headline>
-			<Skills>
-				<ImageContainer style={{ flexDirection: "row" }}>
-					<img src="/developer.svg"></img>
-				</ImageContainer>
-				<SkillContainer>
-					<Skill name="JavaScript" time="2 years" progress="80" />
-					<Skill name="React" time="2 years" progress="70" />
-					<Skill name="Java" time="4 years" progress="60" />
-					<Skill name="CI/CD" time="2 years" progress="60" />
-					<Skill name="Docker" time="2 years" progress="60" />
-					<Skill name="CSS/HTML" time="2 years" progress="40" />
-					<Tools>
-						<div>Tools</div>
-						<div
-							style={{
-								display: "flex",
-								alignItems: "center",
-								width: "100%",
-								flexDirection: "row-reverse"
-							}}>
-							<img
-								width="40"
-								src="/github-icon.svg"
-								style={{ margin: "8px" }}></img>
-							<img
-								width="40"
-								src="/android-icon.svg"
-								style={{ margin: "8px" }}></img>
-							<img
-								width="40"
-								src="/terminal.svg"
-								style={{ margin: "8px" }}></img>
-							<img
-								width="40"
-								src="/visual-studio-code.svg"
-								style={{ margin: "8px" }}></img>
-						</div>
-					</Tools>
-				</SkillContainer>
-			</Skills>
-			<Headline id="projects">Projects</Headline>
+				<Headline>Skills & Tools</Headline>
+				<Skills>
+					<Github></Github>
 
-			<Projects />
+					<SkillContainer>
+						<Skill name="JavaScript" time="2 years" progress="80" />
+						<Skill name="React" time="2 years" progress="70" />
+						<Skill name="Java" time="4 years" progress="60" />
+						<Skill name="CI/CD" time="2 years" progress="60" />
+						<Skill name="Docker" time="2 years" progress="60" />
+						<Skill name="CSS/HTML" time="2 years" progress="40" />
+						<Tools>
+							<div>Tools</div>
+							<div
+								style={{
+									display: "flex",
+									alignItems: "center",
+									width: "100%",
+									flexDirection: "row-reverse"
+								}}>
+								<img
+									width="40"
+									src="/android-icon.svg"
+									style={{ margin: "8px" }}></img>
+								<img
+									width="40"
+									src="/terminal.svg"
+									style={{ margin: "8px" }}></img>
+								<img
+									width="40"
+									src="/visual-studio-code.svg"
+									style={{ margin: "8px" }}></img>
+							</div>
+						</Tools>
+					</SkillContainer>
+				</Skills>
+				<Headline id="projects">Projects</Headline>
 
-			<Headline id="about">About Me</Headline>
+				<Projects />
 
-			<About />
+				<Headline id="about">About Me</Headline>
 
-			<div id="contact"></div>
-			<Contact></Contact>
-		</Container>
-	</Root>
-);
+				<About />
+
+				<div id="contact"></div>
+				<Contact></Contact>
+			</Container>
+		</Root>
+	);
+};
 
 export default App;
