@@ -1,9 +1,10 @@
-import React from "react";
+import React, { useState } from "react";
 import styled from "styled-components";
 import Tech from "../components/svg/tech";
 import Stack from "../components/svg/stack";
 import Github from "../components/svg/github";
 import Link from "next/link";
+import EveDemo from "../components/EveDemo";
 
 const Root = styled.div`
 	box-sizing: border-box;
@@ -18,7 +19,7 @@ const Root = styled.div`
 const Header = styled.div`
 	box-sizing: border-box;
 	width: 100%;
-	height: 100vh;
+	height: 120vh;
 	background-image: url("/eve_blob.svg");
 	background-repeat: no-repeat;
 	background-position-x: -600px;
@@ -205,14 +206,17 @@ const ButtonOutline = styled.button`
 `;
 
 const eve = props => {
+	const [isDemoOpen, setDemoOpen] = useState(false);
+
 	return (
 		<Root>
+			<EveDemo isDemoOpen={isDemoOpen} setDemoOpen={setDemoOpen}></EveDemo>
 			<Header>
 				<FlexItem>
 					<H1>Eve</H1>
 					<H2>A virtual dating assistant</H2>
 					<HeaderActions>
-						<Button>Demo</Button>
+						<Button onClick={() => setDemoOpen(true)}>Demo</Button>
 						<Link href="https://github.com/AAA-Intelligence/eve/wiki/EVE-API">
 							<a>
 								<ButtonOutline>Documentation</ButtonOutline>

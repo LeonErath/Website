@@ -32,22 +32,16 @@ const StyledHeader = styled.div`
 	justify-content: center;
 	position: sticky;
 	top: 0;
-	z-index: 1;
-	background: ${props => (props.shadow ? "transparent" : "white")};
 	display: flex;
 	padding: 10px;
 	flex-direction: row;
 	transition: background-color 0.3s linear;
-	box-shadow: 0 10px 20px 0
-		${props => (props.shadow ? "rgb(0,0,0,0)" : "rgba(0,0,0,.05)")};
-	@media (max-width: 1024px) {
-	}
 `;
 
 const Header = props => {
 	return (
 		<div style={{ position: "absolute", width: "100vw" }}>
-			<StyledHeader shadow={props.scrollPosition < 10}>
+			<StyledHeader>
 				<div>
 					<Logo>
 						<Link href="/">
