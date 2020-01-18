@@ -5,8 +5,8 @@ import axios from "axios";
 
 const ProfileContainer = styled.div`
 	position: absolute;
-	top: 16px;
-	left: 16px;
+	top: 10px;
+	left: 20px;
 	display: flex;
 	width: 100%;
 	justify-content: flex-start;
@@ -14,28 +14,36 @@ const ProfileContainer = styled.div`
 	img {
 		border-radius: 50%;
 		width: 80%;
-		max-width: 120px;
+		max-width: 60px;
 		object-fit: cover;
 	}
 `;
 
 const Header = styled.div`
-	height: 60px;
+	height: 80px;
 	position: relative;
-	border-bottom: 1px solid #d9d9d9;
-	display: flex;
-	justify-content: center;
-	align-items: center;
 
-	div {
-		font-size: 40px;
-	}
+	background: #2f2c41;
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+`;
+const Name = styled.div`
+	margin-left: 90px;
+	font-size: 40px;
+	color: white;
+`;
+
+const Status = styled.div`
+	font-size: 14px;
+	margin-left: 8px;
+	color: #e0e0e0;
 `;
 
 const MessageContainer = styled.div`
 	box-sizing: border-box;
 	overflow-y: scroll;
-	margin-top: 60px;
+	margin-top: 16px;
 	flex-grow: 1;
 	margin-left: 16px;
 	margin-right: 16px;
@@ -50,14 +58,14 @@ const Message = styled.div`
 	display: flex;
 	justify-content: ${props => (props.user ? "flex-end" : "flex-start")};
 	div {
-		background: ${props => (props.user ? "#518CE0" : "#EBEDF2")};
-		color: ${props => (props.user ? "white" : "#505157")};
+		background: ${props => (props.user ? "#31ABB5" : "#F4F4F4")};
+		color: ${props => (props.user ? "white" : "#2F2B41")};
 	}
 `;
 
 const Bubble = styled.div`
 	padding: 8px;
-	border-radius: 4px;
+	border-radius: 8px;
 	font-size: 20px;
 `;
 
@@ -81,13 +89,16 @@ const Input = styled.input`
 	height: 32px;
 	padding: 4px 11px;
 	color: rgba(0, 0, 0, 0.65);
-	font-size: 14px;
+	font-size: 16px;
 	line-height: 1.5;
 	background-color: #fff;
 	background-image: none;
-	border: 1px solid #d9d9d9;
+	border: 1px solid #2f2c41;
 	border-radius: 4px;
 	transition: all 0.3s;
+	:focus {
+		outline: none;
+	}
 `;
 
 const Button = styled.button`
@@ -96,8 +107,6 @@ const Button = styled.button`
 	background-size: cover; /* <------ */
 	background-repeat: no-repeat;
 	background-position: center center;
-	border: 1px solid transparent;
-	box-shadow: 0 2px 0 rgba(0, 0, 0, 0.015);
 	cursor: pointer;
 	transition: all 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
 	user-select: none;
@@ -106,12 +115,8 @@ const Button = styled.button`
 	height: 30px;
 	border-radius: 50%;
 	background-color: #fff;
-	border-color: #d9d9d9;
+	border-color: #fff;
 	display: block;
-	transition: all cubic-bezier(0.075, 0.82, 0.165, 1);
-	:hover {
-		border-color: #5d5d5d;
-	}
 `;
 
 const customStyles = {
@@ -125,6 +130,7 @@ const customStyles = {
 		top: "50%",
 		left: "50%",
 		right: "auto",
+		borderRadius: "20px",
 		overflow: "hidden",
 		boxSizing: "border-box",
 		bottom: "auto",
@@ -143,6 +149,9 @@ const EveDemo = props => {
 			: "/api/eve/message-api";
 
 	const askEve = async message => {
+		if (loading) {
+			return;
+		}
 		setLoading(true);
 		setMessages([...messages, message]);
 		setMessage("");
@@ -175,7 +184,8 @@ const EveDemo = props => {
 				<ProfileContainer>
 					<img src="/images/eve/smile2.jpg"></img>
 				</ProfileContainer>
-				<div>Eve</div>
+				<Name>Eve</Name>
+				{loading && <Status>writing...</Status>}
 			</Header>
 			<MessageContainer>
 				{messages.map((message, i) => (
@@ -194,7 +204,7 @@ const EveDemo = props => {
 					}}
 					value={message}
 					onChange={v => setMessage(v.target.value)}
-					placeholder="hello"></Input>
+					placeholder="Hello..."></Input>
 				<Button onClick={() => askEve(message)}></Button>
 			</Forms>
 		</Modal>

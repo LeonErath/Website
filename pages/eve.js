@@ -19,12 +19,12 @@ const Root = styled.div`
 const Header = styled.div`
 	box-sizing: border-box;
 	width: 100%;
-	height: 120vh;
+	height: 110vh;
 	background-image: url("/eve_blob.svg");
 	background-repeat: no-repeat;
 	background-position-x: -600px;
 	background-position-y: -300px;
-	padding: 100px 100px 0px 100px;
+	padding: 0px 100px 0px 100px;
 	display: flex;
 	justify-content: space-between;
 	@media (min-width: 320px) and (max-width: 1024px) {
