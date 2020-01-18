@@ -122,7 +122,7 @@ const App = () => (
 			<LandingPage>
 				<TextContainer>
 					<h1>Hey, I’m Leon 👋</h1>
-					<h2>I’m a Fullstack Developer based in Düsseldorf.</h2>
+					<h2>I’m a Fullstack Developer based in Düsseldorf, Germany.</h2>
 				</TextContainer>
 				<ImageContainer>
 					<img src="/profile.png"></img>
@@ -138,12 +138,12 @@ const App = () => (
 					<img src="/developer.svg"></img>
 				</ImageContainer>
 				<SkillContainer>
-					<Skill name="JavaScript" time="2 years" progress="70" />
-					<Skill name="CSS/HTML" time="2 years" progress="50" />
-					<Skill name="Java" time="4 years" progress="90" />
-					<Skill name="React" time="2 years" progress="80" />
-					<Skill name="CI/CD" time="1 years" progress="50" />
-					<Skill name="Docker" time="1 years" progress="80" />
+					<Skill name="JavaScript" time="2 years" progress="80" />
+					<Skill name="React" time="2 years" progress="70" />
+					<Skill name="Java" time="4 years" progress="60" />
+					<Skill name="CI/CD" time="2 years" progress="60" />
+					<Skill name="Docker" time="2 years" progress="60" />
+					<Skill name="CSS/HTML" time="2 years" progress="40" />
 					<Tools>
 						<div>Tools</div>
 						<div
