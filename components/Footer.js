@@ -1,4 +1,3 @@
-import Link from "next/link";
 import styled from "styled-components";
 
 const StyledFooter = styled.div`
@@ -6,14 +5,21 @@ const StyledFooter = styled.div`
 	display: flex;
 	justify-content: center;
 	align-content: center;
+	flex-direction: column;
+	align-items: center;
 	background: #2d313c;
 	padding: 16px;
 	margin-top: 16px;
 	color: white;
+	span {
+		margin: 4px;
+	}
 `;
 
 const Footer = () => (
-	<StyledFooter>Leon Erath © 2019 - All Rights Reserved</StyledFooter>
+	<StyledFooter>
+		<span>Made with Mate & Love</span>
+	</StyledFooter>
 );
 
 export default Footer;

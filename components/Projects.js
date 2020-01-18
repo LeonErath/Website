@@ -115,10 +115,14 @@ const Projects = props => (
 				</Card.Stack>
 			</Card>
 		</Item>
-		<Item style={{ background: "#344A5F" }}>
+		<Item
+			background={"#0F9688"}
+			style={{
+				backgroundImage: 'url("/3daudio_background.svg")'
+			}}>
 			<Link href="https://niklaskorz.github.io/audio3d/">
 				<a target="_blank">
-					<img width="400" src="/audio3d.png"></img>
+					<img width="300" src="/3daudio.svg"></img>
 				</a>
 			</Link>
 			<Card>
@@ -127,13 +131,13 @@ const Projects = props => (
 					<div>6 Months</div>
 				</Card.Header>
 				<Card.Main>
-					<Card.Background>audio only</Card.Background>
+					<Card.Background>experiment</Card.Background>
 					<Card.Foreground>
 						<Link href="https://niklaskorz.github.io/audio3d/">
 							<a
 								target="_blank"
 								style={{ color: "black", textDecoration: "none" }}>
-								<Card.Title>Audio 3D</Card.Title>
+								<Card.Title>3D Audio Editor</Card.Title>
 							</a>
 						</Link>
 						<Link href="https://github.com/niklaskorz/audio3d">
@@ -148,7 +152,11 @@ const Projects = props => (
 				</Card.Stack>
 			</Card>
 		</Item>
-		<Item style={{ background: "#CE5E5E" }}>
+		<Item
+			background={"#CE5E5E"}
+			style={{
+				backgroundImage: 'url("/pineapple_background.svg")'
+			}}>
 			<Link href="pineapple">
 				<div
 					style={{
@@ -157,9 +165,6 @@ const Projects = props => (
 						justifyContent: "center",
 						alignItems: "center"
 					}}>
-					<Backtext color="#AA4D4D" style={{ transform: "rotate(-3deg)" }}>
-						Pineapple
-					</Backtext>
 					<img
 						width="400"
 						src="/pineapple.png"

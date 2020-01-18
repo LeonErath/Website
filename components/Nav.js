@@ -64,15 +64,15 @@ const Nav = () => (
 			<Link href="/resume/Leon_Erath_Resume_2019.pdf">
 				<StyledLink>Resume</StyledLink>
 			</Link>
-			<Link href="#projects">
+			<Link href="/#projects">
 				<StyledLink>Projects</StyledLink>
 			</Link>
-			<Link href="#about">
+			<Link href="/#about">
 				<StyledLink>About</StyledLink>
 			</Link>
 		</LinkDiv>
 		<ContactDiv>
-			<Link href="#contact">
+			<Link href="/#contact">
 				<ContactButton>Contact Me</ContactButton>
 			</Link>
 		</ContactDiv>

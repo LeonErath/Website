@@ -39,7 +39,7 @@ const TextContainer = styled.div`
 `;
 
 const LandingPage = styled.div`
-	height: 86vh;
+	height: 92vh;
 	display: flex;
 	flex-direction: row;
 	flex-wrap: wrap-reverse;
@@ -80,7 +80,7 @@ const ImageContainer = styled.div`
 	}
 `;
 const Skills = styled.div`
-	height: 86vh;
+	height: 70vh;
 	display: flex;
 	flex-direction: row;
 	width: 100%;
