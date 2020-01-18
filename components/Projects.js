@@ -8,6 +8,10 @@ const Item = styled.div`
 	justify-content: center;
 	align-items: center;
 	position: relative;
+	background: ${props => (props.background ? props.background : "#ffffff")};
+	background-size: contain;
+	background-repeat: no-repeat;
+	background-position: center center;
 	:hover {
 		div {
 			opacity: 1;
@@ -20,6 +24,12 @@ const Backtext = styled.div`
 	font-size: 6em;
 	color: ${props => props.color};
 	font-weight: bold;
+	display: flex;
+
+	span {
+		line-height: 140px;
+		margin: 32px;
+	}
 	@media (min-width: 320px) and (max-width: 1024px) {
 		font-size: 5em;
 	}
@@ -40,7 +50,7 @@ const ProjectDiv = styled.div`
 
 const Projects = props => (
 	<ProjectDiv>
-		<Item style={{ background: "#F4F4F4" }}>
+		<Item background={"#F4F4F4"}>
 			<Link href="/verifica">
 				<img width="130" src="/verifica.png"></img>
 			</Link>
@@ -62,9 +72,24 @@ const Projects = props => (
 				</Card.Stack>
 			</Card>
 		</Item>
-		<Item style={{ background: "#505050" }}>
+		<Item
+			background={"#2F2E41"}
+			style={{
+				backgroundImage: 'url("/eve_background.svg")'
+			}}>
 			<Link href="/eve">
-				<img width="400" src="/eve.png"></img>
+				<div
+					style={{
+						position: "relative",
+						display: "flex",
+						justifyContent: "center",
+						alignItems: "center"
+					}}>
+					<img
+						width="400"
+						src="/eve.svg"
+						style={{ position: "absolute" }}></img>
+				</div>
 			</Link>
 			<Card>
 				<Card.Header>

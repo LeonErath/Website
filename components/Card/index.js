@@ -1,6 +1,7 @@
 import styled from "styled-components";
 
 const Card = styled.div`
+	overflow: hidden;
 	position: absolute;
 	display: flex;
 	flex-direction: column;
@@ -36,6 +37,7 @@ const Main = styled.div`
 `;
 
 const Foreground = styled.div`
+	overflow: hidden;
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
@@ -45,6 +47,7 @@ const Foreground = styled.div`
 `;
 
 const Background = styled.div`
+	overflow: hidden;
 	font-size: 6em;
 	font-weight: bold;
 	color: #f4f4f4;
