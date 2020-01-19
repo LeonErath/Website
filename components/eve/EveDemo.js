@@ -266,6 +266,13 @@ const EveDemo = props => {
 								message={message}
 								isLast={i === messages.length - 1}></ChatMessage>
 						))}
+						{loading && (
+							<ChatMessage
+								loading={loading}
+								isUser={false}
+								message={{ text: "Loading...", time: Date.now() }}
+								isLast={false}></ChatMessage>
+						)}
 					</MessageContainer>
 					<Forms>
 						<Input

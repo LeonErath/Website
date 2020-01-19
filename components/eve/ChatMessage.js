@@ -1,5 +1,6 @@
 import styled, { keyframes } from "styled-components";
 import moment from "moment";
+import { BeatLoader } from "react-spinners";
 
 const fadeIn = keyframes`
   from {
@@ -8,6 +9,7 @@ const fadeIn = keyframes`
   }
 
   to {
+	visibility: visible;
     transform: scale(1);
 	opacity: 1;
   }
@@ -57,6 +59,21 @@ const Message = styled.div`
 		font-size: 20px;
 		animation: ${fadeIn} 0.4s cubic-bezier(0.075, 0.82, 0.165, 1) 1;
 	}
+	.loadingBubble {
+		display: block;
+		background: ${props => (props.user ? "#40949B" : "#3F3B56")};
+		color: ${props => (props.user ? "white" : "white")};
+		padding: 10px 16px 10px 16px;
+		word-wrap: break-word;
+		max-width: 240px;
+		align-self: ${props => (props.user ? "flex-end" : "flex-start")};
+		border-radius: ${props =>
+			props.user ? "20px 20px 0px 20px" : "20px 20px 20px 0px"};
+		font-size: 20px;
+		visibility: hidden;
+		animation: ${fadeIn} 0.4s cubic-bezier(0.075, 0.82, 0.165, 1) 0.3s 1;
+		animation-fill-mode: forwards;
+	}
 
 	.time {
 		color: ${props => (props.user ? "#40949B" : "#3F3B56")};
@@ -68,7 +85,23 @@ const Message = styled.div`
 	}
 `;
 
-const ChatMessage = ({ isUser, message: { text, time }, isLast }) => {
+const ChatMessage = ({ isUser, message: { text, time }, isLast, loading }) => {
+	if (loading) {
+		return (
+			<Message user={isUser}>
+				<div className="bubbleWrapper">
+					<div className="loadingBubble">
+						<BeatLoader
+							size={8}
+							color={"#ffffff"}
+							loading={loading}
+							margin={2}
+						/>
+					</div>
+				</div>
+			</Message>
+		);
+	}
 	return (
 		<Message user={isUser}>
 			<div className="bubbleWrapper">
