@@ -1,6 +1,6 @@
 import Modal from "react-modal";
 import styled from "styled-components";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import axios from "axios";
 import ChatMessage from "./ChatMessage";
 
@@ -12,6 +12,7 @@ const MessageContainer = styled.div`
 	margin: 14px;
 	display: flex;
 	flex-direction: column;
+	scroll-behavior: smooth;
 `;
 
 const Header = styled.div`
@@ -134,10 +135,19 @@ const EveDemo = props => {
 	const [loading, setLoading] = useState(false);
 	const [message, setMessage] = useState("");
 
+	const messageContainer = useRef(null);
+
 	const URL =
 		process.env.NODE_ENV === "development"
 			? "http://localhost:3001/api/eve"
 			: "/api/eve";
+
+	useEffect(() => {
+		if (messageContainer && messageContainer.current) {
+			messageContainer.current.scrollTop =
+				messageContainer.current.scrollHeight;
+		}
+	}, [messages]);
 
 	useEffect(() => {
 		try {
@@ -164,6 +174,7 @@ const EveDemo = props => {
 		const time = Date.now();
 		setLoading(true);
 		setMessages([...messages, { text: message, time }]);
+
 		setMessage("");
 
 		axios({
@@ -211,7 +222,7 @@ const EveDemo = props => {
 							width="25"
 							alt="Close"></ImageButton>
 					</Header>
-					<MessageContainer>
+					<MessageContainer ref={messageContainer}>
 						{messages.map((message, i) => (
 							<ChatMessage
 								isUser={i % 2 === 0}
