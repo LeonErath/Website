@@ -168,7 +168,7 @@ const EveDemo = props => {
 	}, []);
 
 	const askEve = async message => {
-		if (loading || isOffline) {
+		if (loading || isOffline || message.length === 0) {
 			return;
 		}
 		const time = Date.now();
