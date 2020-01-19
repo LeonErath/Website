@@ -34,7 +34,7 @@ const Bar = styled.div`
 	border-radius: 10px;
 	height: 6px;
 	width: ${props => props.progress}%;
-	background: ${props => props.theme.blue};
+	background: linear-gradient(90deg, #9199ee, #35a0f7);
 `;
 
 const Name = styled.div`

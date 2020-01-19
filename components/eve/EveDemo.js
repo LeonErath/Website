@@ -173,7 +173,7 @@ const EveDemo = props => {
 		}
 		const time = Date.now();
 		setLoading(true);
-		setMessages([...messages, { text: message, time }]);
+		setMessages(m => [...m, { text: message, time }]);
 
 		setMessage("");
 
@@ -186,12 +186,7 @@ const EveDemo = props => {
 		})
 			.then(({ data: answer }) => {
 				setLoading(false);
-
-				setMessages([
-					...messages,
-					{ text: message, time },
-					{ text: answer, time: Date.now() }
-				]);
+				setMessages(m => [...m, { text: answer, time: Date.now() }]);
 			})
 			.catch(e => {
 				setLoading(false);
