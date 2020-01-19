@@ -4,7 +4,7 @@ import Tech from "../components/svg/tech";
 import Stack from "../components/svg/stack";
 import Github from "../components/svg/github";
 import Link from "next/link";
-import EveDemo from "../components/EveDemo";
+import EveDemo from "../components/eve/EveDemo";
 
 const Root = styled.div`
 	box-sizing: border-box;

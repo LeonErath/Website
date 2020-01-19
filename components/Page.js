@@ -35,7 +35,8 @@ const GlobalStyle = createGlobalStyle`
     box-sizing:inherit;
   }
   body{
-    
+    -webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
     padding:0;
     margin:0;
     font-size: 1.5rem;
