@@ -1,8 +1,21 @@
 import Modal from "react-modal";
-import styled from "styled-components";
+import styled, { keyframes } from "styled-components";
 import { useState, useEffect, useRef } from "react";
 import axios from "axios";
 import ChatMessage from "./ChatMessage";
+
+const fadeIn = keyframes`
+  from {
+    transform: scale(0.3);
+	opacity: 0;
+  }
+
+  to {
+    transform: scale(1);
+	opacity: 1;
+	visibility: visible;
+  }
+`;
 
 const MessageContainer = styled.div`
 	box-sizing: border-box;
@@ -23,6 +36,12 @@ const Header = styled.div`
 	margin: 8px;
 `;
 
+const Image = styled.img`
+	visibility: hidden;
+	animation: ${fadeIn} 0.6s cubic-bezier(0.075, 0.82, 0.165, 1) 0.3s 1;
+	animation-fill-mode: forwards;
+`;
+
 const StatusBubble = styled.div`
 	height: 14px;
 	width: 14px;
@@ -32,6 +51,9 @@ const StatusBubble = styled.div`
 	position: absolute;
 	top: 46px;
 	left: 130px;
+	visibility: hidden;
+	animation: ${fadeIn} 0.6s cubic-bezier(0.075, 0.82, 0.165, 1) 0.5s 1;
+	animation-fill-mode: forwards;
 `;
 
 const Status = styled.div`
@@ -54,6 +76,9 @@ const Forms = styled.div`
 	height: 50px;
 	box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.2);
 	border-radius: 25px;
+	visibility: hidden;
+	animation: ${fadeIn} 0.6s cubic-bezier(0.075, 0.82, 0.165, 1) 0.7s 1;
+	animation-fill-mode: forwards;
 `;
 
 const Input = styled.input`
@@ -93,12 +118,21 @@ const Container = styled(Transparent)`
 	flex-direction: column;
 `;
 
-const ImageButton = styled.img`
+const ImageButton = styled.div`
 	padding-right: 4px;
 	cursor: pointer;
-	transition: all 1s cubic-bezier(0.075, 0.82, 0.165, 1);
-	:hover {
-		transform: scale(0.7);
+	visibility: hidden;
+	animation: ${fadeIn} 0.6s cubic-bezier(0.075, 0.82, 0.165, 1)
+		${props => props.delay} 1;
+	animation-fill-mode: forwards;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	img {
+		transition: all 1s cubic-bezier(0.075, 0.82, 0.165, 1);
+		:hover {
+			transform: scale(0.7);
+		}
 	}
 `;
 
@@ -194,28 +228,36 @@ const EveDemo = props => {
 			});
 	};
 
+	const closeModal = () => {
+		props.setDemoOpen(false);
+		setMessages([]);
+		setMessage("");
+	};
+
 	return (
 		<Modal
 			style={customStyles}
 			isOpen={props.isDemoOpen}
-			onRequestClose={() => props.setDemoOpen(false)}
+			onRequestClose={closeModal}
 			contentLabel="Example Modal">
 			<Transparent>
 				<Container>
 					<Header>
-						<img
+						<Image
 							src="/images/eve/eve_chat_header.svg"
 							width="160"
-							alt="Eve"></img>
+							alt="Eve"></Image>
 						<StatusBubble online={!isOffline}></StatusBubble>
 						<Status loading={loading}> writing...</Status>
 
-						<ImageButton
-							onClick={() => props.setDemoOpen(false)}
-							style={{ marginRight: "12px" }}
-							src="/images/eve/eve_chat_close.svg"
-							width="25"
-							alt="Close"></ImageButton>
+						<ImageButton delay={"1.2s"}>
+							<img
+								onClick={closeModal}
+								style={{ marginRight: "12px" }}
+								src="/images/eve/eve_chat_close.svg"
+								width="25"
+								alt="Close"></img>
+						</ImageButton>
 					</Header>
 					<MessageContainer ref={messageContainer}>
 						{messages.map((message, i) => (
@@ -235,9 +277,11 @@ const EveDemo = props => {
 							value={message}
 							onChange={v => setMessage(v.target.value)}
 							placeholder="Hello..."></Input>
-						<ImageButton
-							onClick={() => askEve(message)}
-							src="/images/eve/eve_chat_arrow.svg"></ImageButton>
+						<ImageButton delay={"1s"}>
+							<img
+								onClick={() => askEve(message)}
+								src="/images/eve/eve_chat_arrow.svg"></img>
+						</ImageButton>
 					</Forms>{" "}
 				</Container>
 			</Transparent>

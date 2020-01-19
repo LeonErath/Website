@@ -5,6 +5,7 @@ import Stack from "../components/svg/stack";
 import Github from "../components/svg/github";
 import Link from "next/link";
 import EveDemo from "../components/eve/EveDemo";
+import Head from "next/head";
 
 const Root = styled.div`
 	box-sizing: border-box;
@@ -104,12 +105,14 @@ const H1 = styled.h1`
 	}
 `;
 
-const H2 = styled.h1`
+const H2 = styled.h2`
 	font-size: 3em;
 	font-weight: 400;
 	color: #2f2e41;
+	margin-left: 20px;
 	@media (min-width: 320px) and (max-width: 1024px) {
 		text-align: center;
+		margin-left: 0px;
 	}
 `;
 
@@ -210,6 +213,10 @@ const eve = props => {
 
 	return (
 		<Root>
+			<Head>
+				<title>Leon Erath | Eve</title>
+				<meta name="viewport" content="initial-scale=1.0, width=device-width" />
+			</Head>
 			<EveDemo isDemoOpen={isDemoOpen} setDemoOpen={setDemoOpen}></EveDemo>
 			<Header>
 				<FlexItem>
