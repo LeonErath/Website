@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import Link from "next/link";
 
 const Div = styled.div`
 	display: flex;
@@ -86,7 +87,11 @@ const Contact = props => (
 						<div>
 							<b>Email</b>
 						</div>
-						<div>me@leonerath.de</div>
+						<div>
+							<Link href="mailto:contact@erath.dev">
+								<a>contact@erath.dev</a>
+							</Link>
+						</div>
 					</div>
 				</Container2>
 			</div>
