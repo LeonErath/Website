@@ -15,20 +15,20 @@
   },
   "private": true,
   "dependencies": {
-    "@sentry/browser": "^5.11.1",
+    "@sentry/browser": "^5.11.2",
     "@zeit/next-css": "^1.0.1",
     "apollo-cache-inmemory": "^1.6.5",
     "apollo-client": "^2.6.8",
     "apollo-link-http": "^1.5.16",
-    "axios": "^0.19.1",
+    "axios": "^0.19.2",
     "babel-core": "^7.0.0-bridge.0",
     "core-js": "^3.6.4",
     "dotenv": "^8.2.0",
     "enzyme": "^3.11.0",
-    "graphql": "^14.5.8",
+    "graphql": "^14.6.0",
     "graphql-tag": "^2.10.1",
     "moment": "^2.24.0",
-    "next": "^9.2.0",
+    "next": "^9.2.1",
     "next-offline": "^4.0.6",
     "nprogress": "^0.2.0",
     "react": "^16.12.0",
@@ -40,8 +40,8 @@
     "styled-components": "^5.0.0"
   },
   "devDependencies": {
-    "babel-plugin-styled-components": "^1.7.1",
-    "jest": "^24.8.0"
+    "babel-plugin-styled-components": "^1.10.7",
+    "jest": "^25.1.0"
   },
   "//": "This is our babel config, I prefer this over a .babelrc file",
   "babel": {
