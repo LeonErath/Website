@@ -41,7 +41,7 @@
   },
   "devDependencies": {
     "babel-plugin-styled-components": "^1.11.1",
-    "jest": "^26.5.3"
+    "jest": "^26.6.1"
   },
   "//": "This is our babel config, I prefer this over a .babelrc file",
   "babel": {
