@@ -22,7 +22,7 @@
     "apollo-link-http": "^1.5.17",
     "axios": "^0.19.2",
     "babel-core": "^7.0.0-bridge.0",
-    "core-js": "^3.7.0",
+    "core-js": "^3.8.0",
     "dotenv": "^8.2.0",
     "enzyme": "^3.11.0",
     "graphql": "^14.7.0",
