@@ -1,0 +1,42 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 32px;
+  width: 100%;
+
+  img {
+    display: flex;
+    object-fit: contain;
+    width: 100%;
+    max-width: 400px;
+  }
+
+  .text {
+    display: inline-flex;
+    color: #2d2d2d;
+    font-size: 16px;
+    width: 100%;
+    max-width: 600px;
+    line-height: 24px;
+
+    a {
+      text-decoration: underline;
+      color: #5a66e7;
+      &:hover {
+        color: #35a0f7;
+      }
+    }
+
+    @media (max-width: 480px) {
+      flex-direction: column;
+      text-align: center;
+    }
+
+    @media (max-width: 1024px) {
+      font-size: 16px;
+      line-height: 24px;
+    }
+  }
+}

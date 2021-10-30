@@ -1,0 +1,27 @@
+.skillContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+  width: 100%;
+  max-width: 600px;
+  padding: 0 30px;
+
+  @media (max-width: 1024px) {
+    padding: 0 8px;
+  }
+
+  .tools {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+
+    .toolsIcons {
+      display: flex;
+      flex-direction: row;
+      gap: 16px;
+      width: auto;
+    }
+  }
+}

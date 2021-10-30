@@ -1,0 +1,55 @@
+.container {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  @media (max-width: 480px) {
+    padding: 8px;
+  }
+
+  .left {
+    display: flex;
+    flex-direction: row;
+    @media (max-width: 767px) {
+      display: none;
+    }
+
+    a {
+      margin-left: 48px;
+      padding: 8px;
+      color: black;
+      text-decoration: none;
+      cursor: pointer;
+      font-weight: 500;
+      font-size: 1em;
+      transition: all 0.1s ease;
+      &:hover {
+        color: #4285f4;
+      }
+    }
+  }
+  .right {
+    display: flex;
+    flex-direction: row-reverse;
+    width: 100%;
+
+    .fakeButton {
+      padding: 14px 24px 14px 24px;
+      white-space: nowrap;
+      background: linear-gradient(145deg, #4285f4, #35a0f7);
+      width: auto;
+      text-align: center;
+      font-size: 1em;
+      border-radius: 24px;
+      font-weight: bold;
+      color: white;
+      text-transform: uppercase;
+      cursor: pointer;
+      box-shadow: 6px 6px 10px 1px rgba(0, 0, 0, 0.1);
+      transition: all 0.2s ease;
+      &:hover {
+        transform: scale(1.05);
+      }
+    }
+  }
+}
