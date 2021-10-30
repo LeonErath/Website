@@ -1,4 +1,4 @@
-[![CircleCI](https://circleci.com/gh/LeonErath/Website/tree/master.svg?style=svg)](https://circleci.com/gh/LeonErath/Website/tree/master) [![Website leonerath.de](https://img.shields.io/website-up-down-green-red/http/leonerath.de.svg)](http://leonerath.de/) [![CodeFactor](https://www.codefactor.io/repository/github/leonerath/website/badge)](https://www.codefactor.io/repository/github/leonerath/website) [![Dependabot Status](https://api.dependabot.com/badges/status?host=github&repo=LeonErath/Website)](https://dependabot.com)
+[![CircleCI](https://circleci.com/gh/LeonErath/Website/tree/master.svg?style=svg)](https://circleci.com/gh/LeonErath/Website/tree/master) [![Website leonerath.de](https://img.shields.io/website-up-down-green-red/http/erath.dev.svg)](http://erath.dev/) [![CodeFactor](https://www.codefactor.io/repository/github/leonerath/website/badge)](https://www.codefactor.io/repository/github/leonerath/website) [![Dependabot Status](https://api.dependabot.com/badges/status?host=github&repo=LeonErath/Website)](https://dependabot.com)
 
 
 # Website

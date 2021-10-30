@@ -1,0 +1,36 @@
+html,
+body,
+#root {
+  font-family: "Space Grotesk", sans-serif;
+  height: 100%;
+}
+
+* {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  box-sizing: border-box;
+  outline: none;
+  scrollbar-color: var(--theme-highlight-alt) rgba(0, 0, 0, 0);
+  scrollbar-width: thin;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+div {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+}
+
+ul,
+li {
+  margin: 0;
+}

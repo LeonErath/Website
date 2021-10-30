@@ -1,0 +1,15 @@
+.item {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+
+  .text {
+    max-width: 500px;
+    line-height: 1.2em;
+  }
+}
+@media (max-width: 640px) {
+  .item .text {
+    font-size: 0.9em;
+  }
+}
