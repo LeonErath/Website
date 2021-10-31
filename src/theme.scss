@@ -1,0 +1,44 @@
+@mixin dark {
+  --background: #000000;
+  --background-2: #0f0f0f;
+  --background-3: #181818;
+
+  --ui-color: #ffffff;
+  --ui-color-2: #a7a7a7;
+
+  img[src*=".svg"][data-theme="invert"] {
+    filter: invert(1);
+  }
+}
+
+@mixin light {
+  --background: #ffffff;
+  --background-2: #f9fcff;
+  --background-3: #eff7ff;
+
+  --ui-color: #000000;
+  --ui-color-2: #4d4d4d;
+
+  img[src*=".svg"][data-theme="invert"] {
+    filter: invert(0);
+  }
+}
+
+body[data-theme="dark"] {
+  @include dark;
+}
+
+body[data-theme="light"] {
+  @include light;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    @include dark;
+  }
+}
+@media (prefers-color-scheme: light) {
+  :root {
+    @include light;
+  }
+}

@@ -1,6 +1,7 @@
 .container {
+  position: relative;
   display: flex;
-  background-image: url("/contact_background.svg");
+  z-index: 2;
   background-origin: content-box;
   background-repeat: no-repeat;
   background-clip: border-box;
@@ -31,20 +32,39 @@
       max-height: 200px;
     }
 
-    .headline {
-      font-weight: normal;
-      font-size: 1.4em;
-      margin: 0;
-    }
+    .content {
+      .headline {
+        font-weight: normal;
+        font-size: 1.4em;
+        margin: 0;
+      }
 
-    .text {
-      padding: 20px 0 20px 0;
-      font-size: 1.6em;
-      max-width: 500px;
+      .text {
+        padding: 20px 0 20px 0;
+        font-size: 1.6em;
+        max-width: 500px;
 
-      @media (max-width: 640px) {
-        font-size: 1.2em;
+        @media (max-width: 640px) {
+          font-size: 1.2em;
+        }
+      }
+      a {
+        width: 180px;
       }
     }
+  }
+  &::before {
+    z-index: -1;
+    height: 100%;
+    width: 100%;
+    left: 0;
+    top: 0;
+    position: absolute;
+    content: "";
+    background-color: var(--background-2);
+    -webkit-mask-image: url("/contact_background.svg");
+    mask-image: url("/contact_background.svg");
+    mask-position: center;
+    mask-repeat: no-repeat;
   }
 }

@@ -1,0 +1,15 @@
+.toggle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  border: 1px solid var(--ui-color);
+  background: var(--background);
+  cursor: pointer;
+
+  &:hover {
+    background: var(--background-3);
+  }
+}

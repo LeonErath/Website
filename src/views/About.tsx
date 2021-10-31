@@ -1,7 +1,6 @@
-import styled from "styled-components";
-import classes from "./About.module.scss";
-import { ListItem } from "../components/list-item/ListItem";
 import { Bubble } from "../components/bubble/Bubble";
+import { ListItem } from "../components/list-item/ListItem";
+import classes from "./About.module.scss";
 
 export const About = () => (
   <div className={classes.container}>

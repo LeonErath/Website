@@ -3,19 +3,27 @@ body,
 #root {
   font-family: "Space Grotesk", sans-serif;
   height: 100%;
+  line-height: 1;
 }
 
 * {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   box-sizing: border-box;
-  outline: none;
   scrollbar-color: var(--theme-highlight-alt) rgba(0, 0, 0, 0);
   scrollbar-width: thin;
 }
 
 html {
+  font-size: 10px;
   box-sizing: border-box;
+}
+
+body {
+  font-size: 1.5rem;
+  padding: 0;
+  margin: 0;
+  background: var(--background);
 }
 
 *,
@@ -33,4 +41,12 @@ div {
 ul,
 li {
   margin: 0;
+}
+
+a {
+  text-decoration: underline;
+  color: #35a0f7;
+}
+a:hover {
+  opacity: 0.8;
 }

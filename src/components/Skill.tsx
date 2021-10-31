@@ -15,7 +15,7 @@ const Progress = styled.div`
   width: 100%;
   display: flex;
   justify-content: flex-start;
-  background: ${(props) => props.theme.lightblue};
+  background: var(--background-3);
 `;
 
 const Bar = styled.div`
@@ -29,7 +29,7 @@ const Time = styled.div`
   width: auto;
   white-space: nowrap;
   font-size: 0.9em;
-  color: ${(props) => props.theme.gray};
+  color: var(--ui-color-2);
 `;
 
 export const Skill = (props: Props) => (

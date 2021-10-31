@@ -21,7 +21,9 @@ const Item = styled.div`
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center center;
-  :hover {
+
+  :hover,
+  :focus-within {
     div {
       opacity: 1;
     }
@@ -48,7 +50,7 @@ const ProjectDiv = styled.div`
   width: 100%;
   display: grid;
   grid-template-columns: 1fr 1fr;
-  grid-template-rows: repeat(4, 400px);
+  grid-template-rows: repeat(2, 400px);
 
   @media (min-width: 1024px) {
     padding: 0 10%;
@@ -56,34 +58,12 @@ const ProjectDiv = styled.div`
 
   @media (max-width: 767px) {
     grid-template-columns: 1fr;
-    grid-template-rows: repeat(7, 400px);
+    grid-template-rows: repeat(4, 400px);
   }
 `;
 
 export const Projects = () => (
   <ProjectDiv>
-    <Item background={"#F4F4F4"}>
-      <Link href="/verifica">
-        <img width="130" src="/verifica.png"></img>
-      </Link>
-      <Card>
-        <CardHeader>
-          <div>solo project</div>
-          <div>3 Months</div>
-        </CardHeader>
-        <CardMain>
-          <CardBackground>spellcheck</CardBackground>
-          <CardForeground>
-            <CardTitle>verifica</CardTitle>
-
-            <div>(coming soon)</div>
-          </CardForeground>
-        </CardMain>
-        <CardStack>
-          <img width="40" src="/react.svg"></img>
-        </CardStack>
-      </Card>
-    </Item>
     <Item
       background={"#2F2E41"}
       style={{
@@ -119,14 +99,14 @@ export const Projects = () => (
             </Link>
             <Link href="https://github.com/AAA-Intelligence/eve">
               <a target="_blank">
-                <img src="/github-icon.svg"></img>
+                <img src="/github-icon.svg" data-theme="invert"></img>
               </a>
             </Link>
           </CardForeground>
         </CardMain>
         <CardStack>
-          <img width="40" src="/python.svg"></img>
-          <img width="40" src="/gopher.svg"></img>
+          <img width="40" src="/python.svg" data-theme="invert" />
+          <img width="40" src="/gopher.svg" data-theme="invert" />
         </CardStack>
       </Card>
     </Item>
@@ -136,11 +116,7 @@ export const Projects = () => (
         backgroundImage: 'url("/3daudio_background.svg")',
       }}
     >
-      <Link href="https://niklaskorz.github.io/audio3d/">
-        <a target="_blank">
-          <img width="300" src="/3daudio.svg"></img>
-        </a>
-      </Link>
+      <img width="300" src="/3daudio.svg" />
       <Card>
         <CardHeader>
           <div>3 people</div>
@@ -149,23 +125,17 @@ export const Projects = () => (
         <CardMain>
           <CardBackground>experiment</CardBackground>
           <CardForeground>
-            <Link href="https://niklaskorz.github.io/audio3d/">
-              <a
-                target="_blank"
-                style={{ color: "black", textDecoration: "none" }}
-              >
-                <CardTitle>3D Audio Editor</CardTitle>
-              </a>
-            </Link>
+            <CardTitle>3D Audio Editor</CardTitle>
+
             <Link href="https://github.com/niklaskorz/audio3d">
               <a target="_blank">
-                <img src="/github-icon.svg"></img>
+                <img src="/github-icon.svg" data-theme="invert"></img>
               </a>
             </Link>
           </CardForeground>
         </CardMain>
         <CardStack>
-          <img width="40" src="/react.svg"></img>
+          <img width="40" src="/react.svg" data-theme="invert"></img>
         </CardStack>
       </Card>
     </Item>
@@ -203,58 +173,14 @@ export const Projects = () => (
             </Link>
             <Link href="https://github.com/LeonErath/Pineapple">
               <a target="_blank">
-                <img src="/github-icon.svg"></img>
+                <img src="/github-icon.svg" data-theme="invert"></img>
               </a>
             </Link>
           </CardForeground>
         </CardMain>
         <CardStack>
-          <img width="40" src="/android-icon.svg"></img>
-          <img width="40" src="/brand/apple.svg"></img>
-        </CardStack>
-      </Card>
-    </Item>
-    <Item background="#303F9F">
-      <Link href="journalismfuture">
-        <div
-          style={{
-            position: "relative",
-            display: "flex",
-            justifyContent: "center",
-            alignItems: "center",
-          }}
-        >
-          <Backtext
-            color="#202C77"
-            style={{
-              transform: "rotate(-3deg)",
-            }}
-          >
-            Journalism
-          </Backtext>
-          <img width="200" src="/jf.png" style={{ position: "absolute" }}></img>
-        </div>
-      </Link>
-      <Card>
-        <CardHeader>
-          <div>Hackathon</div>
-          <div>3 days</div>
-        </CardHeader>
-        <CardMain>
-          <CardBackground>Journalism</CardBackground>
-          <CardForeground>
-            <Link href="journalismfuture">
-              <CardTitle>Journalism Future</CardTitle>
-            </Link>
-            <Link href="https://github.com/JournalismFuture/Journalism-Future-App">
-              <a target="_blank">
-                <img src="/github-icon.svg"></img>
-              </a>
-            </Link>
-          </CardForeground>
-        </CardMain>
-        <CardStack>
-          <img width="40" src="/android-icon.svg"></img>
+          <img width="40" src="/android-icon.svg" data-theme="invert"></img>
+          <img width="40" src="/brand/apple.svg" data-theme="invert"></img>
         </CardStack>
       </Card>
     </Item>
@@ -275,62 +201,13 @@ export const Projects = () => (
             </Link>
             <Link href="https://github.com/AudiophileDev/T2M">
               <a target="_blank">
-                <img src="/github-icon.svg"></img>
+                <img src="/github-icon.svg" data-theme="invert"></img>
               </a>
             </Link>
           </CardForeground>
         </CardMain>
         <CardStack>
-          <img width="40" height="60" src="/java.svg"></img>
-        </CardStack>
-      </Card>
-    </Item>
-
-    <Item background="#B20741">
-      <Link href="watchlist">
-        <div
-          style={{
-            position: "relative",
-            display: "flex",
-            justifyContent: "center",
-            alignItems: "center",
-          }}
-        >
-          <Backtext
-            color="#860430"
-            style={{
-              transform: "rotate(2deg)",
-            }}
-          >
-            Watchlist
-          </Backtext>
-          <img
-            width="200"
-            src="/watchlist.png"
-            style={{ position: "absolute" }}
-          ></img>
-        </div>
-      </Link>
-      <Card>
-        <CardHeader>
-          <div>solo project</div>
-          <div>6 months</div>
-        </CardHeader>
-        <CardMain>
-          <CardBackground>Movies</CardBackground>
-          <CardForeground>
-            <Link href="watchlist">
-              <CardTitle>Watchlist</CardTitle>
-            </Link>
-            <Link href="https://github.com/LeonErath/Watchlist">
-              <a target="_blank">
-                <img src="/github-icon.svg"></img>
-              </a>
-            </Link>
-          </CardForeground>
-        </CardMain>
-        <CardStack>
-          <img width="40" src="/android-icon.svg"></img>
+          <img width="40" height="60" src="/java.svg" data-theme="invert"></img>
         </CardStack>
       </Card>
     </Item>

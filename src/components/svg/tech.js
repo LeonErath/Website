@@ -5,6 +5,15 @@ const SVG = styled.svg`
   width: 100%;
   height: 100%;
   object-fit: contain;
+
+  tspan {
+    stroke: none;
+    fill: var(--ui-color);
+  }
+  circle,
+  rect {
+    fill: var(--background-3);
+  }
 `;
 
 export default (props) => (
@@ -255,7 +264,6 @@ export default (props) => (
           transform="translate(237 3590)"
           fill="#404040"
           font-size="23"
-          font-family="HelveticaNeue, Helvetica Neue"
         >
           <tspan x="0" y="22">
             We are using state of the art artificial intelligence to{" "}
@@ -271,8 +279,6 @@ export default (props) => (
           transform="translate(237 3560)"
           fill="#3f3d56"
           font-size="64"
-          font-family="HelveticaNeue-Bold, Helvetica Neue"
-          font-weight="700"
         >
           <tspan x="0" y="0">
             Generative Model{" "}
@@ -287,7 +293,6 @@ export default (props) => (
           transform="translate(1207 3760)"
           fill="#404040"
           font-size="23"
-          font-family="HelveticaNeue, Helvetica Neue"
         >
           <tspan x="0" y="22">
             Recognizing the mood, the topic and the context is{" "}
@@ -303,8 +308,6 @@ export default (props) => (
           transform="translate(1207 3732)"
           fill="#3f3d56"
           font-size="54"
-          font-family="HelveticaNeue-Bold, Helvetica Neue"
-          font-weight="700"
         >
           <tspan x="0" y="0">
             Context Recognition
@@ -319,8 +322,6 @@ export default (props) => (
           transform="translate(1314 3467)"
           fill="#3f3d56"
           font-size="39"
-          font-family="HelveticaNeue-Bold, Helvetica Neue"
-          font-weight="700"
         >
           <tspan x="0" y="0">
             Selective Model
@@ -333,7 +334,6 @@ export default (props) => (
           transform="translate(1314 3491)"
           fill="#404040"
           font-size="23"
-          font-family="HelveticaNeue, Helvetica Neue"
         >
           <tspan x="0" y="22">
             To simulate a human conversation, certain{" "}

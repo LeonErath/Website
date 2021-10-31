@@ -3,51 +3,101 @@
   display: flex;
   flex-direction: row;
   align-items: center;
+  gap: 8px;
+
   @media (max-width: 480px) {
     padding: 8px;
   }
 
   .left {
+    position: relative;
     display: flex;
     flex-direction: row;
+    align-items: center;
+    gap: 32px;
+
     @media (max-width: 767px) {
-      display: none;
+      *:not(:first-child) {
+        display: none;
+      }
     }
 
     a {
-      margin-left: 48px;
       padding: 8px;
-      color: black;
+      color: var(--ui-color);
       text-decoration: none;
       cursor: pointer;
-      font-weight: 500;
       font-size: 1em;
       transition: all 0.1s ease;
       &:hover {
-        color: #4285f4;
+        opacity: 0.8;
       }
     }
   }
   .right {
     display: flex;
-    flex-direction: row-reverse;
-    width: 100%;
+    flex-direction: row;
+    align-items: center;
+    gap: 16px;
+    width: auto;
 
-    .fakeButton {
-      padding: 14px 24px 14px 24px;
-      white-space: nowrap;
-      background: linear-gradient(145deg, #065be3, #38d9ff);
-      width: auto;
-      text-align: center;
-      font-size: 1em;
-      border-radius: 24px;
-      font-weight: 500;
-      color: white;
-      cursor: pointer;
-      transition: transform 0.2s cubic-bezier(0.075, 0.82, 0.165, 1);
-      &:hover {
-        transform: scale(1.1);
+    @media (max-width: 767px) {
+      *:not(:last-child) {
+        display: none;
       }
     }
+
+    .fakeButton {
+      text-decoration: none;
+      padding: 12px 20px;
+      white-space: nowrap;
+
+      width: auto;
+      text-align: center;
+      font-size: 0.9em;
+      border-radius: 24px;
+      font-weight: 400;
+      color: var(--ui-color);
+      background: var(--background);
+      border: 1px solid var(--ui-color);
+      cursor: pointer;
+
+      &:hover {
+        background: var(--background-3);
+      }
+    }
+  }
+}
+
+.logo {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2em;
+  border: 1px solid var(--ui-color);
+  border-radius: 20px;
+  padding: 4px 12px;
+
+  height: 40px;
+  width: 40px;
+
+  transition: width 0.3s cubic-bezier(0.075, 0.82, 0.165, 1);
+
+  .large {
+    display: none;
+    white-space: nowrap;
+    overflow: hidden;
+  }
+}
+
+.logo:hover {
+  background: var(--background-3);
+  color: inherit;
+  width: 106px;
+  .small {
+    display: none;
+  }
+  .large {
+    display: inline-flex;
   }
 }

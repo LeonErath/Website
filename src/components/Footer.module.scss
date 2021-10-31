@@ -1,0 +1,15 @@
+.footer {
+  width: auto;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  flex-direction: column;
+  align-items: center;
+  background: var(--background-2);
+  padding: 16px;
+  margin-top: 16px;
+
+  span {
+    margin: 4px;
+  }
+}

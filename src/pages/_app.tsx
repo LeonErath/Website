@@ -2,8 +2,9 @@ import * as Sentry from "@sentry/browser";
 import type { AppProps } from "next/app";
 import { ApolloProvider } from "react-apollo";
 import { apolloClient } from "../clients/apollo.client";
-import { Page } from "../components/Page";
+import { Page } from "../layout/Page";
 import "../styles.css";
+import "../theme.scss";
 
 if (process.env.NODE_ENV !== "development") {
   Sentry.init({

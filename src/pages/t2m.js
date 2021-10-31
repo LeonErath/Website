@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 
 import styled from "styled-components";
-import Demo from "../components/Demo.js";
+import Demo from "../components/demos/t2m/Demo.js";
 import Section from "../components/styles/Section";
 import { ProjectBar, SubItem } from "../components/styles/ProjectBar";
 import ImageButton from "../components/styles/ImageButton.js";

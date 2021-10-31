@@ -26,14 +26,15 @@ const Github = () => {
   if (loading || error) {
     return (
       <div className={classes.container}>
-        <img src="/developer.svg"></img>
-        {loading && (
-          <div className={classes.textContainer}>
-            <div className={classes.text}>
-              <span>Loading...</span>
-            </div>
-          </div>
-        )}
+        <img src="/illustrations/coding.svg"></img>
+
+        <div className={classes.text}>
+          <span>
+            I love the web and my work is focused around building complex web
+            and desktop apps. Topics such as accessibility and testing are
+            particularly important to me.
+          </span>
+        </div>
       </div>
     );
   }
@@ -49,12 +50,12 @@ const Github = () => {
 
   return (
     <div className={classes.container}>
-      <img src="/developer.svg"></img>
+      <img src="/illustrations/coding.svg"></img>
 
       <div className={classes.text}>
         <span>
-          I love the the web and my work is focused around building complex web
-          and desktop apps. Topics such as accessibility and testing are
+          I love the web and my work is focused around building complex web and
+          desktop apps. Topics such as accessibility and testing are
           particularly important to me.
         </span>
         <br />

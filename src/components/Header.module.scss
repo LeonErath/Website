@@ -4,9 +4,9 @@
   justify-content: center;
   position: sticky;
   top: 0;
-  padding: 8px 10%;
+  padding: 12px 10%;
   z-index: 4;
-  background: white;
+  background: var(--background);
   transition: box-shadow 0.3s cubic-bezier(0.075, 0.82, 0.165, 1);
   box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
 

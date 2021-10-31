@@ -1,4 +1,4 @@
-const data = [
+export const data = [
   {
     year: "2017",
     duration: "3 months",
@@ -10,91 +10,90 @@ const data = [
     links: [
       {
         name: "github",
-        url: "githubt2m"
-      }
+        url: "githubt2m",
+      },
     ],
     member: [
       {
         name: "Leon Erath",
-        task: "Developer"
+        task: "Developer",
       },
       {
         name: "Ivan Marchuk",
-        task: "Developer"
+        task: "Developer",
       },
       {
         name: "Tobias Wymer",
-        task: "Developer"
+        task: "Developer",
       },
       {
         name: "Daniel Scholz",
-        task: "Developer"
+        task: "Developer",
       },
       {
         name: "Simon Niedermayr",
-        task: "Developer"
-      }
+        task: "Developer",
+      },
     ],
     kind: [{ type: "Desktop" }],
     programmingLanguage: [
       {
         name: "JavaScript",
-        function: "backend"
+        function: "backend",
       },
       {
         name: "Java",
-        function: "app"
-      }
-    ]
+        function: "app",
+      },
+    ],
   },
   {
     year: "2018",
     duration: "3 months",
     name: "EVE",
-    sub:
-      "Bot's going on<br />A maschine learning chatbot<br />Created with Go and Python",
+    sub: "Bot's going on<br />A maschine learning chatbot<br />Created with Go and Python",
     icon: "/images/eve/Logo.png",
     link: "../eve",
     thumbnail: "/images/eve.png",
     links: [
       {
         name: "github",
-        url: "githubeve"
-      }
+        url: "githubeve",
+      },
     ],
     member: [
       {
         name: "Daniel Scholz",
-        task: "Python AI"
+        task: "Python AI",
       },
       {
         name: "Niklas Korz",
-        task: "Python AI"
+        task: "Python AI",
       },
       {
         name: "Daniel Salomon",
-        task: "Frontend, Design"
+        task: "Frontend, Design",
       },
       {
         name: "Leon Erath",
-        task: "Backend, Documentation, Software testing"
+        task: "Backend, Documentation, Software testing",
       },
       {
         name: "Simon Niedermayr",
-        task: "Go Webserver"
-      }
+        task: "Go Webserver",
+      },
     ],
     kind: [{ type: "Desktop" }],
     programmingLanguage: [
       {
         name: "Go",
-        function: "Webserver"
+        function: "Webserver",
       },
       {
         name: "Python",
-        function: "KI"
-      }
-    ]
+        function: "KI",
+      },
+    ],
   },
   {
     year: "2018",
@@ -107,36 +106,36 @@ const data = [
     links: [
       {
         name: "github",
-        url: "githubjournalismfuture"
+        url: "githubjournalismfuture",
       },
       {
         name: "playstore",
-        url: ""
+        url: "",
       },
       {
         name: "appstore",
-        url: ""
-      }
+        url: "",
+      },
     ],
     member: [
       {
         name: "Leon Erath",
-        task: "Developer"
-      }
+        task: "Developer",
+      },
     ],
     kind: [
       { type: "Web" },
       { type: "Android" },
       { type: "iOS" },
       { type: "Windows" },
-      { type: "macOS" }
+      { type: "macOS" },
     ],
     programmingLanguage: [
       {
         name: "JavaScript",
-        function: "Everything"
-      }
-    ]
+        function: "Everything",
+      },
+    ],
   },
 
   {
@@ -150,46 +149,46 @@ const data = [
     links: [
       {
         name: "github",
-        url: "pineappleandroid"
+        url: "pineappleandroid",
       },
       {
         name: "github",
-        url: "pineappleios"
-      }
+        url: "pineappleios",
+      },
     ],
     member: [
       {
         name: "Leon Erath",
-        task: "Android Developer"
+        task: "Android Developer",
       },
       {
         name: "Gero Embser",
-        task: "iOS Developer"
+        task: "iOS Developer",
       },
       {
         name: "Florian Brandt",
-        task: "Web Developer"
-      }
+        task: "Web Developer",
+      },
     ],
     kind: [{ type: "Web" }, { type: "Android" }, { type: "iOS" }],
     programmingLanguage: [
       {
         name: "Java",
-        function: "Android App"
+        function: "Android App",
       },
       {
         name: "Swift",
-        function: "iOS App"
+        function: "iOS App",
       },
       {
         name: "HTML/CSS",
-        function: "Frontend Website"
+        function: "Frontend Website",
       },
       {
         name: "PHP & MySQL",
-        function: "Backend Website"
-      }
-    ]
+        function: "Backend Website",
+      },
+    ],
   },
   {
     year: "2017",
@@ -202,56 +201,53 @@ const data = [
     links: [
       {
         name: "github",
-        url: "githubcloudy"
-      }
+        url: "githubcloudy",
+      },
     ],
     member: [
       {
         name: "Leon Erath",
-        task: "iOS Developer"
-      }
+        task: "iOS Developer",
+      },
     ],
     kind: [{ type: "iOS" }],
     programmingLanguage: [
       {
         name: "Swift",
-        function: "iOS App"
-      }
-    ]
+        function: "iOS App",
+      },
+    ],
   },
   {
     year: "2016",
     duration: "1 month",
     name: "Watchlist",
-    sub:
-      "See upcoming Movies and <br />save them into your Watchlist<br /> to watch them later.",
+    sub: "See upcoming Movies and <br />save them into your Watchlist<br /> to watch them later.",
     icon: "/images/Watchlist/Logo.png",
     link: "../watchlist",
     thumbnail: "/images/watchlist.png",
     links: [
       {
         name: "github",
-        url: "githubwatchlist"
+        url: "githubwatchlist",
       },
       {
         name: "playstore",
-        url: "playstorewatchlist"
-      }
+        url: "playstorewatchlist",
+      },
     ],
     member: [
       {
         name: "Leon Erath",
-        task: "Android Developer"
-      }
+        task: "Android Developer",
+      },
     ],
     kind: [{ type: "Android" }],
     programmingLanguage: [
       {
         name: "Kotlin",
-        function: "Android App"
-      }
-    ]
-  }
+        function: "Android App",
+      },
+    ],
+  },
 ];
-
-export default data;

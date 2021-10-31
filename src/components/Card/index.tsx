@@ -5,11 +5,11 @@ const Card = styled.div`
   position: absolute;
   display: flex;
   flex-direction: column;
-  background: white;
+  background: var(--background-2);
   width: 100%;
   height: 100%;
   opacity: 0;
-  transition: opacity 400ms cubic-bezier(0.33, 0, 0.2, 1);
+  transition: opacity 200ms cubic-bezier(0.33, 0, 0.2, 1);
   box-sizing: border-box;
   justify-content: space-between;
   padding: 16px;
@@ -53,13 +53,14 @@ const Background = styled.div`
   overflow: hidden;
   font-size: 6em;
   font-weight: bold;
-  color: #f4f4f4;
+  color: var(--background-3);
 `;
 
 const Title = styled.div`
   font-size: 3em;
   margin: 16px;
   font-weight: bold;
+  color: var(--ui-color);
 `;
 
 const Stack = styled.div`

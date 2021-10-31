@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import styled from "styled-components";
 import axios from "axios";
-import APIs from "./UTILS/API";
+import { API as APIs } from "../../../utils/api";
 
 const API = APIs.filter((obj) => obj.project === "t2m");
 
