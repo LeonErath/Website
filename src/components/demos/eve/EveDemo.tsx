@@ -26,25 +26,22 @@ const customStyles = {
   content: {
     padding: "8px",
     width: "94%",
-    height: "100%",
-    maxHeight: "88%",
+
     maxWidth: "400px",
     display: "flex",
     backgroundColor: "rgba(250, 250, 250, 0.3)",
     flexDirection: "column",
     justifyContent: "center",
     alignItems: "cetner",
-    top: "50%",
+    top: "80px",
+    bottom: "16px",
     left: "50%",
     right: "auto",
     border: "0px solid black",
     borderRadius: "24px",
     overflow: "hidden",
     boxSizing: "border-box",
-    bottom: "auto",
-    marginRight: "-50%",
-    marginTop: "20px",
-    transform: "translate(-50%, -50%)",
+    transform: "translateX(-50%)",
   },
 };
 
@@ -140,7 +137,7 @@ export const EveDemo = (props: Props) => {
                 [classes.offline]: isOffline,
               })}
             ></div>
-            <Status loading={loading}> writing...</Status>
+            <Status loading={loading}>writing...</Status>
 
             <button onClick={closeModal} className={classes.button}>
               <img
@@ -153,18 +150,13 @@ export const EveDemo = (props: Props) => {
           </div>
           <div className={classes.messageContainer} ref={messageContainer}>
             {messages.map((message, i) => (
-              <ChatMessage
-                isUser={i % 2 === 0}
-                message={message}
-                isLast={i === messages.length - 1}
-              ></ChatMessage>
+              <ChatMessage isUser={i % 2 === 0} message={message}></ChatMessage>
             ))}
             {loading && (
               <ChatMessage
                 loading={loading}
                 isUser={false}
                 message={{ text: "Loading...", time: Date.now() }}
-                isLast={false}
               ></ChatMessage>
             )}
           </div>

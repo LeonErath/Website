@@ -5,82 +5,86 @@ import { BeatLoader } from "react-spinners";
 const fadeIn = keyframes`
   from {
     transform: scale(0.3);
-	opacity: 0;
+	  opacity: 0;
   }
 
   to {
-	visibility: visible;
+	  visibility: visible;
     transform: scale(1);
-	opacity: 1;
+	  opacity: 1;
   }
 `;
 const fadeInRight = keyframes`
   from {
-	opacity: 0;
-	transform: translateX(50px)
+	  pacity: 0;
+	  ransform: translateX(50px)
   }
   to {
-	opacity: 1;
-	transform: translateX(0px)
+	  opacity: 1;
+	  transform: translateX(0px)
   }
 `;
 const fadeInLeft = keyframes`
   from {
-	opacity: 0;
-	transform: translateX(-50px)
+	  opacity: 0;
+	  transform: translateX(-50px)
   }
   to {
-	opacity: 1;
-	transform: translateX(0px)
+	  opacity: 1;
+	  transform: translateX(0px)
   }
 `;
 
 const Message = styled.div`
-  margin-top: 16px;
-  width: 100%;
   display: flex;
   flex-direction: row;
-  justify-content: ${(props: { user: boolean }) =>
-    props.user ? "flex-end" : "flex-start"};
+  margin-top: 16px;
+  width: 100%;
+
+  font-size: 16px;
 
   .bubbleWrapper {
     display: flex;
     flex-direction: column;
   }
+
   .bubble {
-    display: block;
-    background: ${(props) => (props.user ? "#40949B" : "#3F3B56")};
-    color: ${(props) => (props.user ? "white" : "white")};
+    width: auto;
+    background: ${(props: { user: boolean }) =>
+      props.user ? "#40949B" : "#3F3B56"};
+    color: white;
     padding: 10px 16px 10px 16px;
     word-wrap: break-word;
     max-width: 240px;
     align-self: ${(props) => (props.user ? "flex-end" : "flex-start")};
     border-radius: ${(props) =>
       props.user ? "20px 20px 0px 20px" : "20px 20px 20px 0px"};
-    font-size: 20px;
+    font-size: inherit;
     animation: ${fadeIn} 0.4s cubic-bezier(0.075, 0.82, 0.165, 1) 1;
   }
   .loadingBubble {
-    display: block;
-    background: ${(props) => (props.user ? "#40949B" : "#3F3B56")};
-    color: ${(props) => (props.user ? "white" : "white")};
+    color: white;
+    background: #3f3b56;
     padding: 10px 16px 10px 16px;
     word-wrap: break-word;
-    max-width: 240px;
-    align-self: ${(props) => (props.user ? "flex-end" : "flex-start")};
-    border-radius: ${(props) =>
-      props.user ? "20px 20px 0px 20px" : "20px 20px 20px 0px"};
-    font-size: 20px;
+    width: auto;
+    align-self: flex-start;
+    border-radius: 20px 20px 20px 0px;
+    font-size: inherit;
     visibility: hidden;
     animation: ${fadeIn} 0.4s cubic-bezier(0.075, 0.82, 0.165, 1) 0.3s 1;
     animation-fill-mode: forwards;
+    > div {
+      display: block;
+    }
   }
 
   .time {
+    width: auto;
     color: ${(props) => (props.user ? "#40949B" : "#3F3B56")};
     margin-top: 4px;
     font-size: 12px;
-    align-self: ${(props) => (props.user ? "flex-start" : "flex-end")};
+    align-self: ${(props) => (props.user ? "flex-end" : "flex-start")};
     animation: ${(props) => (props.user ? fadeInRight : fadeInLeft)} 0.5s
       cubic-bezier(0.075, 0.82, 0.165, 1) 1;
   }
@@ -92,14 +96,12 @@ interface Props {
     text: string;
     time: number;
   };
-  isLast: boolean;
   loading?: boolean;
 }
 
 export const ChatMessage = ({
   isUser,
   message: { text, time },
-  isLast,
   loading,
 }: Props) => {
   if (loading) {

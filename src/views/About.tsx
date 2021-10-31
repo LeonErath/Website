@@ -13,7 +13,7 @@ export const About = () => (
         />
         <ul className={classes.list}>
           <ListItem text="Fullstack Developer for 2+ years" />
-          <ListItem text="Build multiple web-apps with over 10k daily users" />
+          <ListItem text="Built multiple web-apps with over 10k daily users" />
           <ListItem text="Maintaining and designing microservices" />
         </ul>
       </div>
