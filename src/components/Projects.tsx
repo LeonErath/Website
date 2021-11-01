@@ -88,7 +88,7 @@ export const Projects = () => (
       </Link>
       <Card>
         <CardHeader>
-          <div>3 people</div>
+          <div>5 people</div>
           <div>3 Months</div>
         </CardHeader>
         <CardMain>

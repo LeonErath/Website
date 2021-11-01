@@ -1,14 +1,14 @@
 export const API = [
   {
     project: "t2m",
-    url: "https://t2m.leonerath.de",
+    url: "https://t2m.erath.dev",
   },
   {
     project: "eve",
-    url: "https://eve.leonerath.de",
+    url: "https://eve.erath.dev",
   },
   {
     project: "jf",
-    url: "https://jf.leonerath.de",
+    url: "https://jf.erath.dev",
   },
 ];

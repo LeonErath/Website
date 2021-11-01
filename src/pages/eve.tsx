@@ -2,25 +2,11 @@ import classNames from "classnames";
 import Head from "next/head";
 import Link from "next/link";
 import React, { useState } from "react";
-import styled from "styled-components";
 import { Avatar } from "../components/avatar/Avatar";
 import { EveDemo } from "../components/demos/eve/EveDemo";
 import Github from "../components/svg/github";
 import { Tech } from "../components/svg/tech";
 import classes from "./eve.module.scss";
-
-const AIContainer = styled.div`
-  justify-content: center;
-  display: flex;
-  align-items: center;
-  margin-left: 100px;
-  margin-right: 100px;
-  margin-bottom: -100px;
-  @media (min-width: 320px) and (max-width: 1024px) {
-    margin-left: 0px;
-    margin-right: 0px;
-  }
-`;
 
 const eve = () => {
   const [isDemoOpen, setDemoOpen] = useState(false);
@@ -64,14 +50,14 @@ const eve = () => {
           <Avatar name="Leon Erath" short="LE" />
         </div>
         <div className={classes.item}>
-          <img src="/icons/certificate(24x24)@1x.svg" data-theme="invert" />
+          <img src="/icons/location-2(24x24)@1x.svg" data-theme="invert" />
           <span>DHBW</span>
           <span>University</span>
         </div>
         <div className={classes.item}>
           <img src="/icons/calendar(24x24)@1x.svg" data-theme="invert" />
           <span>3 months</span>
-          <span>2017</span>
+          <span>2018</span>
         </div>
         <div className={classes.item}>
           <img src="/icons/keyboard(24x24)@1x.svg" data-theme="invert" />
@@ -158,9 +144,9 @@ const eve = () => {
         </div>
       </div>
 
-      <AIContainer>
+      <div className={classes.aiContainer}>
         <Tech></Tech>
-      </AIContainer>
+      </div>
     </div>
   );
 };

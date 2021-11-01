@@ -15,6 +15,7 @@ services:
     labels:
       - traefik.backend=website
       - traefik.frontend.rule=Host:leonerath.de,www.leonerath.de,erath.dev,www.erath.dev
+      - traefik.frontend.priority=2
       - traefik.docker.network=proxy
       - traefik.port=3000
       - traefik.enable=true
