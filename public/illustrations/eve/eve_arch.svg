@@ -111,7 +111,7 @@
     <path id="Path_82" data-name="Path 82" d="M-54.09-11.23c-7.83,3.33-16.28,3.58-30.4,9.61" transform="translate(1828.785 -375.554)" fill="none" stroke="#495057" stroke-linecap="round" stroke-width="1.5"/>
     <path id="Path_83" data-name="Path 83" d="M-54.72,9.28c-7.81-1.86-16.1-6.82-29.77-10.9" transform="translate(1828.785 -375.554)" fill="none" stroke="#495057" stroke-linecap="round" stroke-width="1.5"/>
     <path id="Path_84" data-name="Path 84" d="M.63-.82c136.28-.04,680.65.48,816.83.19M-.49,1.36c136.15-.33,680.83-3.12,817.11-3.64" transform="translate(1238.781 -1243.786)" fill="none" stroke="#495057" stroke-linecap="round" stroke-width="1"/>
-    <text id="Before" transform="translate(1251.214 -1428)" fill="#0b7285" font-size="20" font-family="Virgil3YOFF, 'Virgil \33  YOFF'"><tspan x="-33.65" y="0">Before</tspan></text>
+    <text id="Before" transform="translate(1251.214 -1428)" fill="#0b7285" font-size="20" font-family="Virgil3YOFF, 'Virgil \33  YOFF'"><tspan x="-33.65" y="0">Training</tspan></text>
     <text id="Architecture" transform="translate(1282.496 -1162.39)" fill="#0b7285" font-size="20" font-family="Virgil3YOFF, 'Virgil \33  YOFF'"><tspan x="-59.78" y="0">Architecture</tspan></text>
     <text id="Python" transform="translate(2003.884 -490.944)" fill="#862e9c" font-size="20" font-family="Virgil3YOFF, 'Virgil \33  YOFF'"><tspan x="-32.1" y="0">Python</tspan></text>
     <text id="Go" transform="translate(2022.97 -906.623)" fill="#862e9c" font-size="20" font-family="Virgil3YOFF, 'Virgil \33  YOFF'"><tspan x="-13.73" y="0">Go</tspan></text>

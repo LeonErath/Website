@@ -43,9 +43,9 @@ const eve = () => {
 
       <div className={classes.banner}>
         <div className={classes.avatarContainer}>
-          <Avatar name="Daniel Salomon" short="DS" />
+          <Avatar name="Daniel Salomon" short="DSa" />
           <Avatar name="Niklas Korz" short="NK" />
-          <Avatar name="Daniel Scholz" short="DS" />
+          <Avatar name="Daniel Scholz" short="DSc" />
           <Avatar name="Simon Niedermayr" short="SN" />
           <Avatar name="Leon Erath" short="LE" />
         </div>
