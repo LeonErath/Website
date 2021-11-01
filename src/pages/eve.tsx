@@ -6,7 +6,7 @@ import styled from "styled-components";
 import { Avatar } from "../components/avatar/Avatar";
 import { EveDemo } from "../components/demos/eve/EveDemo";
 import Github from "../components/svg/github";
-import Tech from "../components/svg/tech";
+import { Tech } from "../components/svg/tech";
 import classes from "./eve.module.scss";
 
 const AIContainer = styled.div`
@@ -82,30 +82,67 @@ const eve = () => {
 
       <div className={classes.section}>
         <div className={classes.textContainer}>
-          <h3>Solving a Problem</h3>
+          <h3>What is eve?</h3>
           <span>
-            99% of Men don’t approach women, because they are waiting for the
-            right moment. To remedy this, there are numerous dating coaches.
-            Help in this form, however, is very expensive and overcomes the need
-            for introverted people to seek help. In addition, it is very
-            difficult to provide the counselling service for the many victims at
-            any time anywhere in the world.
+            "Eve" is our chatbot that uses a mix of artificial intelligence and
+            static responses to mimic realistic conversations between students.
+            The Project was part of the three-month university course "software
+            engineering II" and was built by Niklas Korz, Daniel Scholz, Simon
+            Niedermayr, Daniel Salomon and Me. The user can ask questions and
+            receive, either pre-defined or procedurally generated, answers,
+            which are influenced by his previous messages.
           </span>
-          <h3>Using artificial intelligence</h3>
+          <h3>Corpus</h3>
           <span>
-            “Eve” gives the possibility of communicating with a chatbot through
-            a chat client. The user interacts with a daily used and thus already
-            known chat interface. The user receives answers in German, which are
-            influenced by his messages. This allows him to practice what it
-            would be like in reality to communicate with a real potential
-            partner.
+            The corpus of the model consists of our own exported chat histories
+            from WhatsApp & Co. This helped us to recreate a more realistic
+            conversation, which for example also led to our model using emojis
+            correctly. The chat exports were then processed by our{" "}
+            <a
+              href="https://github.com/AAA-Intelligence/parser"
+              target="_blank"
+            >
+              parser
+            </a>
+            , where the chats were normalized and tokenized and finally exported
+            into two files: a vocabulary and a set of questions & answers. For
+            the parser, we used a mix of JavaScript and Python.
           </span>
-          <h3>Our tech stack</h3>
+          <h3>Chatbot</h3>
           <span>
-            With the help of Google’s library tensorflow, we have developed a
-            state of the art chatbot. We also use Go to provide a WebSocket
-            connection to the bot. If you also want to integrate Eve into your
-            platform, we offer a REST API.
+            For our chatbot, we used a{" "}
+            <b>unidirectional LSTM encoder-decoder model</b>, which is also used
+            by{" "}
+            <a href="https://github.com/OpenNMT/OpenNMT-tf" target="_blank">
+              OpenNMT
+            </a>
+            . In addition to the chatbot model, we trained two other models. One
+            model to recognize predefined patterns (PatternAnalyser) and one
+            model to determine the mood of the conversation (MoodAnalyser). The
+            pattern analyser allowed us to give predefined answers to certain
+            questions depending on the mood. For example, what the chatbot's
+            name is or how old it is. Mood dependent questions would be "How are
+            you?" or "Do you like me?". A full list of our predefined answers
+            can be found{" "}
+            <a
+              href="https://github.com/AAA-Intelligence/eve/tree/master/bot/predefined_answers"
+              target="_blank"
+            >
+              here
+            </a>
+            .
+          </span>
+          <h3>Architecture</h3>
+          <span>
+            We chose a modular system architecture so that the team could easily
+            work on individual components. For our backend, we used Go and
+            Python, not only because it is the standard in AI chatbot
+            development, but also because some of the team had prior knowledge
+            of these programming languages. The WebApp can communicate with the
+            WebServer over WebSockets or REST. The WebServer authenticates the
+            user, saves the message and relays it to a running bot instance. The
+            WebServer can manage multiple instances of chatbots to improve the
+            performance of the application.
           </span>
 
           <a href="https://github.com/AAA-Intelligence/eve" target="_blank">
@@ -113,12 +150,16 @@ const eve = () => {
           </a>
         </div>
         <div className={classes.imageContainer}>
-          <img src="/opinion.svg" alt="dark_alley" width="400"></img>
+          <img
+            src="/illustrations/eve/eve_arch.svg"
+            alt="Architecture Diagram"
+            data-theme="invert"
+          ></img>
         </div>
       </div>
 
       <AIContainer>
-        <Tech style={{ maxWidth: "1200px", width: "90%" }}></Tech>
+        <Tech></Tech>
       </AIContainer>
     </div>
   );

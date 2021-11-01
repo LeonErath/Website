@@ -2,9 +2,13 @@ import React from "react";
 import styled from "styled-components";
 
 const SVG = styled.svg`
-  width: 100%;
+  width: 90%;
   height: 100%;
+  max-width: 1200px;
   object-fit: contain;
+  @media (max-width: 767px) {
+    display: none;
+  }
 
   tspan {
     stroke: none;
@@ -16,9 +20,8 @@ const SVG = styled.svg`
   }
 `;
 
-export default (props) => (
+export const Tech = () => (
   <SVG
-    {...props}
     xmlns="http://www.w3.org/2000/svg"
     width="1523"
     height="1015"
@@ -26,7 +29,7 @@ export default (props) => (
   >
     <g id="Methods" transform="translate(-237 -3232)">
       <g id="icon">
-        <g id="Group_199" data-name="Group 199" class="back">
+        <g id="Group_199" data-name="Group 199" className="back">
           <animateTransform
             id="anim1"
             attributeName="transform"
@@ -180,7 +183,7 @@ export default (props) => (
           transform="translate(1069.583 3518.968)"
           fill="#2f2e41"
         />
-        <g id="Group_197" data-name="Group 197" class="point">
+        <g id="Group_197" data-name="Group 197" className="point">
           <circle
             id="Ellipse_106"
             data-name="Ellipse 106"
@@ -258,7 +261,7 @@ export default (props) => (
       </g>
       <g id="Group_195" data-name="Group 195">
         <text
-          class="text"
+          className="text"
           id="We_are_using_state_of_the_art_artificial_intelligence_to_generate_the_best_answers_for_your_conversation."
           data-name="We are using state of the art artificial intelligence to generate the best answers for your conversation."
           transform="translate(237 3590)"
@@ -273,7 +276,7 @@ export default (props) => (
           </tspan>
         </text>
         <text
-          class="text"
+          className="text"
           id="Generative_Model_"
           data-name="Generative Model "
           transform="translate(237 3560)"
@@ -287,7 +290,7 @@ export default (props) => (
       </g>
       <g id="Group_194" data-name="Group 194">
         <text
-          class="text"
+          className="text"
           id="Recognizing_the_mood_the_topic_and_the_context_is_essential_for_a_good_conversation."
           data-name="Recognizing the mood, the topic and the context is essential for a good conversation."
           transform="translate(1207 3760)"
@@ -302,7 +305,7 @@ export default (props) => (
           </tspan>
         </text>
         <text
-          class="text"
+          className="text"
           id="Context_Recognition"
           data-name="Context Recognition"
           transform="translate(1207 3732)"
@@ -316,7 +319,7 @@ export default (props) => (
       </g>
       <g id="Group_193" data-name="Group 193">
         <text
-          class="text"
+          className="text"
           id="Selective_Model"
           data-name="Selective Model"
           transform="translate(1314 3467)"
@@ -328,7 +331,7 @@ export default (props) => (
           </tspan>
         </text>
         <text
-          class="text"
+          className="text"
           id="To_simulate_a_human_conversation_certain_random_character_traits_are_defined."
           data-name="To simulate a human conversation, certain random character traits are defined."
           transform="translate(1314 3491)"

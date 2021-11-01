@@ -202,15 +202,19 @@
       color: var(--ui-color-2);
       line-height: 1.8;
       font-size: 1.1em;
+      b {
+        color: var(--ui-color);
+      }
     }
   }
   .imageContainer {
     display: flex;
     justify-content: center;
     align-items: center;
-    max-width: 500px;
+    max-width: 600px;
     img {
-      max-width: 300px;
+      width: 100%;
+      max-width: 500px;
     }
   }
 }
