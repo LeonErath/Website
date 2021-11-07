@@ -4,6 +4,7 @@ import Link from "next/link";
 import React, { useState } from "react";
 import { Avatar } from "../components/avatar/Avatar";
 import { EveDemo } from "../components/demos/eve/EveDemo";
+import { EveArch } from "../components/svg/eveArch";
 import Github from "../components/svg/github";
 import { Tech } from "../components/svg/tech";
 import classes from "./eve.module.scss";
@@ -136,11 +137,7 @@ const eve = () => {
           </a>
         </div>
         <div className={classes.imageContainer}>
-          <img
-            src="/illustrations/eve/eve_arch.svg"
-            alt="Architecture Diagram"
-            data-theme="invert"
-          ></img>
+          <EveArch className={classes.arch} />
         </div>
       </div>
 

@@ -9,6 +9,9 @@
   img[src*=".svg"][data-theme="invert"] {
     filter: invert(1);
   }
+  svg[data-theme="invert"] {
+    filter: invert(1);
+  }
 }
 
 @mixin light {
@@ -20,6 +23,9 @@
   --ui-color-2: #4d4d4d;
 
   img[src*=".svg"][data-theme="invert"] {
+    filter: invert(0);
+  }
+  svg[data-theme="invert"] {
     filter: invert(0);
   }
 }
