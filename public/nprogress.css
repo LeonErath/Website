@@ -1,10 +1,11 @@
 /* Make clicks pass-through */
+
 #nprogress {
   pointer-events: none;
 }
 
 #nprogress .bar {
-  background: rgb(14, 158, 122);
+  background: #38d9ff;
   position: fixed;
   z-index: 1031;
   top: 0;
@@ -21,7 +22,7 @@
   right: 0px;
   width: 100px;
   height: 100%;
-  box-shadow: 0 0 10px rgb(14, 158, 122), 0 0 5px rgb(14, 158, 122);
+  box-shadow: 0 0 10px #38d9ff, 0 0 5px #38d9ff;
   opacity: 1;
 
   -webkit-transform: rotate(3deg) translate(0px, -4px);
@@ -44,8 +45,8 @@
   box-sizing: border-box;
 
   border: solid 2px transparent;
-  border-top-color: rgb(14, 158, 122);
-  border-left-color: rgb(14, 158, 122);
+  border-top-color: #38d9ff;
+  border-left-color: #38d9ff;
   border-radius: 50%;
 
   -webkit-animation: nprogress-spinner 400ms linear infinite;

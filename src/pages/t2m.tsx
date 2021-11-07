@@ -56,6 +56,7 @@ class T2M extends Component {
               present news quickly and clearly. A new, innovative feature for
               such a news website would be a quick preview of the article in the
               form of music. <br />
+              <br />
               But Problems are:
               <br />
               <ul>
@@ -64,6 +65,7 @@ class T2M extends Component {
                 <li>Repetition of music</li>
               </ul>
               <br />
+              Features of T2M:
               <ul>
                 <li>Generating music from texts</li>
                 <li>Adaptation of the mood of the text</li>

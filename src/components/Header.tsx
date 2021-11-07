@@ -5,6 +5,8 @@ import { useScrollHandler } from "../hooks/useScroll";
 import classes from "./Header.module.scss";
 import { Nav } from "./Nav";
 
+NProgress.configure({ showSpinner: false });
+
 (Router as any).onRouteChangeStart = () => {
   NProgress.start();
 };

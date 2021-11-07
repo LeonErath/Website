@@ -44,9 +44,17 @@ const Foreground = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
+  gap: 16px;
   align-items: center;
 
   position: absolute;
+
+  a {
+    padding: 0;
+    margin: 0;
+    width: auto;
+    text-decoration: none;
+  }
 `;
 
 const Background = styled.div`
@@ -58,7 +66,6 @@ const Background = styled.div`
 
 const Title = styled.div`
   font-size: 3em;
-  margin: 16px;
   font-weight: bold;
   color: var(--ui-color);
 `;

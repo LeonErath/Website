@@ -30,22 +30,6 @@ const Item = styled.div`
   }
 `;
 
-const Backtext = styled.div`
-  position: absolute;
-  font-size: 6em;
-  color: ${(props) => props.color};
-  font-weight: bold;
-  display: flex;
-
-  span {
-    line-height: 140px;
-    margin: 32px;
-  }
-  @media (min-width: 320px) and (max-width: 1024px) {
-    font-size: 5em;
-  }
-`;
-
 const ProjectDiv = styled.div`
   width: 100%;
   display: grid;
@@ -70,22 +54,17 @@ export const Projects = () => (
         backgroundImage: 'url("/eve_background.svg")',
       }}
     >
-      <Link href="/eve">
-        <div
-          style={{
-            position: "relative",
-            display: "flex",
-            justifyContent: "center",
-            alignItems: "center",
-          }}
-        >
-          <img
-            width="340"
-            src="/eve.svg"
-            style={{ position: "absolute" }}
-          ></img>
-        </div>
-      </Link>
+      <div
+        style={{
+          position: "relative",
+          display: "flex",
+          justifyContent: "center",
+          alignItems: "center",
+        }}
+      >
+        <img width="340" src="/eve.svg" style={{ position: "absolute" }}></img>
+      </div>
+
       <Card>
         <CardHeader>
           <div>5 people</div>
@@ -95,7 +74,9 @@ export const Projects = () => (
           <CardBackground>chatbot</CardBackground>
           <CardForeground>
             <Link href="/eve">
-              <CardTitle>Eve</CardTitle>
+              <a>
+                <CardTitle>Eve</CardTitle>
+              </a>
             </Link>
             <Link href="https://github.com/AAA-Intelligence/eve">
               <a target="_blank">
@@ -145,21 +126,20 @@ export const Projects = () => (
         backgroundImage: 'url("/pineapple_background.svg")',
       }}
     >
-      <Link href="pineapple">
-        <div
-          style={{
-            position: "relative",
-            display: "flex",
-            justifyContent: "center",
-            alignItems: "center",
-          }}
-        >
-          <img
-            src="/pineapple.png"
-            style={{ position: "absolute", width: "100%", maxWidth: "400px" }}
-          ></img>
-        </div>
-      </Link>
+      <div
+        style={{
+          position: "relative",
+          display: "flex",
+          justifyContent: "center",
+          alignItems: "center",
+        }}
+      >
+        <img
+          src="/pineapple.png"
+          style={{ position: "absolute", width: "100%", maxWidth: "400px" }}
+        ></img>
+      </div>
+
       <Card>
         <CardHeader>
           <div>3 people</div>
@@ -169,7 +149,9 @@ export const Projects = () => (
           <CardBackground>School 4.0</CardBackground>
           <CardForeground>
             <Link href="pineapple">
-              <CardTitle>Pineapple</CardTitle>
+              <a>
+                <CardTitle>Pineapple</CardTitle>
+              </a>
             </Link>
             <Link href="https://github.com/LeonErath/Pineapple">
               <a target="_blank">
@@ -185,9 +167,8 @@ export const Projects = () => (
       </Card>
     </Item>
     <Item background="#F4F4F4">
-      <Link href="t2m">
-        <img style={{ width: "100%" }} src="/t2m.png"></img>
-      </Link>
+      <img style={{ width: "100%" }} src="/t2m.png"></img>
+
       <Card>
         <CardHeader>
           <div>5 people</div>
@@ -197,7 +178,9 @@ export const Projects = () => (
           <CardBackground>generation</CardBackground>
           <CardForeground>
             <Link href="t2m">
-              <CardTitle>Text2Music</CardTitle>
+              <a>
+                <CardTitle>Text2Music</CardTitle>
+              </a>
             </Link>
             <Link href="https://github.com/AudiophileDev/T2M">
               <a target="_blank">
