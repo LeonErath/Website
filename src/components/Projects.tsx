@@ -7,7 +7,7 @@ import Card, {
   CardMain,
   CardStack,
   CardTitle,
-} from "./Card";
+} from "./card";
 
 const Item = styled.div`
   overflow: hidden;

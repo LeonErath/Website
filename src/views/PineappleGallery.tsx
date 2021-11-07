@@ -59,6 +59,7 @@ export const PineappleGallery = () => {
         </div>
         <button onClick={nextFeature}>
           <img
+            data-theme="invert"
             src="/icons/chevron-double-right(24x24)@1x.svg"
             alt="next image"
           />

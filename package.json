@@ -8,7 +8,7 @@
   "main": "index.js",
   "scripts": {
     "dev": "next -p 7777",
-    "build": "NODE_OPTIONS=--openssl-legacy-provider next build",
+    "build": "next build",
     "start": "next start -p 3000",
     "sw": " next build && next export && cp your-sw.js out/sw.js",
     "test": "NODE_ENV=test jest --watch"

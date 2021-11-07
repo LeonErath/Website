@@ -8,5 +8,5 @@ WORKDIR /usr/src/app
 COPY package.json yarn.lock ./
 RUN yarn install
 COPY . ./
-RUN yarn run build
+RUN NODE_OPTIONS=--openssl-legacy-provider yarn run build
 CMD ["yarn", "start"]

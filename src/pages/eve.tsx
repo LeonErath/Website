@@ -3,9 +3,9 @@ import Head from "next/head";
 import Link from "next/link";
 import React, { useState } from "react";
 import { Avatar } from "../components/avatar/Avatar";
-import { EveDemo } from "../components/demos/eve/EveDemo";
+import { EveDemo } from "../views/eve-demo/EveDemo";
 import { EveArch } from "../components/svg/EveArch";
-import Github from "../components/svg/github";
+import { GithubIcon } from "../components/svg/github";
 import { Tech } from "../components/svg/tech";
 import classes from "./eve.module.scss";
 
@@ -133,7 +133,7 @@ const eve = () => {
           </span>
 
           <a href="https://github.com/AAA-Intelligence/eve" target="_blank">
-            <Github fill="#000000" style={{ width: "50px" }}></Github>
+            <GithubIcon fill="#000000" style={{ width: "50px" }} />
           </a>
         </div>
         <div className={classes.imageContainer}>

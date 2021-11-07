@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import { ThemeProvider } from "styled-components";
 import { Footer } from "../components/Footer";
 import { Header } from "../components/Header";
-import Meta from "../components/Meta";
+import { Meta } from "../components/Meta";
 import classes from "./Page.module.scss";
 
 const theme = {

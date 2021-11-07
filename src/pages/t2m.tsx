@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { Avatar } from "../components/avatar/Avatar";
-import { T2MDemo } from "../components/demos/t2m/T2MDemo";
+import { T2MDemo } from "../views/T2MDemo";
 import classes from "./t2m.module.scss";
 
 class T2M extends Component {
