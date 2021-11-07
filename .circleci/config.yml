@@ -1,17 +1,5 @@
 version: 2.0
 jobs:
-  build:
-    machine: true
-    steps:
-      - checkout
-      # start proprietary DB using private Docker image
-      # with credentials stored in the UI
-      # build the application image
-      - run: docker network create proxy
-
-      - run: docker-compose build
-
-      - run: docker-compose up -d
   deploy:
     machine:
       machine: true
@@ -20,19 +8,14 @@ jobs:
       - add_ssh_keys:
           fingerprints:
             - "33:c9:99:69:2b:8a:47:ee:d2:7f:87:17:a5:92:54:ce"
-
-      - run: |
-          docker build -f Dockerfile -t leonerath/website . --build-arg REACT_APP_GITHUB_PERSONAL_ACCESS_TOKEN=${GITHUB_TOKEN}
-          docker login -u $DOCKER_USER -p $DOCKER_PASS    
-          docker push leonerath/website
+      - run: docker build -f Dockerfile -t leonerath/website . --build-arg REACT_APP_GITHUB_PERSONAL_ACCESS_TOKEN=${GITHUB_TOKEN}
+      - run: docker login -u $DOCKER_USER -p $DOCKER_PASS
+      - run: docker push leonerath/website
 workflows:
   version: 2
   build-and-deploy:
     jobs:
-      - build
       - deploy:
-          requires:
-            - build
           filters:
             branches:
               only: master
