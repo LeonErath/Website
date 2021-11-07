@@ -4,7 +4,7 @@ import Link from "next/link";
 import React, { useState } from "react";
 import { Avatar } from "../components/avatar/Avatar";
 import { EveDemo } from "../components/demos/eve/EveDemo";
-import { EveArch } from "../components/svg/eveArch";
+import { EveArch } from "../components/svg/EveArch";
 import Github from "../components/svg/github";
 import { Tech } from "../components/svg/tech";
 import classes from "./eve.module.scss";
