@@ -26,6 +26,7 @@ export default class MyDocument extends Document {
             name="google-site-verification"
             content="MSkqJgiVlLnyfRfjieCXuB1EKHUS_NtulUjFxuE2dQQ"
           />
+          <script src="https://platform.twitter.com/widgets.js"></script>
         </Head>
         <body>
           <Main />

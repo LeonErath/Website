@@ -28,7 +28,6 @@ Create React App vs Vite React on <a href="https://twitter.com/Replit?ref_src=tw
 </p>
 &mdash; Amjad Masad ⠕ (@amasad) <a href="https://twitter.com/amasad/status/1355379680275128321?ref_src=twsrc%5Etfw">January 30, 2021</a>
 </blockquote>
-<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 
 The time to switch from the IDE to the Browser takes longer than the dev-server hot reloading the app. And due to HMR not losing your local state after hot-reloading the page, was a huge benefit for our workflow. Features, where you would need an active call, like transfer, could now be easily tested and debugged without starting a new call everytime you change a line of code.
 

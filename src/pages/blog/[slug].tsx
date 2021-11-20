@@ -3,11 +3,17 @@ import { MDXRemote } from "next-mdx-remote";
 import { serialize } from "next-mdx-remote/serialize";
 import ErrorPage from "next/error";
 import Head from "next/head";
-import React from "react";
+import React, { useEffect } from "react";
 import { getPostBySlug, getSlugs } from "../../utils/blog.utils";
 import classes from "./blog.module.scss";
 
 export default function TestPage({ source, frontMatter }) {
+  useEffect(() => {
+    if ((window as any).twttr) {
+      (window as any).twttr.widgets.load();
+    }
+  }, []);
+
   if (!source || !frontMatter) {
     return <ErrorPage statusCode={404} />;
   }
