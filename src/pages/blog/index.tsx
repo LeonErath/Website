@@ -1,4 +1,5 @@
 import matter from "gray-matter";
+import Head from "next/head";
 import Link from "next/link";
 import React from "react";
 import { getAllPosts } from "../../utils/blog.utils";
@@ -17,6 +18,9 @@ type Props = {
 export default function TestPage({ posts }: Props) {
   return (
     <div className={classes.container}>
+      <Head>
+        <title>Leon Erath | Blog</title>
+      </Head>
       {posts.map((post) => (
         <Link href={`/blog/${post.slug}`} key={post.slug}>
           <a className={classes.blogItem}>

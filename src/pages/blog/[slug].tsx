@@ -2,6 +2,7 @@ import matter from "gray-matter";
 import { MDXRemote } from "next-mdx-remote";
 import { serialize } from "next-mdx-remote/serialize";
 import ErrorPage from "next/error";
+import Head from "next/head";
 import React from "react";
 import { getPostBySlug, getSlugs } from "../../utils/blog.utils";
 import classes from "./blog.module.scss";
@@ -13,6 +14,9 @@ export default function TestPage({ source, frontMatter }) {
 
   return (
     <div className={classes.wrapper}>
+      <Head>
+        <title>Leon Erath | {frontMatter.title}</title>
+      </Head>
       <div className={classes.container}>
         <img src={frontMatter.image} alt="" />
         <h1>{frontMatter.title}</h1>
