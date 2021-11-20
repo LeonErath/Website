@@ -19,8 +19,8 @@ export const Nav = () => {
         <Link href="/#projects">
           <a>Projects</a>
         </Link>
-        <Link href="/#about">
-          <a>About</a>
+        <Link href="/blog">
+          <a>Blog</a>
         </Link>
       </div>
       <div className={classes.right}>
