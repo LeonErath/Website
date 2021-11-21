@@ -10,7 +10,7 @@
   .blogItem {
     width: 100%;
     max-width: 800px;
-    height: 260px;
+    min-height: 260px;
     background: var(--background-2);
     text-decoration: none;
     color: var(--ui-color);
@@ -18,14 +18,18 @@
     flex-direction: row;
     padding: 8px;
 
-    img {
-      width: 260px;
+    > img {
+      display: flex;
+      width: 240px;
       height: 100%;
+      min-height: 240px;
+      max-height: 300px;
       object-fit: cover;
     }
 
-    > div {
+    .textContainer {
       padding: 8px;
+
       display: flex;
       flex-direction: column;
       justify-content: center;
@@ -65,6 +69,15 @@
             object-fit: cover;
           }
         }
+      }
+    }
+
+    @media (max-width: 767px) {
+      flex-direction: column;
+      padding: 0;
+
+      img {
+        width: 100%;
       }
     }
   }

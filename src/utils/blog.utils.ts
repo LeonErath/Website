@@ -10,9 +10,12 @@ export const getPostBySlug = (slug: string) => {
 };
 
 export const getAllPosts = () => {
-  return getSlugs().map((slug) => ({ slug, file: getPostBySlug(slug) }));
+  return getSlugs().map((slug) => ({
+    slug: slug,
+    file: getPostBySlug(slug),
+  }));
 };
 
 export const getSlugs = () => {
-  return fs.readdirSync(postsDirectory);
+  return fs.readdirSync(postsDirectory).map((slug) => slug.replace(".md", ""));
 };

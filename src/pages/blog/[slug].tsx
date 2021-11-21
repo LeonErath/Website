@@ -33,6 +33,8 @@ export default function TestPage({ source, frontMatter }) {
 }
 
 export async function getStaticProps({ params }) {
+  console.log(params.slug);
+
   const file = getPostBySlug(params.slug);
 
   const { content, data } = matter(file);

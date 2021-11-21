@@ -25,7 +25,8 @@ export default function TestPage({ posts }: Props) {
         <Link href={`/blog/${post.slug}`} key={post.slug}>
           <a className={classes.blogItem}>
             <img src={post.data.image} alt="" />
-            <div>
+
+            <div className={classes.textContainer}>
               <h1>{post.data.title}</h1>
               <p>{post.data.description}</p>
 
