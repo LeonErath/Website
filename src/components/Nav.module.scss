@@ -5,10 +5,6 @@
   align-items: center;
   gap: 8px;
 
-  @media (max-width: 480px) {
-    padding: 8px;
-  }
-
   .left {
     position: relative;
     display: flex;
@@ -16,22 +12,21 @@
     align-items: center;
     gap: 32px;
 
-    @media (max-width: 767px) {
-      *:not(:first-child) {
-        display: none;
-      }
+    button {
+      background: none;
+      border: none;
     }
-
-    a {
-      padding: 8px;
-      color: var(--ui-color);
-      text-decoration: none;
-      cursor: pointer;
-      font-size: 1em;
-      transition: all 0.1s ease;
-      &:hover {
-        opacity: 0.8;
-      }
+  }
+  .left a,
+  .right a {
+    padding: 8px;
+    color: var(--ui-color);
+    text-decoration: none;
+    cursor: pointer;
+    font-size: 1em;
+    transition: all 0.1s ease;
+    &:hover {
+      opacity: 0.8;
     }
   }
   .right {
@@ -40,12 +35,6 @@
     align-items: center;
     gap: 16px;
     width: auto;
-
-    @media (max-width: 767px) {
-      *:not(:last-child) {
-        display: none;
-      }
-    }
 
     .fakeButton {
       text-decoration: none;
@@ -99,5 +88,55 @@
   }
   .large {
     display: inline-flex;
+  }
+}
+
+.desktopNav {
+  @media (max-width: 767px) {
+    display: none;
+  }
+}
+
+.mobileNav {
+  display: none;
+  @media (max-width: 767px) {
+    display: flex;
+  }
+
+  .popupNav {
+    position: absolute;
+    background: var(--background);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+    padding: 12px;
+
+    left: 0;
+    right: 0;
+    top: 64px;
+
+    transform: scaleY(0);
+    transition: transform 300ms cubic-bezier(0.075, 0.82, 0.165, 1);
+    transform-origin: top;
+
+    a {
+      text-align: center;
+      width: 100%;
+      padding: 8px;
+      color: var(--ui-color);
+      text-decoration: none;
+      cursor: pointer;
+      font-size: 1em;
+      transition: all 0.1s ease;
+      &:hover {
+        opacity: 0.8;
+      }
+    }
+
+    &.open {
+      transform: scaleY(1);
+      box-shadow: rgba(100, 100, 111, 0.2) 0px 24px 29px 0px;
+    }
   }
 }

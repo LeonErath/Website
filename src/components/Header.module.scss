@@ -17,4 +17,8 @@
   a {
     cursor: pointer;
   }
+
+  @media (max-width: 767px) {
+    padding: 12px 4%;
+  }
 }
