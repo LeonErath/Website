@@ -6,6 +6,8 @@ import Head from "next/head";
 import React, { useEffect } from "react";
 import { getPostBySlug, getSlugs } from "../../utils/blog.utils";
 import classes from "./blog.module.scss";
+import Image from "next/image";
+import { shimmer, toBase64 } from "../../utils/shimmer.utils";
 
 export default function TestPage({ source, frontMatter }) {
   useEffect(() => {
@@ -24,7 +26,18 @@ export default function TestPage({ source, frontMatter }) {
         <title>Leon Erath | {frontMatter.title}</title>
       </Head>
       <div className={classes.container}>
-        <img src={frontMatter.image} alt="" />
+        <Image
+          priority
+          width={800}
+          layout="responsive"
+          height={450}
+          src={frontMatter.image}
+          placeholder="blur"
+          blurDataURL={`data:image/svg+xml;base64,${toBase64(
+            shimmer(800, 450)
+          )}`}
+          alt=""
+        />
         <h1>{frontMatter.title}</h1>
         <MDXRemote {...source} />
       </div>
@@ -33,8 +46,6 @@ export default function TestPage({ source, frontMatter }) {
 }
 
 export async function getStaticProps({ params }) {
-  console.log(params.slug);
-
   const file = getPostBySlug(params.slug);
 
   const { content, data } = matter(file);

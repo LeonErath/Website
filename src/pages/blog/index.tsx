@@ -24,7 +24,7 @@ export default function TestPage({ posts }: Props) {
       {posts.map((post) => (
         <Link href={`/blog/${post.slug}`} key={post.slug}>
           <a className={classes.blogItem}>
-            <img src={post.data.image} alt="" />
+            <img src={post.data.image} alt="" width={240} height={"100%"} />
 
             <div className={classes.textContainer}>
               <h1>{post.data.title}</h1>

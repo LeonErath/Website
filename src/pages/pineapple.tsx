@@ -2,16 +2,20 @@ import React, { Component } from "react";
 import { Avatar } from "../components/avatar/Avatar";
 import { PineappleGallery } from "../views/PineappleGallery";
 import classes from "./pineapple.module.scss";
-
+import Image from "next/image";
+import PineappleBanenr from "../../public/images/pineapple/PineappleBanner.png";
 class Pineapple extends Component {
   render() {
     return (
       <div>
         <div>
-          <img
+          <Image
             alt="pineapple banner"
-            style={{ width: "100%", objectFit: "contain" }}
-            src="/images/pineapple/PineappleBanner.png"
+            width={1252}
+            height={878}
+            objectFit={"cover"}
+            src={PineappleBanenr}
+            placeholder="blur"
           />
         </div>
 
