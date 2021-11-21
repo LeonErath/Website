@@ -62,7 +62,12 @@ export const Projects = () => (
           alignItems: "center",
         }}
       >
-        <img width="340" src="/eve.svg" style={{ position: "absolute" }}></img>
+        <img
+          width="340"
+          src="/eve.svg"
+          style={{ position: "absolute" }}
+          alt=""
+        ></img>
       </div>
 
       <Card>
@@ -79,15 +84,29 @@ export const Projects = () => (
               </a>
             </Link>
             <Link href="https://github.com/AAA-Intelligence/eve">
-              <a target="_blank">
-                <img src="/github-icon.svg" data-theme="invert"></img>
+              <a target="_blank" rel="noopener">
+                <img
+                  src="/github-icon.svg"
+                  data-theme="invert"
+                  alt="Github"
+                ></img>
               </a>
             </Link>
           </CardForeground>
         </CardMain>
         <CardStack>
-          <img width="40" src="/python.svg" data-theme="invert" />
-          <img width="40" src="/gopher.svg" data-theme="invert" />
+          <img
+            width="40"
+            src="/python.svg"
+            data-theme="invert"
+            alt="Python (Programming Language)"
+          />
+          <img
+            width="40"
+            src="/gopher.svg"
+            data-theme="invert"
+            alt="Go (Programming Language)"
+          />
         </CardStack>
       </Card>
     </Item>
@@ -97,7 +116,7 @@ export const Projects = () => (
         backgroundImage: 'url("/3daudio_background.svg")',
       }}
     >
-      <img width="300" src="/3daudio.svg" />
+      <img width="300" src="/3daudio.svg" alt="" />
       <Card>
         <CardHeader>
           <div>3 people</div>
@@ -109,14 +128,23 @@ export const Projects = () => (
             <CardTitle>3D Audio Editor</CardTitle>
 
             <Link href="https://github.com/niklaskorz/audio3d">
-              <a target="_blank">
-                <img src="/github-icon.svg" data-theme="invert"></img>
+              <a target="_blank" rel="noopener">
+                <img
+                  src="/github-icon.svg"
+                  data-theme="invert"
+                  alt="Github"
+                ></img>
               </a>
             </Link>
           </CardForeground>
         </CardMain>
         <CardStack>
-          <img width="40" src="/react.svg" data-theme="invert"></img>
+          <img
+            width="40"
+            src="/react.svg"
+            data-theme="invert"
+            alt="React"
+          ></img>
         </CardStack>
       </Card>
     </Item>
@@ -137,6 +165,7 @@ export const Projects = () => (
         <img
           src="/pineapple.png"
           style={{ position: "absolute", width: "100%", maxWidth: "400px" }}
+          alt=""
         ></img>
       </div>
 
@@ -154,20 +183,34 @@ export const Projects = () => (
               </a>
             </Link>
             <Link href="https://github.com/LeonErath/Pineapple">
-              <a target="_blank">
-                <img src="/github-icon.svg" data-theme="invert"></img>
+              <a target="_blank" rel="noopener">
+                <img
+                  src="/github-icon.svg"
+                  data-theme="invert"
+                  alt="Github"
+                ></img>
               </a>
             </Link>
           </CardForeground>
         </CardMain>
         <CardStack>
-          <img width="40" src="/android-icon.svg" data-theme="invert"></img>
-          <img width="40" src="/brand/apple.svg" data-theme="invert"></img>
+          <img
+            width="40"
+            src="/android-icon.svg"
+            data-theme="invert"
+            alt="Android"
+          ></img>
+          <img
+            width="40"
+            src="/brand/apple.svg"
+            data-theme="invert"
+            alt="iOS"
+          ></img>
         </CardStack>
       </Card>
     </Item>
     <Item background="#F4F4F4">
-      <img style={{ width: "100%" }} src="/t2m.png"></img>
+      <img style={{ width: "100%" }} src="/t2m.png" alt=""></img>
 
       <Card>
         <CardHeader>
@@ -183,14 +226,24 @@ export const Projects = () => (
               </a>
             </Link>
             <Link href="https://github.com/AudiophileDev/T2M">
-              <a target="_blank">
-                <img src="/github-icon.svg" data-theme="invert"></img>
+              <a target="_blank" rel="noopener">
+                <img
+                  src="/github-icon.svg"
+                  data-theme="invert"
+                  alt="Github"
+                ></img>
               </a>
             </Link>
           </CardForeground>
         </CardMain>
         <CardStack>
-          <img width="40" height="60" src="/java.svg" data-theme="invert"></img>
+          <img
+            width="40"
+            height="60"
+            src="/java.svg"
+            data-theme="invert"
+            alt="Java"
+          ></img>
         </CardStack>
       </Card>
     </Item>

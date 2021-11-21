@@ -40,8 +40,18 @@ export const Skills = () => {
       <div className={classes.tools}>
         <div>Tools</div>
         <div className={classes.toolsIcons}>
-          <img width="40" src="/terminal.svg" data-theme="invert" />
-          <img width="40" src="/visual-studio-code.svg" data-theme="invert" />
+          <img
+            width="40"
+            src="/terminal.svg"
+            data-theme="invert"
+            alt="Terminal"
+          />
+          <img
+            width="40"
+            src="/visual-studio-code.svg"
+            data-theme="invert"
+            alt="Visual Studio Code (IDE)"
+          />
         </div>
       </div>
     </div>

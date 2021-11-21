@@ -19,14 +19,14 @@ export default class MyDocument extends Document {
 
   render() {
     return (
-      <Html>
+      <Html lang="en">
         <Head>
           {(this.props as any).styleTags}
           <meta
             name="google-site-verification"
             content="MSkqJgiVlLnyfRfjieCXuB1EKHUS_NtulUjFxuE2dQQ"
           />
-          <script src="https://platform.twitter.com/widgets.js"></script>
+          <script async src="https://platform.twitter.com/widgets.js"></script>
         </Head>
         <body>
           <Main />

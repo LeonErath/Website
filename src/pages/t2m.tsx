@@ -12,7 +12,11 @@ class T2M extends Component {
             <h1>T2M</h1>
             <h2>Generate music from text</h2>
 
-            <a href="https://github.com/AudiophileDev/T2M" target="_blank">
+            <a
+              href="https://github.com/AudiophileDev/T2M"
+              target="_blank"
+              rel="noopener"
+            >
               Documentation
             </a>
           </div>

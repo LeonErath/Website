@@ -60,6 +60,7 @@ class Pineapple extends Component {
               <a
                 href="https://www.jugend-forscht.de/projektdatenbank/einfach-und-sicher-der-ultimative-schulplaner.html"
                 target="_blank"
+                rel="noopener"
               >
                 Jugend Forscht competition
               </a>{" "}
@@ -68,6 +69,7 @@ class Pineapple extends Component {
               <a
                 href="https://www.meine-woche.de/staedte/herausragender-erfolg_aid-36389947"
                 target="_blank"
+                rel="noopener"
               >
                 source
               </a>

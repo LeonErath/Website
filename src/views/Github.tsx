@@ -26,7 +26,7 @@ const Github = () => {
   if (loading || error) {
     return (
       <div className={classes.container}>
-        <img src="/illustrations/coding.svg"></img>
+        <img src="/illustrations/coding.svg" alt="" />
 
         <div className={classes.text}>
           <span>
@@ -50,7 +50,7 @@ const Github = () => {
 
   return (
     <div className={classes.container}>
-      <img src="/illustrations/coding.svg"></img>
+      <img src="/illustrations/coding.svg" alt="" />
 
       <div className={classes.text}>
         <span>
@@ -61,7 +61,7 @@ const Github = () => {
         <br />
         <span>
           I joined{" "}
-          <a href="https://github.com/LeonErath" target="_blank">
+          <a href="https://github.com/LeonErath" target="_blank" rel="noopener">
             Github
           </a>{" "}
           <b>{moment(createdAt).fromNow()}</b> and commited <b>{commits}</b>{" "}

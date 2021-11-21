@@ -35,11 +35,11 @@ const App = () => {
           </div>
 
           <div className={classes.profile}>
-            <Image src="/profile.png" width={400} height={400} />
+            <Image src="/profile.png" width={400} height={400} alt="" />
           </div>
         </div>
-        <ScrollDown href="#skills">
-          <Image src="/scroll.svg" width={60} height={60} />
+        <ScrollDown href="#skills" aria-label="Scroll down">
+          <Image src="/scroll.svg" width={60} height={60} alt="" />
         </ScrollDown>
 
         <div className={classes.page}>

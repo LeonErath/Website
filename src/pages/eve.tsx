@@ -87,6 +87,7 @@ const eve = () => {
             <a
               href="https://github.com/AAA-Intelligence/parser"
               target="_blank"
+              rel="noopener"
             >
               parser
             </a>
@@ -99,7 +100,11 @@ const eve = () => {
             For our chatbot, we used a{" "}
             <b>unidirectional LSTM encoder-decoder model</b>, which is also used
             by{" "}
-            <a href="https://github.com/OpenNMT/OpenNMT-tf" target="_blank">
+            <a
+              href="https://github.com/OpenNMT/OpenNMT-tf"
+              target="_blank"
+              rel="noopener"
+            >
               OpenNMT
             </a>
             . In addition to the chatbot model, we trained two other models. One
@@ -113,6 +118,7 @@ const eve = () => {
             <a
               href="https://github.com/AAA-Intelligence/eve/tree/master/bot/predefined_answers"
               target="_blank"
+              rel="noopener"
             >
               here
             </a>
@@ -131,7 +137,11 @@ const eve = () => {
             performance of the application.
           </span>
 
-          <a href="https://github.com/AAA-Intelligence/eve" target="_blank">
+          <a
+            href="https://github.com/AAA-Intelligence/eve"
+            target="_blank"
+            rel="noopener"
+          >
             <img src="/brand/github_black.svg" data-theme="invert" width={50} />
           </a>
         </div>
